@@ -1,5 +1,5 @@
 # Charger Customs
-- бесплатный PSD шаблон
+бесплатный PSD шаблон
 ![charger шаблон](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1c9cc258353073.5a02ab8250e4e.jpg "Экран приветствия")
 Шаблон в первую очередь будет актуален для сайтов тематика которых связанна с автомобилями. 
 Оформление шаблона: Строгие линии,  шрифт под раритет, темная тема
@@ -20,7 +20,7 @@
 
 Demo: В процессе
 
-Автор шаблона: [Kirill Yevdokimov][https://www.behance.net/gallery/58353073/Charger-Customs-Free-Psd-Website-Template]
+Автор шаблона: [Kirill Yevdokimov](https://www.behance.net/gallery/58353073/Charger-Customs-Free-Psd-Website-Template)
 
 Верстка: Максим Студеникин
 
