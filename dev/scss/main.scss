@@ -8,3 +8,11 @@ $black: #000;
 
 @import "~normalize/normalize";
 @import "~fast-grid/fast-grid";
+
+//sections
+@import "./section/welcome";
+@import "./section/about";
+@import "./section/services";
+@import "./section/projects";
+@import "./section/reviews";
+@import "./section/blog";
