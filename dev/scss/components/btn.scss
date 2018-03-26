@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  min-width: 10%;
+  font-size: 13px;
+  padding: rem(10px) rem(15px);
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: $orange;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+}
+
+.btn--hover:hover {
+  background-color: $orange / 1.2;
+}
