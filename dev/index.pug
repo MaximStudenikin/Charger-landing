@@ -2,10 +2,54 @@ include ../base
 	block head
 		title Charger costum
 block content
-	section.welcome
-	section.about
-	section.services
-	section.projects
-	section.reviews
-	section.blog
-	footer.footer__teg
+	.wrap
+		.maincontent
+			section.welcome
+				.container
+					.header
+						a.logo(href='#')
+							img.img__teg
+							.logo__text
+								span.logo__heading Charger
+								span.logo__sub Customs
+						nav.nav
+							ul.nav__list
+								li.nav__item
+									a.nav__link(href='#') about as
+								li.nav__item
+									a.nav__link(href='#') services
+								li.nav__item
+									a.nav__link(href='#') projects
+						a.h__menu
+							.h__bars
+							span Menu
+					.center
+						.content
+							.heading__welcome We’re Charger
+							p.paragraph One of the most powerful and recognized brand names in the custom automotive industry.
+							a.btn.btn__sb(href='#')
+						.controls
+									a.controls__btn.controls__btn_next(href='#')
+										i.controls__arrow_right
+									a.controls__btn.controls__btn_prev(href='#')
+										i.controls__arrow_left
+					.footer
+						ul.social__list
+							li.social__item
+								a.social__link Facebook
+							li.social__item
+								a.social__link Twitter   
+							li.social__item
+								a.social__link Youtube
+						ul.pagination__list
+							li.pagination__item 01
+								a.pagination__link
+							li.pagination__item
+								a.pagination__link 10
+						span.scroll__down scroll down
+			section.about
+			section.services
+			section.projects
+			section.reviews
+			section.blog
+			footer.footer__teg
