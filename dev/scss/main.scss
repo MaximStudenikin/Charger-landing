@@ -8,9 +8,11 @@ $black: #000;
 @import "../../node_modules/fast-grid/fast-grid";
 
 //config
-@import "./config/fonts";
+@import "./config/mixin";
 @import "./config/base";
 @import "./config/adjustment";
+@import "./config/fonts";
+
 
 //sections
 @import "./section/welcome";
@@ -19,3 +21,6 @@ $black: #000;
 @import "./section/projects";
 @import "./section/reviews";
 @import "./section/blog";
+
+//components
+@import "./components/logo/logo";

@@ -6,20 +6,21 @@ block content
 		.maincontent
 			section.welcome
 				.container
-					.header
+					.welcome__header
 						a.logo(href='#')
-							img.img__teg(url='./img/logo.png', alt='Charger Customs')
+							.logo__icon
+								img.img__teg(src='./img/logo.png', alt='Charger Customs')
 							.logo__text
 								span.logo__heading Charger
 								span.logo__sub Customs
 						nav.nav
 							ul.nav__list
 								li.nav__item
-									a.nav__link(href='#') about as
+									a.nav__link.nav__link--hover(href='#') about as
 								li.nav__item
-									a.nav__link(href='#') services
+									a.nav__link.nav__link--hover(href='#') services
 								li.nav__item
-									a.nav__link(href='#') projects
+									a.nav__link.nav__link--hover(href='#') projects
 						a.h__menu
 							.h__bars
 							span Menu
@@ -28,27 +29,27 @@ block content
 							li.slider__item
 								h1.heading__welcome We’re Charger
 								p.paragraph One of the most powerful and recognized brand names in the custom automotive industry.
-								a.btn.btn__sb(href='#')
+								a.btn.btn__sb(href='#') Read more
 							li.slider__item
 								h1.heading__welcome Lorem, ipsum dolor
 								p.paragraph Lorem ipsum dolor, sit amet consectetur adipisicing.
-								a.btn.btn__sb(href='#')
+								a.btn.btn__sb(href='#') Read more
 							li.slider__item
 								h1.heading__welcome Lorem
 								p.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda?
-								a.btn.btn__sb(href='#')
+								a.btn.btn__sb(href='#') Read more
 							li.slider__item
 								h1.heading__welcome Lorem ipsum dolor sit
 								p.paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam deserunt corporis dolorem?
-								a.btn.btn__sb(href='#')
+								a.btn.btn__sb(href='#') Read more
 							li.slider__item
 								h1.heading__welcome Lorem ipsum dolor sit amet
 								p.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, perferendis.
-								a.btn.btn__sb(href='#')
+								a.btn.btn__sb(href='#') Read more
 						.controls
 									a.controls__btn.controls__btn_next(href='#')
 									a.controls__btn.controls__btn_prev(href='#')
-					.footer
+					.welcome__footer
 						ul.social__list
 							li.social__item
 								a.social__link Facebook

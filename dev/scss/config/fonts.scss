@@ -79,32 +79,32 @@ sans-serif;
 
 @font-face {
     font-family: 'playfair_display_bold';
-    src: url('../source/fonts/playfairdisplay-bold-webfont.woff2') format('woff2'), 
-    url('../source/fonts/playfairdisplay-bold-webfont.woff') format('woff');
+    src: url('./fonts/playfairdisplay-bold-webfont.woff2') format('woff2'), 
+    url('./fonts/playfairdisplay-bold-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'playfair_display_italic';
-    src: url('../source/fonts/playfairdisplay-italic-webfont.woff2') format('woff2'), 
-    url('../source/fonts/playfairdisplay-italic-webfont.woff') format('woff');
+    src: url('./fonts/playfairdisplay-italic-webfont.woff2') format('woff2'), 
+    url('./fonts/playfairdisplay-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: 400;
 }
 
 @font-face {
     font-family: 'proxima_nova_light';
-    src: url('../source/fonts/proxima_nova_light-webfont.woff2') format('woff2'), 
-    url('../source/fonts/proxima_nova_light-webfont.woff') format('woff');
+    src: url('./fonts/proxima_nova_light-webfont.woff2') format('woff2'), 
+    url('./fonts/proxima_nova_light-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima_nova_regular';
-    src: url('../source/fonts/proxima_nova_regular-webfont.woff2') format('woff2'), 
-    url('../source/fonts/proxima_nova_regular-webfont.woff') format('woff');
+    src: url('./fonts/proxima_nova_regular-webfont.woff2') format('woff2'), 
+    url('./fonts/proxima_nova_regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }

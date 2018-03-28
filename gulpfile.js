@@ -93,13 +93,13 @@ function img() {
 }
 
 //fonts
-function fonts() {
-	gulp.src(paths.src + 'fonts/*')
+function font() {
+	return	gulp.src(paths.src + 'fonts/*')
 	.pipe(gulp.dest(paths.build + 'fonts/'))
 }
 
 function remov() {
-	return del('./source/')
+	return del('./build/')
 }
 
 //watch
@@ -131,6 +131,7 @@ function serve() {
 exports.html = html;
 exports.style = style;
 exports.script = script;
+exports.font = font;
 exports.img = img;
 exports.remov = remov;
 exports.watch = watch;
@@ -138,12 +139,13 @@ exports.watch = watch;
 gulp.task('build', gulp.series(
 	remov,
 	html,
+	font,
 	style,
 	script
 ));
 
 gulp.task('default', gulp.series(
 	remov,
-	gulp.parallel(style, script, html, img),
+	gulp.parallel(style, script, html, font, img),
 	gulp.parallel(watch, serve)
 ));
