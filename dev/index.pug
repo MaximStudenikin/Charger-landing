@@ -1,4 +1,4 @@
-include ../base
+include ./base
 	block head
 		title Charger costum
 block content
@@ -8,7 +8,7 @@ block content
 				.container
 					.header
 						a.logo(href='#')
-							img.img__teg
+							img.img__teg(url='./img/logo.png', alt='Charger Customs')
 							.logo__text
 								span.logo__heading Charger
 								span.logo__sub Customs
@@ -53,7 +53,7 @@ block content
 							li.social__item
 								a.social__link Facebook
 							li.social__item
-								a.social__link Twitter   
+								a.social__link Twitter
 							li.social__item
 								a.social__link Youtube
 						ul.pagination__list
@@ -98,20 +98,19 @@ block content
 								p.paragraph Lorem ipsum dolor sit, amet consectetur adipisicing.
 								a.btn(href='#') More
 					.decorative
-						i.decorative__sb_small  
+						i.decorative__sb_small
 							| Cars & Details
 			section.projects
 				h3.heading  Projects
 				.slidershow
-					//- ???
 				.decorative
-						i.decorative__sb_big P
-						i.decorative__sb_small Our Portfolio
-						i.decorative__sb_big T
+					i.decorative__sb_big P
+					i.decorative__sb_small Our Portfolio
+					i.decorative__sb_big T
 			section.reviews
 				ul.slider__list
 					li.slider__item
-						p.paragraph__quote 
+						p.paragraph__quote
 						|These guys do amazing work here. They made my
 						|car awesome.
 						span.user__name John Brown
@@ -126,31 +125,31 @@ block content
 						span.user__car Camaro
 			section.blog
 				.blog__preview
-						.section__img
-							img.img__teg
-						h2.heading Charger
-						p.paragraph The most powerful and brand names in the  custom automotive industry. We now have franchises stretching across the world. We have worked with some of the largest brands in the world, including Fortune 500 companies. We are now a household name in multiple countries and plan to continue dominating the custom car world and expand our global reach with amazing rides and concepts.
-							| We have an exceptional team, both in the workshop and office. We've done what others can't and we constantly strive to push the boundaries and expectations of this industry. If you or your company feel that you have something beneficial to offer our brand, we look forward to hearing from you. 
-						a.bnt(href='#') more
+					.section__img
+						img.img__teg
+					h2.heading Charger
+					p.paragraph The most powerful and brand names in the  custom automotive industry. We now have franchises stretching across the world. We have worked with some of the largest brands in the world, including Fortune 500 companies. We are now a household name in multiple countries and plan to continue dominating the custom car world and expand our global reach with amazing rides and concepts.
+					p.paragraph We have an exceptional team, both in the workshop and office. We've done what others can't and we constantly strive to push the boundaries and expectations of this industry. If you or your company feel that you have something beneficial to offer our brand, we look forward to hearing from you.
+					a.bnt(href='#') more
 				.decorative
-						i.decorative__sb_small Our Portfolio
+					i.decorative__sb_small Our Portfolio
 			footer.footer__teg
 				a.logo(href='#')
-							img.img__teg
-							.logo__text
-								span.logo__heading Charger
-								span.logo__sub Customs
+					img.img__teg
+					.logo__text
+						span.logo__heading Charger
+						span.logo__sub Customs
 				nav.nav
-							ul.nav__list
-								li.nav__item
-									a.nav__link(href='#') about as
-								li.nav__item
-									a.nav__link(href='#') services
-								li.nav__item
-									a.nav__link(href='#') projects
+					ul.nav__list
+						li.nav__item
+							a.nav__link(href='#') about as
+						li.nav__item
+							a.nav__link(href='#') services
+						li.nav__item
+							a.nav__link(href='#') projects
 				.footer__row
-					p.сopyright &copy; 2017. All Rights Reserved
-					span.info Designed by 
+					p.copy &copy; 2017. All Rights Reserved
+					span.info Designed by
 						p Kirill Yevdokimov
 					span.info Developer by
 						p Studenikin Maxim

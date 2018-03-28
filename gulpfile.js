@@ -47,17 +47,17 @@ function html() {
 }
 
 function style() {
-	return gulp.src(paths.dev + 'scss/main.scss')
+	return gulp.src(paths.dev + '/scss/main.scss')
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sassGlob())
 		.pipe(sass())
 		.pipe(groupMediaCSSQueries())
 		.pipe(cleanCSS())
-		.pipe(autoPref({
-		    browsers: ['last 15 versions'],
-		    cascade: false
-		}))
+		// .pipe(autoPref({
+		//     browsers: ['last 15 versions'],
+		//     cascade: false
+		// }))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(sourcemaps.write('/'))
 		.pipe(gulp.dest(paths.build + 'css/'))
@@ -89,7 +89,6 @@ function img() {
 			svgo: true,
 			concurrent: 10
 		}))
-		.pipe(rename({ suffix: "_min" }))
 		.pipe(gulp.dest(paths.build + 'img/'))
 }
 
@@ -100,12 +99,12 @@ function fonts() {
 }
 
 function remov() {
-	return del('build/')
+	return del('./source/')
 }
 
 //watch
 function watch() {
-	gulp.watch(paths.dev + 'html/**/*.pug', html);
+	gulp.watch(paths.dev + '*.pug', html);
 	gulp.watch(paths.dev + '/**/*.scss', style);
 	gulp.watch(paths.dev + 'js/*.js', script);
 }
@@ -145,7 +144,6 @@ gulp.task('build', gulp.series(
 
 gulp.task('default', gulp.series(
 	remov,
-	gulp.parallel(style, script, html, svg, img),
-	gulp.series(['fonts']),
+	gulp.parallel(style, script, html, img),
 	gulp.parallel(watch, serve)
 ));

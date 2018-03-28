@@ -1,13 +1,16 @@
 //colors
-
 $white: #fff;
 $gold: #e3a062;
 $black: #000;
 
 //packege
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/fast-grid/fast-grid";
 
-@import "~normalize/normalize";
-@import "~fast-grid/fast-grid";
+//config
+@import "./config/fonts";
+@import "./config/base";
+@import "./config/adjustment";
 
 //sections
 @import "./section/welcome";
