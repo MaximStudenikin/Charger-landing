@@ -4,65 +4,67 @@ include ./base
 block content
 	.wrap
 		.maincontent
-			section.welcome
-				.container
-					.welcome__header
-						a.logo(href='#')
-							.logo__icon
-								img.img__teg(src='./img/logo.png', alt='Charger Customs')
-							.logo__text
-								span.logo__heading Charger
-								span.logo__sub Customs
-						nav.nav
-							ul.nav__list
-								li.nav__item
-									a.nav__link.nav__link--hover(href='#') about as
-								li.nav__item
-									a.nav__link.nav__link--hover(href='#') services
-								li.nav__item
-									a.nav__link.nav__link--hover(href='#') projects
-						a.h__menu
-							.h__bars
-							span Menu
-					.slider
-						ul.slider__list
-							li.slider__item
-								h1.heading__welcome We’re Charger
-								p.paragraph One of the most powerful and recognized brand names in the custom automotive industry.
-								a.btn.btn__sb(href='#') Read more
-							li.slider__item
-								h1.heading__welcome Lorem, ipsum dolor
-								p.paragraph Lorem ipsum dolor, sit amet consectetur adipisicing.
-								a.btn.btn__sb(href='#') Read more
-							li.slider__item
-								h1.heading__welcome Lorem
-								p.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda?
-								a.btn.btn__sb(href='#') Read more
-							li.slider__item
-								h1.heading__welcome Lorem ipsum dolor sit
-								p.paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam deserunt corporis dolorem?
-								a.btn.btn__sb(href='#') Read more
-							li.slider__item
-								h1.heading__welcome Lorem ipsum dolor sit amet
-								p.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, perferendis.
-								a.btn.btn__sb(href='#') Read more
-						.controls
-									a.controls__btn.controls__btn_next(href='#')
-									a.controls__btn.controls__btn_prev(href='#')
-					.welcome__footer
-						ul.social__list
-							li.social__item
-								a.social__link Facebook
-							li.social__item
-								a.social__link Twitter
-							li.social__item
-								a.social__link Youtube
-						ul.pagination__list
-							li.pagination__item 01
-								a.pagination__link
-							li.pagination__item
-								a.pagination__link 10
-						span.scroll__down scroll down
+			.container
+				section.welcome
+						.left
+							a.logo(href='#')
+									.logo__icon
+										img.img__teg(src='./img/logo.png', alt='Charger Customs')
+									.logo__text
+										span.logo__heading Charger
+										span.logo__sub Customs
+							.controls
+								a.controls__btn.controls__btn_prev(href='#') prev
+							ul.social__list
+								li.social__item
+									a.social__link Facebook
+								li.social__item
+									a.social__link Twitter
+								li.social__item
+									a.social__link Youtube
+						.center
+							nav.nav
+								ul.nav__list
+									li.nav__item
+										a.nav__link.nav__link--hover(href='#') about as
+									li.nav__item
+										a.nav__link.nav__link--hover(href='#') services
+									li.nav__item
+										a.nav__link.nav__link--hover(href='#') projects
+							.slider
+								ul.slider__list
+									li.slider__item
+										h1.heading__welcome We’re Charger
+										p.paragraph One of the most powerful and recognized brand names in the custom automotive industry.
+										a.btn.btn__sb(href='#') Read more
+									li.slider__item
+										h1.heading__welcome Lorem, powerful
+										p.paragraph Lorem ipsum dolor, sit amet consectetur adipisicing.
+										a.btn.btn__sb(href='#') Read more
+									li.slider__item
+										h1.heading__welcome Lorem
+										p.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda?
+										a.btn.btn__sb(href='#') Read more
+									li.slider__item
+										h1.heading__welcome Lorem dolor
+										p.paragraph Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam deserunt corporis dolorem?
+										a.btn.btn__sb(href='#') Read more
+									li.slider__item
+										h1.heading__welcome Lorem ipsum dolor
+										p.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, perferendis.
+										a.btn.btn__sb(href='#') Read more
+							ul.pagination__list
+									li.pagination__item 01
+										a.pagination__link
+									li.pagination__item
+										a.pagination__link 10
+						.right
+							a.h__menu
+								.h__bars
+								span Menu
+							.controls
+								a.controls__btn.controls__btn_next(href='#') next
+							span.scroll__down scroll down
 			section.about
 				.container
 					.blog__preview

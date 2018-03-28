@@ -1,64 +1,78 @@
 .welcome {
+    position: relative;
     color: $white;
     padding: rem(45px);
-    &__header {
-        width: 100%;
+    display: flex;
+    .left,
+    .right {
+        width: 95%;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
-    .slider {
+    .left {
+        align-items: flex-start;
+    }
+    .right {
+        align-items: flex-end;
+    }
+    .center {
         width: 100%;
         height: 100%;
-        &__list {
-            display: flex;
-						justify-content: flex-start;
-						align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-        &__item {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 100%;
-            height: 100%;
-        }
-    }
-    &__footer {
-        width: 100%;
         display: flex;
+        overflow: hidden;
+        flex-direction: column;
         justify-content: space-between;
+    }
+}
+
+.slider {
+    width: 100%;
+    &__list {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        right: 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 rem(200px) 0 0;
     }
 }
 
 .nav {
-	&__list {
-			display: flex;
-	}
-	&__item {
-			padding: 0 rem(38px) 0 0;
-			&:last-child {
-					padding: 0;
-			}
-	}
-	&__link {
-			color: $white;
-			text-decoration: none;
-			text-transform: uppercase;
-	}
-	&__link--hover:hover {
-			text-decoration: underline;
-	}
+    &__list {
+        display: flex;
+    }
+    &__item {
+        padding: 0 rem(38px) 0 0;
+        &:last-child {
+            padding: 0;
+        }
+    }
+    &__link {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    &__link--hover:hover {
+        text-decoration: underline;
+    }
 }
 
-.pagination{
-	&__list{
-		display: flex;
-	}
+.pagination {
+    &__list {
+        display: flex;
+    }
 }
 
-.social{
-	&__list{
-		display: flex;
-	}
+.social {
+    &__list {
+        display: flex;
+    }
 }
