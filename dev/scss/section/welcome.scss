@@ -75,4 +75,13 @@
     &__list {
         display: flex;
     }
+    &__item{
+        &:after{
+            content: '/';
+            padding: 0 rem(10px);
+        }
+        &:last-child::after{
+            content: none;
+        }
+    }
 }
