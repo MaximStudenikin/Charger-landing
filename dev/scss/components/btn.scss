@@ -6,16 +6,15 @@
     font-size: rem(14px);
     text-decoration: none;
     letter-spacing: 0.1em;
-    width: 100px;
-    height: 35px; 
-    // padding: 5px;
+    width: 96px;
+    height: 34px; 
 }
 
-.btn--gold_bottom_border {
+.btn--c_gb {
     color: $gold; 
-    // border-bottom: 1px solid $gold;
+    border-bottom: 1px solid $gold;
 }
 
-.btn--bottom_hover:hover {
-    @include btn--bottom_hover($gold, $black, 0.01rem, 2px);
+.btn--b_hover {
+    @include hover__effect($gold, $black, 1px, 7px, 0.2s);
 }
