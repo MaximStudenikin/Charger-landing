@@ -68,6 +68,22 @@
 .pagination {
     &__list {
         display: flex;
+        font-family: $playfair__bold;
+        font-family: rem(26px);
+    }
+    &__item {
+        &:after {
+            content: '';
+            display: inline-block;
+            margin: rem(4px) rem(20px);
+            width: 165px;
+            height: 1px;
+            opacity: 0.55;
+            background: #fff;
+        }
+        &:last-child::after {
+            content: none;
+        }
     }
 }
 
@@ -75,12 +91,12 @@
     &__list {
         display: flex;
     }
-    &__item{
-        &:after{
+    &__item {
+        &:after {
             content: '/';
             padding: 0 rem(10px);
         }
-        &:last-child::after{
+        &:last-child::after {
             content: none;
         }
     }
