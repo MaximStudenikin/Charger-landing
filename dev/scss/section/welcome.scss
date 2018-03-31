@@ -60,8 +60,7 @@
         text-decoration: none;
         text-transform: uppercase;
     }
-    &__link--hover {
-        // text-decoration: underline;
+    &__link--hover{
         @include hover__l_effect($white, $gold);
     }
 }
