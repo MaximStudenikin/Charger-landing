@@ -16,5 +16,5 @@
 }
 
 .btn--b_hover {
-    @include hover__effect($gold, $black, 1px, 7px, 0.2s);
+    @include hover__b_effect($gold, $black, 1px, 7px, 0.2s);
 }

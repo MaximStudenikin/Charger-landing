@@ -1,0 +1,27 @@
+.controls {
+    display: flex;
+    &__btn {
+        color: $white;
+        text-transform: uppercase;
+    }
+    &__btn_prev {
+        &:after {
+            content: '';
+            display: inline-block;
+            margin: rem(4px) rem(16px);
+            width: 47px;
+            height: 1px;
+            background: $gold;
+        }
+    }
+    &__btn_next {
+        &:before {
+            content: '';
+            display: inline-block;
+            margin: rem(4px) rem(16px);
+            width: 47px;
+            height: 1px;
+            background: $gold;
+        }
+    }
+}

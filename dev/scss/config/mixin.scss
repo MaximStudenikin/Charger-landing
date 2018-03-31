@@ -4,7 +4,7 @@
 }
 
 // Mixin for drawing button with optional argument for width, padding, and time
-@mixin hover__effect($color, $color-hov, $width: 1px, $padding: 0.5em, $time: 0.2s) {
+@mixin hover__b_effect($color, $color-hov, $width: 1px, $padding: 0.5em, $time: 0.2s) {
   position: relative;
   display: inline-block;
   color: $color;
@@ -79,4 +79,61 @@
     background-color: $color;
     transition-delay: $time * 3;
   }
+}
+
+
+@mixin hover__l_effect($color, $color-hov){
+
+  color: $color;
+
+> .link {
+  color: $color;
+  display: inline-block;
+  overflow: hidden;
+}
+
+&:before{
+  content: '';
+  top:0; left: 0; 
+  bottom: 0; 
+  right: 0;
+  width: 100%;    
+  height: 100%;
+  position: absolute;
+  background: $color-hov;
+  z-index: -1;
+  transform: translateX(-100%) translateY(calc(100% - 2px));;
+  opacity: 0;
+}
+
+
+ &:hover::before{
+  transition: transform .7s cubic-bezier(.19,1,.22,1);
+  transform: translateX(0%) translateY(calc(100% - 2px));;
+  opacity: 1;
+}
+
+ &:after{
+  content: "";
+  top:0; left: 0; 
+  bottom: 0; 
+  right: 0;
+  width: 100%;  
+  height: 100%;
+  position: absolute;
+  background: $color-hov;
+  z-index: -2;
+  transition: transform .8s cubic-bezier(.19,1,.22,1);
+  transform: translateX(100%) translateY(calc(100% - 2px));
+  opacity: 1;
+}
+&:hover::after {
+  transition: none;
+  transform: translateX(0%) translateY(calc(100% - 2px));
+  opacity: 0;
+}
+
+&:hover{
+  color: $color;
+}
 }
