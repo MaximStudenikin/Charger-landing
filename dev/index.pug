@@ -4,80 +4,79 @@ include ./base
 block content
 	.wrap
 		.maincontent
-			.container
-				section.welcome
-						.left
-							a.logo(href='#')
-									.logo__icon
-										img.img__teg(src='./img/logo.png', alt='Charger Customs')
-									.logo__text
-										span.logo__heading Charger
-										span.logo__sub Customs
-							.controls
-								a.controls__btn.controls__btn_prev(href='#') prev
-							ul.social__list
-								li.social__item
-									a.social__link Facebook
-								li.social__item
-									a.social__link Twitter
-								li.social__item
-									a.social__link Youtube
-						.center
-							nav.nav
-								ul.nav__list
-									li.nav__item
-										a.nav__link.nav__link--hover(href='#') about as
-									li.nav__item
-										a.nav__link(href='#') services
-									li.nav__item
-										a.nav__link(href='#') projects
-							.slider
-								ul.slider__list
-									li.slider__item
-										h1.heading__welcome We’re Charger
-										p.paragraph.cut__32 One of the most powerful and recognized brand names in the custom automotive industry.
-										a.btn.btn__sb.cut__62.btn--c_gb.btn--b_hover(href='#')
-											span.btn__text Read more
-									li.slider__item
-										h1.heading__welcome Lorem, powerful
-										p.paragraph.cut__32 Lorem ipsum dolor, sit amet consectetur adipisicing.
-										a.btn.btn__sb.cut__62.btn--c_gold_b_bottom.btn--bottom_hover(href='#') 
-											span.btn__text Read more
-									li.slider__item
-										h1.heading__welcome Lorem
-										p.paragraph.cut__32 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda?
-										a.btn.btn__sb.cut__62.btn--c_gold_b_bottom.btn--bottom_hover(href='#') Read more
-									li.slider__item
-										h1.heading__welcome Lorem dolor
-										p.paragraph.cut__32 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam deserunt corporis dolorem?
-										a.btn.btn__sb.cut__62.btn--c_gold_b_bottom.btn--bottom_hover(href='#') Read more
-									li.slider__item
-										h1.heading__welcome Lorem ipsum dolor
-										p.paragraph.cut__32 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, perferendis.
-										a.btn.btn__sb.cut__62.btn--c_gold_b_bottom.btn--bottom_hover(href='#') Read more
-							ul.pagination__list
-									li.pagination__item 
-										a.pagination__link 01
-									li.pagination__item
-										a.pagination__link 10
-						.right
-							a.h__menu
-								.h__bars
-								span Menu
-							.controls
-								a.controls__btn.controls__btn_next(href='#') next
-							span.scroll__down scroll down
+			section.welcome
+					.left
+						a.logo(href='#')
+								.logo__icon
+									img.img__teg(src='./img/logo.png', alt='Charger Customs')
+								.logo__text
+									span.logo__heading Charger
+									span.logo__sub Customs
+						.controls
+							a.controls__btn.controls__btn_prev(href='#') prev
+						ul.social__list
+							li.social__item
+								a.social__link.social__link--hover(href='#') Facebook
+							li.social__item
+								a.social__link.social__link--hover(href='#') Twitter
+							li.social__item
+								a.social__link.social__link--hover(href='#') Youtube
+					.center
+						nav.nav
+							ul.nav__list
+								li.nav__item
+									a.nav__link.nav__link--hover(href='#') about as
+								li.nav__item
+									a.nav__link.nav__link--hover(href='#') services
+								li.nav__item
+									a.nav__link.nav__link--hover(href='#') projects
+						.slider
+							ul.slider__list
+								li.slider__item
+									h1.heading__welcome We’re Charger
+									p.paragraph.cut__32 One of the most powerful and recognized brand names in the custom automotive industry.
+									a.btn.btn__sb.cut__62.btn--c_gb.btn--b_hover(href='#')
+										span.btn__text Read more
+								li.slider__item
+									h1.heading__welcome Lorem, powerful
+									p.paragraph.cut__32 Lorem ipsum dolor, sit amet consectetur adipisicing.
+									a.btn.btn__sb.cut__62.btn--c_gold_b_bottom.btn--bottom_hover(href='#') 
+										span.btn__text Read more
+								li.slider__item
+									h1.heading__welcome Lorem
+									p.paragraph.cut__32 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda?
+									a.btn.btn__sb.cut__62.btn--c_gold_b_bottom.btn--bottom_hover(href='#') Read more
+								li.slider__item
+									h1.heading__welcome Lorem dolor
+									p.paragraph.cut__32 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam deserunt corporis dolorem?
+									a.btn.btn__sb.cut__62.btn--c_gold_b_bottom.btn--bottom_hover(href='#') Read more
+								li.slider__item
+									h1.heading__welcome Lorem ipsum dolor
+									p.paragraph.cut__32 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, perferendis.
+									a.btn.btn__sb.cut__62.btn--c_gold_b_bottom.btn--bottom_hover(href='#') Read more
+						ul.pagination__list
+								li.pagination__item 
+									a.pagination__link 01
+								li.pagination__item
+									a.pagination__link 10
+					.right
+						a.h__menu
+							.h__bars
+							span Menu
+						.controls
+							a.controls__btn.controls__btn_next(href='#') next
+						span.scroll__down scroll down
 			section.about
 				.blog__preview
-					.section__img
-						img.img__teg
-					h2.heading About us
-					p.paragraph Charger Customs - luxury automotive restyling center based in Corona, California. There is no limit to what we can do.
-					a.bnt(href='#') more
-				.decorative
+					.blog__img
+						img.img__teg(src='https://source.unsplash.com/CKeoh-90U3E/1200x900"')
+					.blog__discription
+						h2.heading About us
+						p.paragraph.cut__62 Charger Customs - luxury automotive restyling center based in Corona, California. There is no limit to what we can do.
+						a.bnt.bnt__rectangle.cut__32(href='#') more
+				.decorative.decorative__side--right
 					i.decorative__sb_big A
 					i.decorative__sb_small Who We Are
-					i.decorative__sb_big S
 			section.services
 				h2.heading Services
 				a.btn(href='#') lren more
@@ -101,6 +100,7 @@ block content
 							p.paragraph Lorem ipsum dolor sit, amet consectetur adipisicing.
 							a.btn(href='#') More
 				.decorative
+					i.decorative__sb_big S
 					i.decorative__sb_small Cars & Details
 			section.projects
 				h3.heading  Projects
@@ -108,7 +108,6 @@ block content
 				.decorative
 					i.decorative__sb_big P
 					i.decorative__sb_small Our Portfolio
-					i.decorative__sb_big T
 			section.reviews
 				ul.slider__list
 					li.slider__item
@@ -132,6 +131,7 @@ block content
 					p.paragraph We have an exceptional team, both in the workshop and office. We've done what others can't and we constantly strive to push the boundaries and expectations of this industry. If you or your company feel that you have something beneficial to offer our brand, we look forward to hearing from you.
 					a.bnt(href='#') more
 				.decorative
+					i.decorative__sb_big T
 					i.decorative__sb_small Our Portfolio
 			footer.footer__teg
 				a.logo(href='#')

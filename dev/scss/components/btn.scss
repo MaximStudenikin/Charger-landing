@@ -10,6 +10,15 @@
     height: 34px; 
 }
 
+.bnt__rectangle{
+    text-transform: uppercase;
+    border: 2px solid $gold;
+    text-align: center;
+    width: 120px;
+    font-size: 14px;
+    padding: rem(5px) rem(20px);
+}
+
 .btn--c_gb {
     color: $gold; 
     border-bottom: 1px solid $gold;

@@ -1,0 +1,28 @@
+.about {
+    display: flex;
+    position: relative;
+    background: $white;
+    align-items: center;
+    padding: 0 2%;
+}
+
+.blog {
+    &__preview {
+      display: flex;
+      align-items: center;
+      width: 85%;
+      margin: auto;
+    }
+    &__discription {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 25%;
+    }
+    &__img {
+      padding: 0 5% 0 0;
+      flex-basis: 50%;
+      width: 50%;
+      height: 50%;
+      overflow: hidden;
+    }
+}

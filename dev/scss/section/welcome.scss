@@ -100,4 +100,7 @@
             content: none;
         }
     }
+    &__link--hover{
+        @include hover__l_effect($white, $gold);
+    }
 }
