@@ -1,26 +1,10 @@
-$playfair__bold: 
-'playfair_display_bold',
-Helvetica,
-Arial,
-sans-serif;
+$playfair__bold: 'playfair_display_bold',Helvetica,Arial,sans-serif;
 
-$playfair_italic: 
-'playfair_display_italic',
-Helvetica,
-Arial,
-sans-serif;
+$proxima_light: 'proxima_nova_light',Helvetica,Arial,sans-serif;
 
-$proxima_light: 
-'proxima_nova_light',
-Helvetica,
-Arial,
-sans-serif;
+$playfair_italic: 'playfair_display_italic',Helvetica,Arial,sans-serif;
 
-$proxima_regular: 
-'proxima_nova_regular',
-Helvetica,
-Arial,
-sans-serif;
+$proxima_regular: 'proxima_nova_regular',Helvetica,Arial,sans-serif;
 
 .logo {
     color: #fff;
@@ -65,17 +49,6 @@ sans-serif;
     &__quote{
         font-family: $playfair_italic;
         font-size: rem(48px);
-    }
-}
-
-.decorative {
-    &__sb_big {
-        font-family: $playfair__bold;
-        font-size: rem(300px);
-    }
-    &__sb_small {
-        font-family: $proxima_regular;
-        font-size: rem(16px);
     }
 }
 

@@ -8,21 +8,23 @@
 
 .blog {
     &__preview {
+      position: relative;
       display: flex;
       align-items: center;
-      width: 85%;
+      width: 55%;
       margin: auto;
     }
     &__discription {
       display: flex;
       flex-direction: column;
-      flex-basis: 25%;
+      flex-basis: 26%;
     }
     &__img {
       padding: 0 5% 0 0;
-      flex-basis: 50%;
-      width: 50%;
-      height: 50%;
+      align-items: center;
+      width: 655px;
+      height: 540px;
       overflow: hidden;
+      display: flex;
     }
 }

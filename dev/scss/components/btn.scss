@@ -2,21 +2,20 @@
     position: relative;
     display: flex;
     justify-content: center;
+    text-transform: uppercase;
     align-items: center;
     font-size: rem(14px);
     text-decoration: none;
     letter-spacing: 0.1em;
-    width: 96px;
-    height: 34px; 
+    width: 105px;
+    height: 35px; 
 }
 
-.bnt__rectangle{
-    text-transform: uppercase;
+.btn__rectangle{
     border: 2px solid $gold;
-    text-align: center;
-    width: 120px;
-    font-size: 14px;
-    padding: rem(5px) rem(20px);
+    width: 190px;
+    font-size: rem(14px);
+    padding: rem(20px);
 }
 
 .btn--c_gb {
