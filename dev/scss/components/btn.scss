@@ -7,13 +7,26 @@
     font-size: rem(14px);
     text-decoration: none;
     letter-spacing: 0.1em;
-    width: 105px;
-    height: 35px; 
+    width: 130px;
+    height: 40px;
 }
 
-.btn__rectangle{
-    border: 2px solid $gold;
-    width: 190px;
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  svg rect,{
+    fill: none;
+    stroke: $gold;
+    stroke-width: 1;
+  }
+
+.btn__rec{
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
     font-size: rem(14px);
     padding: rem(20px);
 }
@@ -25,4 +38,8 @@
 
 .btn--b_hover {
     @include hover__b_effect($gold, $black, 1px, 7px, 0.2s);
+}
+
+.btn__rec--hover{
+    @include hover__rec_effect;
 }
