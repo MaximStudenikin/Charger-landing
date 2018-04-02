@@ -1,38 +1,41 @@
 .btn {
-    position: relative;
     display: flex;
     justify-content: center;
-    text-transform: uppercase;
     align-items: center;
+    position: relative;
+    text-transform: uppercase;
     font-size: rem(14px);
     text-decoration: none;
     letter-spacing: 0.1em;
-    width: 130px;
-    height: 40px;
+    width: 120px;
+    height: 35px;
 }
 
 svg {
     position: absolute;
     top: 0;
     left: 0;
-  }
+}
 
-  svg rect,{
+svg rect,
+    {
     fill: none;
     stroke: $gold;
     stroke-width: 1;
-  }
+}
 
-.btn__rec{
-  text-transform: uppercase;
-  position: relative;
-  cursor: pointer;
+.btn__rec {
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
     font-size: rem(14px);
     padding: rem(20px);
 }
 
 .btn--c_gb {
-    color: $gold; 
+    display: inline-block;
+    text-align: center;
+    color: $gold;
     border-bottom: 1px solid $gold;
 }
 
@@ -40,6 +43,6 @@ svg {
     @include hover__b_effect($gold, $black, 1px, 10px 6px, 0.2s);
 }
 
-.btn__rec--hover{
+.btn__rec--hover {
     @include hover__rec_effect;
 }

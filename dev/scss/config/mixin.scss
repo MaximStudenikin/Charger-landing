@@ -10,17 +10,9 @@
     color: $color;
     border-bottom: $width solid $color;
     cursor: pointer;
-    width: 96px;
     white-space: nowrap;
     overflow: hidden;
-    @keyframes width__an {
-        100% {
-            width: 110px;
-            transition: width ease-in-out;
-        }
-    }
-    transition: color $time ease-in-out,
-    background-color $time ease-in-out;
+    transition: color $time ease-in-out, background-color $time ease-in-out;
     &:after {
         content: '';
         position: absolute;
@@ -34,10 +26,9 @@
         transition-delay: $time * 3;
     }
     .btn__text {
+        padding: $padding;
         position: relative;
         display: block;
-        padding: 10px 0;
-        transition: padding $time ease-in-out;
         &:before,
         &:after {
             content: '';
@@ -60,10 +51,6 @@
             transition-delay: $time;
         }
     }
-    &:hover>.btn__text {
-        padding: $padding;
-        transition-delay: $time * 3;
-    }
     &:hover:after,
     &:hover>.btn__text:before,
     &:hover>.btn__text:after {
@@ -82,7 +69,6 @@
         color: $color-hov;
         background-color: $color;
         transition-delay: $time * 3;
-        animation: width__an $time $time * 3 ease-in-out forwards;
     }
 }
 
@@ -146,7 +132,7 @@
     }
     &:hover svg rect {
         stroke-width: 3;
-        stroke-dasharray: 65 204;
+        stroke-dasharray: 65 188;
         stroke-dashoffset: 65;
         transition: all 0.8s ease-in-out;
     }
