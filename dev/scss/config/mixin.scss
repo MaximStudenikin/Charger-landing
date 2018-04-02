@@ -36,7 +36,7 @@
     .btn__text {
         position: relative;
         display: block;
-        padding: $padding 0;
+        padding: 10px 0;
         transition: padding $time ease-in-out;
         &:before,
         &:after {
