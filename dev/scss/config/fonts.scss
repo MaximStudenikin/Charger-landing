@@ -1,11 +1,19 @@
-$playfair__bold: 'playfair_display_bold',Helvetica,Arial,sans-serif;
-
-$proxima_light: 'proxima_nova_light',Helvetica,Arial,sans-serif;
-
-$playfair_italic: 'playfair_display_italic',Helvetica,Arial,sans-serif;
-
-$proxima_regular: 'proxima_nova_regular',Helvetica,Arial,sans-serif;
-
+$playfair__bold: 'playfair_display_bold',
+Helvetica,
+Arial,
+sans-serif;
+$proxima_light: 'proxima_nova_light',
+Helvetica,
+Arial,
+sans-serif;
+$playfair_italic: 'playfair_display_italic',
+Helvetica,
+Arial,
+sans-serif;
+$proxima_regular: 'proxima_nova_regular',
+Helvetica,
+Arial,
+sans-serif;
 .logo {
     color: #fff;
     text-transform: uppercase;
@@ -23,7 +31,7 @@ $proxima_regular: 'proxima_nova_regular',Helvetica,Arial,sans-serif;
     font-family: $playfair__bold;
     font-size: rem(60px);
     position: relative;
-    &:after{
+    &:after {
         content: '';
         position: absolute;
         height: 2px;
@@ -37,60 +45,66 @@ $proxima_regular: 'proxima_nova_regular',Helvetica,Arial,sans-serif;
         color: $gold;
         font-size: rem(120px);
     }
-    &__sb{
+    &__sb {
         font-family: $playfair__bold;
         font-size: rem(24px);
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 50%;
+            left: 25%;
+            top: 60px;
+            background: $gold;
+        }
     }
 }
 
 .paragraph {
     font-family: $proxima_regular;
     font-size: rem(16px);
-    &__quote{
+    &__quote {
         font-family: $playfair_italic;
         font-size: rem(48px);
     }
 }
 
-    .user{
-        &__name{
-            font-family: $proxima_regular;
-            font-size: rem(30px);
-        }
-        &__car{
-            font-family: $proxima_light;
-            font-size: rem(18px);
-        }
+.user {
+    &__name {
+        font-family: $proxima_regular;
+        font-size: rem(30px);
     }
+    &__car {
+        font-family: $proxima_light;
+        font-size: rem(18px);
+    }
+}
 
 @font-face {
     font-family: 'playfair_display_bold';
-    src: url('../fonts/playfairdisplay-bold-webfont.woff2') format('woff2'), 
-    url('../fonts/playfairdisplay-bold-webfont.woff') format('woff');
+    src: url('../fonts/playfairdisplay-bold-webfont.woff2') format('woff2'), url('../fonts/playfairdisplay-bold-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'playfair_display_italic';
-    src: url('../fonts/playfairdisplay-italic-webfont.woff2') format('woff2'), 
-    url('../fonts/playfairdisplay-italic-webfont.woff') format('woff');
+    src: url('../fonts/playfairdisplay-italic-webfont.woff2') format('woff2'), url('../fonts/playfairdisplay-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: 400;
 }
 
 @font-face {
     font-family: 'proxima_nova_light';
-    src: url('../fonts/proxima_nova_light-webfont.woff2') format('woff2'), 
-    url('../fonts/proxima_nova_light-webfont.woff') format('woff');
+    src: url('../fonts/proxima_nova_light-webfont.woff2') format('woff2'), url('../fonts/proxima_nova_light-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima_nova_regular';
-    src: url('../fonts/proxima_nova_regular-webfont.woff2') format('woff2'), 
-    url('../fonts/proxima_nova_regular-webfont.woff') format('woff');
+    src: url('../fonts/proxima_nova_regular-webfont.woff2') format('woff2'), url('../fonts/proxima_nova_regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
