@@ -119,9 +119,6 @@
             transform: translateX(0%) translateY(calc(100% - 2px));
             opacity: 0;
         }
-        &:hover {
-            color: $color-hov;
-        }
     }
 }
 
