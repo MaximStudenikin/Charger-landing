@@ -95,21 +95,21 @@ block content
 								p.paragraph.services__paragraph Modification of the performance or appearance of a vehicle.
 								a.btn.services__btn.btn--b_hover(href='#') 
 									span.btn__text More
-						li.services__item
+						li.services__item.services__description--active
 							.services__img
 								img.img__teg(src='https://source.unsplash.com/-xpLiZVXUcg')
 							.services__description
 								h3.heading__sb Restoration
 								p.paragraph.services__paragraph Lorem ipsum dolor sit amet consectetur.
-								a.btn.btn--b_hover(href='#')
+								a.btn.services__btn.btn--b_hover(href='#')
 									span.btn__text More
-						li.services__item
+						li.services__item.services__description--active
 							.services__img
 								img.img__teg(src='https://source.unsplash.com/HHaKG9DaQ6w')
 							.services__description
 								h3.heading__sb Repairs
 								p.paragraph.services__paragraph Lorem ipsum dolor sit, amet consectetur adipisicing.
-								a.btn.btn--b_hover(href='#')
+								a.btn.services__btn.btn--b_hover(href='#')
 									span.btn__text More
 				.decorative
 					i.decorative__sb_big.services__decor S
@@ -121,29 +121,45 @@ block content
 					i.decorative__sb_big P
 					i.decorative__sb_small Our Portfolio
 			section.reviews
-				ul.slider__list
-					li.slider__item
+				ul.reviews__list
+					li.reviews__item
 						p.paragraph__quote These guys do amazing work here. They made my car awesome.
-						span.user__name John Brown
-						span.user__car Chevrolet Camaro
-					li.slider__item
+						.user__info
+							span.user__name John Brown
+							span.user__car Chevrolet Camaro
+					li.reviews__item
 						p.paragraph__quote Lorem ipsum dolor sit amet
-						span.user__name Brown John
-						span.user__car Chevrolet
-					li.slider__item
+						.user__info
+							span.user__name Brown John
+							span.user__car Chevrolet
+					li.reviews__item
 						p.paragraph__quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, explicabo.
-						span.user__name John
-						span.user__car Camaro
+						.user__info
+							span.user__name John
+							span.user__car Camaro
+				.reviews__controls
+					a.review__btn.reviews__btn_prev(href='#')
+						i.reviews__arrow_left
+					a.review__btn.reviews__btn_next(href='#')
+						i.reviews__arrow_right
+				.decorative
+					i.decorative__sb_big.reviews__decor T
+					i.decorative__sb_small Our Portfolio
 			section.blog
 				.blog__preview
-					.section__img
-						img.img__teg
-					h2.heading Charger
-					p.paragraph The most powerful and brand names in the  custom automotive industry. We now have franchises stretching across the world. We have worked with some of the largest brands in the world, including Fortune 500 companies. We are now a household name in multiple countries and plan to continue dominating the custom car world and expand our global reach with amazing rides and concepts.
-					p.paragraph We have an exceptional team, both in the workshop and office. We've done what others can't and we constantly strive to push the boundaries and expectations of this industry. If you or your company feel that you have something beneficial to offer our brand, we look forward to hearing from you.
-					a.bnt(href='#') more
-				.decorative
-					i.decorative__sb_big T
+					.blog__img
+						img.img__teg(src='https://source.unsplash.com/ykb57L1P_rs')
+					.blog__discription
+						h2.heading Charger
+						.blog__textarea.cut__32
+							p.paragraph.paragraph--initial_letter The most powerful and brand names in the  custom automotive industry. We now have franchises stretching across the world. We have worked with some of the largest brands in the world, including Fortune 500 companies. We are now a household name in multiple countries and plan to continue dominating the custom car world and expand our global reach with amazing rides and concepts.
+							p.paragraph.cut__32 We have an exceptional team, both in the workshop and office. We've done what others can't and we constantly strive to push the boundaries and expectations of this industry. If you or your company feel that you have something beneficial to offer our brand, we look forward to hearing from you.
+						a.btn.btn__rec.btn__rec--hover.cut__32(href='#')
+								svg(width="120" height="40" viewbox="0 0 120 40" xmlns="http://www.w3.org/2000/svg")
+									rect(x='0' y='0' fill='none' width='120' height='40')
+								| more
+				.decorative.decorative__side--right
+					i.decorative__sb_big.reviews__decor C
 					i.decorative__sb_small Our Portfolio
 			footer.footer__teg
 				a.logo(href='#')

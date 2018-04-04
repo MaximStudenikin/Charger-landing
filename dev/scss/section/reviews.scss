@@ -1,0 +1,56 @@
+.reviews {
+    position: relative;
+    color: $white;
+    display: flex;
+    align-items: center;
+    height: 80%;
+    &__list {
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    &__item {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    &__controls,
+    &__btn_next,
+    &__btn_prev {
+        position: absolute;
+    }
+    &__controls {
+        width: 85%;
+        top: 45%;
+    }
+    &__btn_next {
+        right: 0;
+    }
+    &__btn_prev {
+        right: 80%;
+    }
+    &__arrow_right,
+    &__arrow_left {
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: rem(10px);
+    }
+    &__arrow_left {
+        position: relative;
+        transform: rotate(135deg);
+        top: 15px;
+        left: 20px;
+    }
+    &__arrow_right {
+        position: relative;
+        transform: rotate(-45deg);
+        top: 15px;
+        left: 15px;
+    }
+    &__decor{
+      position: relative;
+      top: -75%;
+    }
+}
