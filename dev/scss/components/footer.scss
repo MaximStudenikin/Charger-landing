@@ -1,0 +1,41 @@
+.footer {
+    background: $black;
+    width: 100%;
+    height: 165px;
+    display: flex;
+    max-width: 1920px;
+    min-width: 320px;
+    overflow: hidden;
+    justify-content: space-evenly;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__block{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+}
+
+.copy{
+  color:$white;
+    opacity: 0.5;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  &__blok{
+    display: flex;
+  }
+  &__text{
+    color:$white;
+    opacity: 0.5;
+    padding: 0 rem(10px) 0 0;
+  }
+  &__autor{
+    color:$white;
+    opacity: 1;
+  }
+}
