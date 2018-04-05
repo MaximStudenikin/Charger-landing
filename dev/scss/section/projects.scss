@@ -1,4 +1,48 @@
 .projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   background: $white;
+  overflow: hidden;
+  &__heading{
+    top: 10%;
+  }
+  &__row{
+    margin: rem(15px) 0 0 0;
+  }
+  &__block{
+    margin: auto 0;
+  }
+}
+
+.slidershow{
+  position: relative;
+  white-space: nowrap;
+  &__item{
+    display: inline-block;
+    width: 20%;
+    padding: 0 rem(15px) 0 0;
+    
+    &:last-child{
+      padding: 0;
+    }
+  }
+  &__item:nth-child(2n){
+    width: 25%;
+  }
+}
+
+.slidershow__item--bottom{
+  vertical-align: bottom;
+}
+.slidershow__item--top{
+  vertical-align: top;
+}
+
+.slidershow--right{
+  right: 15%;
+}
+.slidershow--left{
+  left: -35%;
 }
