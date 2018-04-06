@@ -24,7 +24,7 @@
 ![charger презинтация](https://mir-s3-cdn-cf.behance.net/project_modules/fs/b437d858353073.5a02ab82505a8.jpg "Внешний вид шаблона")
 
 
-Demo: В процессе
+Demo (не окончен): https://maximstudenikin.github.io/Charger-landing/
 
 Автор шаблона: [Kirill Yevdokimov](https://www.behance.net/gallery/58353073/Charger-Customs-Free-Psd-Website-Template)
 
