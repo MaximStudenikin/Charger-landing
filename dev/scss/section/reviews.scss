@@ -3,7 +3,7 @@
     color: $white;
     display: flex;
     align-items: center;
-    height: 60%;
+    height: 90%;
     &__list {
         position: relative;
         display: inline-block;
@@ -50,7 +50,7 @@
         left: 15px;
     }
     &__decor{
-      position: relative;
-      top: -75%;
-    }
+        position: relative;
+        top: -70%;
+      }
 }

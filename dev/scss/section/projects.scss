@@ -2,26 +2,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   position: relative;
   background: $white;
   overflow: hidden;
   &__heading{
-    top: 10%;
+    top: 5%;
+    &::after{
+      left: 38%;
+    }
   }
   &__row{
     margin: rem(15px) 0 0 0;
   }
   &__block{
-    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__sb_big{
+    top: -30%;
+    position: relative;
+  }
+  &__sb_small{
+    position: relative;
+    bottom: -40%;
   }
 }
 
 .slidershow{
   position: relative;
   white-space: nowrap;
+  z-index: 2;
   &__item{
     display: inline-block;
-    width: 20%;
+    width: 15%;
     padding: 0 rem(15px) 0 0;
     
     &:last-child{
@@ -29,7 +43,7 @@
     }
   }
   &__item:nth-child(2n){
-    width: 25%;
+    width: 20%;
   }
 }
 
@@ -41,8 +55,9 @@
 }
 
 .slidershow--right{
-  right: 15%;
+  right: 25%;
 }
 .slidershow--left{
-  left: -35%;
+  left: -5%;
+  transform: translate(0.2%);
 }

@@ -1,23 +1,25 @@
 .services {
-    height: 60%;
+    height: 50%;
     position: relative;
     &__container {
         display: flex;
         flex-direction: column;
         width: 60%;
+        height: 100%;
         margin: auto;
     }
     &__header {
+        position: relative;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin: rem(118px) 0 0 0;
+        align-items: flex-end;
+        top: 10%;
     }
     &__list {
         position: absolute;
         color: $white;
         display: flex;
-        bottom: -70px;
+        bottom: -50px;
         justify-content: space-between;
         width: 60%;
     }

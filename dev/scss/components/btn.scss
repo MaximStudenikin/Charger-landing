@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
     text-transform: uppercase;
     font-size: rem(14px);
@@ -30,6 +31,7 @@ svg rect,
     cursor: pointer;
     font-size: rem(14px);
     padding: rem(20px);
+    color: $black;
 }
 
 .btn--c_gb {
