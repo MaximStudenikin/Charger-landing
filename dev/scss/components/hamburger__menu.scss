@@ -1,0 +1,83 @@
+.h__menu {
+    display: flex;
+}
+
+$menu-width: 40px;
+$menu-height: 50px;
+.h__block {
+  margin: 0 rem(10px) 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.h__open {
+    background: $black;
+    .h__bars:first-child {
+        transform: rotate(45deg);
+        transform-origin: 2px 90%;
+    }
+    .h__bars:nth-child(2) {
+        transform: translateX($menu-width);
+        opacity: 0;
+    }
+    .h__bars:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: 2px 50%;
+    }
+}
+
+.h__bars {
+    transition: all 0.2s ease-in-out;
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin:  5px 0 0 0;
+    background: $gold;
+    &:first-child{
+      margin: 0;
+    }
+}
+
+.h__text {
+    height: 20px;
+}
+
+// .h__list {
+//     position: absolute;
+//     width: 300px;
+//     margin: -100px 0 0 -50px;
+//     padding: 50px;
+//     padding-top: 125px;
+//     background: #ededed;
+//     list-style-type: none;
+//     -webkit-font-smoothing: antialiased;
+//     /* to stop flickering of text in safari */
+//     transform-origin: 0% 0%;
+//     transform: translate(-100%, 0);
+//     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+// }
+
+// .h__item {
+//     padding: 10px 0;
+//     font-size: 22px;
+// }
+
+// .h__list {
+//   margin: 0 auto;
+//   font-size: rem(24px);
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// }
+.h__item {
+    margin: 0 0 50px 0;
+    &:last-child {
+        margin: 0;
+    }
+}
