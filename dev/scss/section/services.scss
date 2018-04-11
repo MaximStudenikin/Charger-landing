@@ -1,12 +1,18 @@
 .services {
     height: 50%;
     position: relative;
+    @include portrait {
+        height: 100%;
+    }
     &__container {
         display: flex;
         flex-direction: column;
         width: 60%;
         height: 100%;
         margin: auto;
+        @include portrait {
+            width: 90%;
+        }
     }
     &__header {
         position: relative;
@@ -22,6 +28,9 @@
         bottom: -50px;
         justify-content: space-between;
         width: 60%;
+        @include portrait{
+            width: 90%;
+        }
     }
     &__item {
         position: relative;
@@ -57,7 +66,8 @@
         box-shadow: 0px -20px 20px 20px transparentize($black, 0.6);
         transition: top .6s ease-in-out;
         transition-delay: 0.3s;
-        &:after, &:before{
+        &:after,
+        &:before {
             z-index: 9;
             position: absolute;
             top: 15px;
@@ -79,10 +89,10 @@
             transform: scale(1, 0);
         }
     }
-    &__btn{
+    &__btn {
         z-index: 11;
     }
-    &__decor{
+    &__decor {
         position: relative;
         top: -85%;
     }
@@ -93,7 +103,8 @@
             justify-content: space-evenly;
             transition: top .3s ease-in-out;
             transition-delay: 0.3s;
-            &:before, &:after {
+            &:before,
+            &:after {
                 opacity: 1;
                 transform: scale(1);
             }

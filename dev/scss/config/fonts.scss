@@ -44,6 +44,9 @@ sans-serif;
         font-family: $playfair__bold;
         color: $gold;
         font-size: rem(120px);
+        @include portrait {
+            font-size: rem(60px);
+        }
     }
     &__sb {
         font-family: $playfair__bold;
@@ -69,6 +72,9 @@ sans-serif;
         font-size: rem(48px);
         white-space: normal;
         padding: 0 20%;
+        @include portrait {
+            padding: 0 10%;
+        }
     }
 }
 
@@ -86,7 +92,7 @@ sans-serif;
     &__info {
         position: relative;
         margin: rem(50px) 0 0 0;
-        &:before{
+        &:before {
             content: '';
             position: absolute;
             height: 2px;

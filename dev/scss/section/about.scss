@@ -14,11 +14,17 @@
       align-items: center;
       width: 55%;
       margin: auto;
+      @include portrait{
+        flex-direction: column;
+    }
     }
     &__discription {
       display: flex;
       flex-direction: column;
       flex-basis: 35%;
+      @include portrait{
+        margin: rem(32px) 0 0 0;
+    }
     }
     &__img {
       padding: 0 10% 0 0;
@@ -27,5 +33,8 @@
       height: 540px;
       overflow: hidden;
       display: flex;
+      @include portrait{
+        padding: 0;
+    }
     }
 }

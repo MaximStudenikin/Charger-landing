@@ -9,8 +9,7 @@ section {
 .wrap {
     position: relative;
     width: 100%;
-    height: 100%; 
-    // overflow: hidden;
+    height: 100%; // overflow: hidden;
 }
 
 .maincontent {
@@ -53,10 +52,19 @@ section {
     top: 20%;
     opacity: .5;
     line-height: 1;
+    @include portrait {
+        top: 25%;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
     &__sb_big {
         font-size: rem(300px);
         font-family: $playfair__bold;
         font-style: normal;
+        @include portrait {
+            position: relative;
+            top: -25%;
+        }
     }
     &__sb_small {
         display: flex;
@@ -72,6 +80,9 @@ section {
     }
     &__side--right {
         right: 8%;
+        @include portrait {
+            right: 4%;
+        }
     }
     &__side--left {
         left: 15%;

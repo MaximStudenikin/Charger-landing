@@ -23,34 +23,60 @@
         overflow: hidden;
         flex-direction: column;
         justify-content: space-between;
+        @include portrait{
+            justify-content: center;
+        }
+    }
+    &__social{
+        @include portrait{
+            display: none;
+        }
     }
 }
 
 .slider {
     width: 100%;
+    top: -10%;
+    position: relative;
     &__list {
         position: relative;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        white-space: nowrap;
         width: 100%;
         height: 100%;
         right: 0;
     }
     &__item {
-        display: flex;
-        flex-direction: column;
+        display: inline-block;
         width: 100%;
-        margin: 0 rem(200px) 0 0;
+        white-space: normal;
+    }
+}
+
+.welcome__text{
+    width: 60%;
+    @include portrait{
+        width: 100%;
+    }
+}
+
+.scroll__down{
+    @include portrait{
+        display: none;
     }
 }
 
 .nav {
+
+    @include portrait{
+        display: none;
+    }
+
     &__list {
         display: flex;
     }
     &__item {
         padding: 0 rem(38px) 0 0;
+        height: 40px;
         &:last-child {
             padding: 0;
         }
@@ -66,11 +92,16 @@
 }
 
 .pagination {
+
     &__list {
         display: flex;
         font-family: $playfair__bold;
         font-family: rem(26px);
+        @include portrait{
+            display: none;
+        }
     }
+
     &__item {
         &:after {
             content: '';
@@ -81,10 +112,13 @@
             opacity: 0.55;
             background: $white;
         }
+
         &:last-child::after {
             content: none;
         }
+
     }
+
 }
 
 .social {

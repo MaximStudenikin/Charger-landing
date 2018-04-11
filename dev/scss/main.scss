@@ -8,12 +8,12 @@ $black: #000;
 @import "../../node_modules/fast-grid/fast-grid";
 
 //config
+@import "./config/media";
 @import "./config/mixin";
 @import "./config/fonts";
 @import "./config/grid";
 @import "./config/base";
 @import "./config/adjustment";
-
 
 //sections
 @import "./section/welcome";

@@ -1,28 +1,28 @@
 .h__menu {
     display: flex;
+    z-index: 2;
+    cursor: pointer;
 }
 
-$menu-width: 40px;
-$menu-height: 50px;
 .h__block {
-  margin: 0 rem(10px) 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    margin: 0 rem(10px) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     &:hover {
         cursor: pointer;
     }
 }
 
 .h__open {
-    background: $black;
+    background: $white;
     .h__bars:first-child {
         transform: rotate(45deg);
         transform-origin: 2px 90%;
     }
     .h__bars:nth-child(2) {
-        transform: translateX($menu-width);
+        transform: translateX(40px);
         opacity: 0;
     }
     .h__bars:nth-child(3) {
@@ -36,48 +36,57 @@ $menu-height: 50px;
     display: block;
     width: 20px;
     height: 1px;
-    margin:  5px 0 0 0;
+    margin: 5px 0 0 0;
     background: $gold;
-    &:first-child{
-      margin: 0;
+    &:first-child {
+        margin: 0;
     }
 }
 
 .h__text {
+    color: $white;
     height: 20px;
 }
 
-// .h__list {
-//     position: absolute;
-//     width: 300px;
-//     margin: -100px 0 0 -50px;
-//     padding: 50px;
-//     padding-top: 125px;
-//     background: #ededed;
-//     list-style-type: none;
-//     -webkit-font-smoothing: antialiased;
-//     /* to stop flickering of text in safari */
-//     transform-origin: 0% 0%;
-//     transform: translate(-100%, 0);
-//     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-// }
+.h__text--black {
+    transition: all 0.2s ease-in-out;
+    color: $black;
+}
 
-// .h__item {
-//     padding: 10px 0;
-//     font-size: 22px;
-// }
-
-// .h__list {
-//   margin: 0 auto;
-//   font-size: rem(24px);
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-// }
-.h__item {
-    margin: 0 0 50px 0;
-    &:last-child {
-        margin: 0;
+.h__content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transform: translate(100%, 0);
+    transition: all 400ms ease-in-out;
+    &.h__content--open {
+        transform: translate(0);
     }
+}
+
+.h__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    text-transform: uppercase;
+    background: $white;
+    overflow: hidden;
+}
+
+.h__item {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+.h__link {
+    color: $black;
 }
