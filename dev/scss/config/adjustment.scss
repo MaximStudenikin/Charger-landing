@@ -54,8 +54,7 @@ section {
     line-height: 1;
     @include portrait {
         top: 25%;
-        height: 100%;
-        flex-direction: column-reverse;
+        height: 60%;
     }
     &__sb_big {
         font-size: rem(300px);

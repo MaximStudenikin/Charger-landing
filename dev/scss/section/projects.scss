@@ -37,6 +37,9 @@
     display: inline-block;
     width: 15%;
     padding: 0 rem(15px) 0 0;
+    @include portrait{
+      width: 45%;
+    }
     
     &:last-child{
       padding: 0;
@@ -44,7 +47,11 @@
   }
   &__item:nth-child(2n){
     width: 20%;
+    @include portrait{
+      width: 55%;
+    }
   }
+  
 }
 
 .slidershow__item--bottom{

@@ -12,6 +12,7 @@
         margin: auto;
         @include portrait {
             width: 90%;
+            align-items: center;
         }
     }
     &__header {
@@ -20,6 +21,11 @@
         justify-content: space-between;
         align-items: flex-end;
         top: 10%;
+        @include portrait{
+            justify-content: space-between;
+            top: 4%;
+            width: 85%;
+        }
     }
     &__list {
         position: absolute;
@@ -30,6 +36,8 @@
         width: 60%;
         @include portrait{
             width: 90%;
+            top: 15%;
+            flex-direction: column;
         }
     }
     &__item {
@@ -37,11 +45,17 @@
         display: flex;
         justify-content: center;
         align-self: center;
-        max-width: 350px;
-        max-height: 350px;
+        width: 350px;
+        height: 350px;
         overflow: hidden;
         &:last-child {
             padding: 0;
+        }
+        @include portrait{
+            flex-direction: column;
+            height: 30%;
+            width: 90%;
+            overflow: hidden;
         }
     }
     &__img {
@@ -52,6 +66,18 @@
         z-index: 1;
     }
     &__description {
+        @include portrait{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 10;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
         position: absolute;
         display: flex;
         flex-direction: column;
