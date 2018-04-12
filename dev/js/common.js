@@ -12,35 +12,6 @@ $(document).ready(function () {
 
     //slider
 
-    //click ruls btn
-
-    $('[data-class="slider__controls"]').on('click', function (event) {
-        event.preventDefault();
-
-        var $this = $(event.currentTarget),
-            cont = $this.closest('[data-class="slider__teg"]'),
-            items = $('[data-class="slider__item"]', cont),
-            activeItem = items.filter('.active__slide');
-        var existedItem,
-            edgeItem,
-            reqItem;
-
-        if ($this.hasClass('controls__btn_next')) {
-            existedItem = activeItem.next();
-            edgeItem = items.first();
-        }
-
-        if ($this.hasClass('controls__btn_prev')) {
-            existedItem = activeItem.prev();
-            edgeItem = items.last();
-        }
-
-        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
-
-        moveSlide(cont, reqItem);
-
-    });
-
     //searh number slid and activ slide
 
     var moveSlide = function (cont, slideNum) {
@@ -62,5 +33,34 @@ $(document).ready(function () {
         }
 
     };
+
+    //click ruls btn
+
+    $('.reviews__controls').on('click', function (event) {
+        event.preventDefault();
+
+        var $this = $(event.target),
+            cont = $this.closest('.reviews__slider'),
+            items = $('.reviews__item', cont),
+            activeItem = items.filter('.active__slide');
+        var existedItem,
+            edgeItem,
+            reqItem;
+
+        if ($this.hasClass('reviews__btn_next')) {
+           existedItem = activeItem.next();
+           edgeItem = items.first();  
+        }
+
+        if ($this.hasClass('reviews__btn_prev')) {
+           existedItem = activeItem.prev();
+           edgeItem = items.last();
+        }
+
+        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+
+        moveSlide(cont, reqItem);
+
+    });
 
 });
