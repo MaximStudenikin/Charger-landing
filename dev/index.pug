@@ -12,8 +12,8 @@ block content
 								.logo__text
 									span.logo__heading Charger
 									span.logo__sub Customs
-						.controls
-							a.controls__btn.controls__btn_prev(href='#') prev
+						.controls(data-slider_controls)
+							a.controls__btn.controls__btn_prev.btn__prev(href='#') prev
 						ul.social__list.welcome__social
 							li.social__item
 								a.social__link.social__link--hover(href='#') Facebook
@@ -31,26 +31,26 @@ block content
 								li.nav__item
 									a.nav__link.nav__link--hover(href='#') projects
 						.slider
-							ul.slider__list
-								li.slider__item
+							ul.slider__list(data-slider_list)
+								li.slider__item.active__slide(data-slider_item)
 									h1.heading__welcome We’re Charger
 									p.paragraph.welcome__text.cut__32 One of the most powerful and recognized brand names in the custom automotive industry.
 									a.btn.btn__sb.cut__62.btn--c_gb.btn--b_hover(href='#')
 										span.btn__text Read more
-								li.slider__item
+								li.slider__item(data-slider_item)
 									h1.heading__welcome Lorem, powerful
 									p.paragraph.welcome__text.cut__32 Lorem ipsum dolor, sit amet consectetur adipisicing.
 									a.btn.btn__sb.cut__62.btn--c_gb.btn--b_hover(href='#') 
 										span.btn__text Read more
-								li.slider__item
+								li.slider__item(data-slider_item)
 									h1.heading__welcome Lorem
 									p.paragraph.welcome__text.cut__32 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda?
 									a.btn.btn__sb.cut__62.btn--c_gb.btn--b_hover(href='#') Read more
-								li.slider__item
+								li.slider__item(data-slider_item)
 									h1.heading__welcome Lorem dolor
 									p.paragraph.welcome__text.cut__32 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam deserunt corporis dolorem?
 									a.btn.btn__sb.cut__62.btn--c_gb.btn--b_hover(href='#') Read more
-								li.slider__item
+								li.slider__item(data-slider_item)
 									h1.heading__welcome Lorem ipsum dolor
 									p.paragraph.welcome__text.cut__32 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, perferendis.
 									a.btn.btn__sb.cut__62.btn--c_gb.btn--b_hover(href='#') Read more
@@ -67,7 +67,7 @@ block content
 								span.h__bars
 							span.h__text Menu
 						.controls
-							a.controls__btn.controls__btn_next(href='#') next
+							a.controls__btn.controls__btn_next.btn__next(href='#') next
 						span.scroll__down scroll down
 			section.about
 					.blog__preview
@@ -161,26 +161,26 @@ block content
 					i.decorative__sb_big.projects__sb_big P
 					i.decorative__sb_small.projects__sb_small Our Portfolio
 			section.reviews
-				.reviews__slider(data-class="slider__teg")
-					ul.reviews__list(data-class="slider__list")
-						li.reviews__item.active__slide(data-class="slider__item")
+				.reviews__slider
+					ul.reviews__list(data-slider_list)
+						li.reviews__item.active__slide(data-slider_item)
 							p.paragraph__quote These guys do amazing work here. They made my car awesome.
 							.user__info
 								span.user__name John Brown
 								span.user__car Chevrolet Camaro
-						li.reviews__item(data-class="slider__item")
+						li.reviews__item(data-slider_item)
 							p.paragraph__quote Lorem ipsum dolor sit amet
 							.user__info
 								span.user__name Brown John
 								span.user__car Chevrolet
-						li.reviews__item(data-class="slider__item")
+						li.reviews__item(data-slider_item)
 							p.paragraph__quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, explicabo.
 							.user__info
 								span.user__name John
 								span.user__car Camaro
-					.reviews__controls(data-class="slider__controls")
-						a.review__btn.btn__prev.reviews__btn_prev(href='#')
-						a.review__btn.btn__next.reviews__btn_next(href='#')
+					.reviews__controls
+						a.btn__prev.reviews__btn_prev(href='#')
+						a.btn__next.reviews__btn_next(href='#')
 				.decorative
 					i.decorative__sb_big.reviews__decor T
 					i.decorative__sb_small Our Portfolio

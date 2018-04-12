@@ -16,11 +16,11 @@ $(document).ready(function () {
 
     var moveSlide = function (cont, slideNum) {
 
-        var items = cont.find('[data-class="slider__item"]'),
+        var items = cont.find('[data-slider_item]'),
             activeSlide = items.filter('.active__slide'),
             reqItem = items.eq(slideNum),
             reqIndex = reqItem.index(),
-            list = cont.find('[data-class="slider__list"]'),
+            list = cont.find('[data-slider_list]'),
             dur = 500;
 
         if (reqItem.length) {
@@ -34,27 +34,56 @@ $(document).ready(function () {
 
     };
 
-    //click ruls btn
+    //click ruls btn welcome slider
+
+    $('.controls').on('click', function (event) {
+        event.preventDefault();
+        var $this = $(event.target),
+            cont = $this.parents().find('.slider'),
+            items = $('[data-slider_item]', cont),
+            activeItem = items.filter('.active__slide');
+        var existedItem,
+            edgeItem,
+            reqItem;
+
+        if ($this.hasClass('btn__next')) {
+            existedItem = activeItem.next();
+            edgeItem = items.first();
+        }
+
+        if ($this.hasClass('btn__prev')) {
+            cont = $this.parentsUntil().find('.slider');
+            existedItem = activeItem.prev();
+            edgeItem = items.last();
+        }
+
+        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+
+        moveSlide(cont, reqItem);
+
+    });
+
+    //click ruls btn reviews slider
 
     $('.reviews__controls').on('click', function (event) {
         event.preventDefault();
 
         var $this = $(event.target),
             cont = $this.closest('.reviews__slider'),
-            items = $('.reviews__item', cont),
+            items = $('[data-slider_item]', cont),
             activeItem = items.filter('.active__slide');
         var existedItem,
             edgeItem,
             reqItem;
 
-        if ($this.hasClass('reviews__btn_next')) {
-           existedItem = activeItem.next();
-           edgeItem = items.first();  
+        if ($this.hasClass('btn__next')) {
+            existedItem = activeItem.next();
+            edgeItem = items.first();
         }
 
-        if ($this.hasClass('reviews__btn_prev')) {
-           existedItem = activeItem.prev();
-           edgeItem = items.last();
+        if ($this.hasClass('btn__prev')) {
+            existedItem = activeItem.prev();
+            edgeItem = items.last();
         }
 
         reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
