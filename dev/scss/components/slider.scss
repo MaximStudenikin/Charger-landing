@@ -1,3 +1,14 @@
+.slider{
+    &__img{
+        position: absolute;
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        z-index: -1;
+        right: 99999px;
+    }
+}
+
 .controls {
     display: flex;
     &__btn {

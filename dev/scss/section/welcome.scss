@@ -1,8 +1,11 @@
 .welcome {
     position: relative;
+    background: $black no-repeat;
+    background-size: cover;
     color: $white;
     padding: rem(45px);
     display: flex;
+    z-index: 2;
     .left,
     .right {
         width: 95%;
@@ -23,12 +26,12 @@
         overflow: hidden;
         flex-direction: column;
         justify-content: space-between;
-        @include portrait{
+        @include portrait {
             justify-content: center;
         }
     }
-    &__social{
-        @include portrait{
+    &__social {
+        @include portrait {
             display: none;
         }
     }
@@ -52,25 +55,23 @@
     }
 }
 
-.welcome__text{
+.welcome__text {
     width: 60%;
-    @include portrait{
+    @include portrait {
         width: 100%;
     }
 }
 
-.scroll__down{
-    @include portrait{
+.scroll__down {
+    @include portrait {
         display: none;
     }
 }
 
 .nav {
-
-    @include portrait{
+    @include portrait {
         display: none;
     }
-
     &__list {
         display: flex;
     }
@@ -86,22 +87,20 @@
         text-decoration: none;
         text-transform: uppercase;
     }
-    &__link--hover{
+    &__link--hover {
         @include hover__l_effect($white, $gold);
     }
 }
 
 .pagination {
-
     &__list {
         display: flex;
         font-family: $playfair__bold;
         font-family: rem(26px);
-        @include portrait{
+        @include portrait {
             display: none;
         }
     }
-
     &__item {
         &:after {
             content: '';
@@ -112,13 +111,10 @@
             opacity: 0.55;
             background: $white;
         }
-
         &:last-child::after {
             content: none;
         }
-
     }
-
 }
 
 .social {
@@ -137,7 +133,7 @@
             content: none;
         }
     }
-    &__link--hover{
+    &__link--hover {
         @include hover__l_effect($white, $gold);
     }
 }

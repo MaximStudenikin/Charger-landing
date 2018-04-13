@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('.h__menu').on('click', function (e) {
         e.preventDefault();
 
-        const container = $('.h__menu');
+        var container = $('.h__menu');
 
         $('.h__block', container).toggleClass('h__open');
         $('.h__text', container).toggleClass('h__text--black');
@@ -38,24 +38,33 @@ $(document).ready(function () {
 
     $('.controls').on('click', function (event) {
         event.preventDefault();
+
         var $this = $(event.target),
             cont = $this.parents().find('.slider'),
+            browsing = $this.closest('.welcome--slider__bg', cont),
             items = $('[data-slider_item]', cont),
             activeItem = items.filter('.active__slide');
+
         var existedItem,
             edgeItem,
             reqItem;
 
         if ($this.hasClass('btn__next')) {
             existedItem = activeItem.next();
+            var backImg = activeItem.find('.slider__img').attr('src');
+            browsing.css('background', 'url(' + backImg + ') no-repeat');
+            browsing.css('backgroundSize', 'cover');
             edgeItem = items.first();
         }
 
         if ($this.hasClass('btn__prev')) {
             cont = $this.parentsUntil().find('.slider');
             existedItem = activeItem.prev();
+            var backImg = activeItem.find('.slider__img').attr('src');
+            browsing.css('background', 'url(' + backImg + ') no-repeat');
+            browsing.css('backgroundSize', 'cover');
             edgeItem = items.last();
-        }
+        };
 
         reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
 
