@@ -25,12 +25,12 @@ $(document).ready(function () {
             edgeItem,
             reqItem;
 
-        if ($this.hasClass('controls__btn_next')) {
+        if ($this.classList('controls__btn_next')) {
             existedItem = activeItem.next();
             edgeItem = items.first();
         }
 
-        if ($this.hasClass('controls__btn_prev')) {
+        if ($this.classList('controls__btn_prev')) {
             existedItem = activeItem.prev();
             edgeItem = items.last();
         }
