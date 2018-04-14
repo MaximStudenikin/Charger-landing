@@ -3,8 +3,7 @@
     color: $white;
     display: flex;
     height: 90%;
-    
-    &__slider{
+    &__slider {
         position: relative;
         width: 100%;
     }
@@ -27,38 +26,45 @@
     &__controls {
         width: 85%;
         top: 45%;
-        @include portrait{
-			width: 100%;
-			right: 10%;
-		}
+        @include portrait {
+            width: 100%;
+            right: 10%;
+        }
+    }
+    &__btn_next,
+    &__btn_prev {
+        width: 50px;
+        height: 50px;
+        &:after {
+            content: '';
+            border: solid $white;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: rem(10px);
+        }
     }
     &__btn_next {
         right: 0;
+        &:after {
+            content: '';
+            position: relative;
+            transform: rotate(-45deg);
+            top: 15px;
+            left: 15px;
+        }
     }
     &__btn_prev {
         right: 80%;
+        &:after {
+            content: '';
+            position: relative;
+            transform: rotate(135deg);
+            top: 15px;
+            left: 20px;
+        }
     }
-    &__arrow_right,
-    &__arrow_left {
-        border: solid $white;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: rem(10px);
-    }
-    &__arrow_left {
-        position: relative;
-        transform: rotate(135deg);
-        top: 15px;
-        left: 20px;
-    }
-    &__arrow_right {
-        position: relative;
-        transform: rotate(-45deg);
-        top: 15px;
-        left: 15px;
-    }
-    &__decor{
+    &__decor {
         position: relative;
         top: -70%;
-      }
+    }
 }

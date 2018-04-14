@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('.h__menu').on('click', function (e) {
         e.preventDefault();
 
-        const container = $('.h__menu');
+        var container = $('.h__menu');
 
         $('.h__block', container).toggleClass('h__open');
         $('.h__text', container).toggleClass('h__text--black');
@@ -12,44 +12,15 @@ $(document).ready(function () {
 
     //slider
 
-    //click ruls btn
-
-    $('[data-class="slider__controls"]').on('click', function (event) {
-        event.preventDefault();
-
-        var $this = $(event.currentTarget),
-            cont = $this.closest('[data-class="slider__teg"]'),
-            items = $('[data-class="slider__item"]', cont),
-            activeItem = items.filter('.active__slide');
-        var existedItem,
-            edgeItem,
-            reqItem;
-
-        if ($this.classList('controls__btn_next')) {
-            existedItem = activeItem.next();
-            edgeItem = items.first();
-        }
-
-        if ($this.classList('controls__btn_prev')) {
-            existedItem = activeItem.prev();
-            edgeItem = items.last();
-        }
-
-        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
-
-        moveSlide(cont, reqItem);
-
-    });
-
     //searh number slid and activ slide
 
     var moveSlide = function (cont, slideNum) {
 
-        var items = cont.find('[data-class="slider__item"]'),
+        var items = cont.find('[data-slider_item]'),
             activeSlide = items.filter('.active__slide'),
             reqItem = items.eq(slideNum),
             reqIndex = reqItem.index(),
-            list = cont.find('[data-class="slider__list"]'),
+            list = cont.find('[data-slider_list]'),
             dur = 500;
 
         if (reqItem.length) {
@@ -62,5 +33,80 @@ $(document).ready(function () {
         }
 
     };
+
+    //click ruls btn welcome slider
+
+    $('.controls').on('click', function (event) {
+        event.preventDefault();
+
+        var $this = $(event.target),
+            cont = $this.parents().find('.slider'),
+            browsing = $this.closest('.welcome--slider__bg', cont),
+            items = $('[data-slider_item]', cont),
+            activeItem = items.filter('.active__slide');
+
+        var existedItem,
+            edgeItem,
+            reqItem;
+
+<<<<<<< HEAD
+        if ($this.classList('controls__btn_next')) {
+=======
+        if ($this.hasClass('btn__next')) {
+>>>>>>> 6cb3915e935d658c912e002be126be65c2573551
+            existedItem = activeItem.next();
+            var backImg = activeItem.find('.slider__img').attr('src');
+            browsing.css('background', 'url(' + backImg + ') no-repeat');
+            browsing.css('backgroundSize', 'cover');
+            edgeItem = items.first();
+        }
+
+<<<<<<< HEAD
+        if ($this.classList('controls__btn_prev')) {
+=======
+        if ($this.hasClass('btn__prev')) {
+            cont = $this.parentsUntil().find('.slider');
+>>>>>>> 6cb3915e935d658c912e002be126be65c2573551
+            existedItem = activeItem.prev();
+            var backImg = activeItem.find('.slider__img').attr('src');
+            browsing.css('background', 'url(' + backImg + ') no-repeat');
+            browsing.css('backgroundSize', 'cover');
+            edgeItem = items.last();
+        };
+
+        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+
+        moveSlide(cont, reqItem);
+
+    });
+
+    //click ruls btn reviews slider
+
+    $('.reviews__controls').on('click', function (event) {
+        event.preventDefault();
+
+        var $this = $(event.target),
+            cont = $this.closest('.reviews__slider'),
+            items = $('[data-slider_item]', cont),
+            activeItem = items.filter('.active__slide');
+        var existedItem,
+            edgeItem,
+            reqItem;
+
+        if ($this.hasClass('btn__next')) {
+            existedItem = activeItem.next();
+            edgeItem = items.first();
+        }
+
+        if ($this.hasClass('btn__prev')) {
+            existedItem = activeItem.prev();
+            edgeItem = items.last();
+        }
+
+        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+
+        moveSlide(cont, reqItem);
+
+    });
 
 });
