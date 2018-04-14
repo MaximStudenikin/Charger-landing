@@ -27,7 +27,7 @@ block content
 									span.h__bars
 								span.h__text Menu
 					.welcome__center
-						.slider
+						.slider(data-slider)
 							ul.slider__list(data-slider_list)
 								li.slider__item.active__slide(data-slider_item)
 									h1.heading__welcome We’re Charger
@@ -61,7 +61,7 @@ block content
 									a.pagination__link 01
 								li.pagination__item
 									a.pagination__link 10
-						.slider__controls(data-slider_controls)
+						.slider__controls
 							a.slider__btn_prev.slider__btn_prev--line(href='#') prev
 							a.slider__btn_next.slider__btn_next--line(href='#') next
 					.welcome__footer
@@ -165,7 +165,7 @@ block content
 					i.decorative__sb_big.projects__sb_big P
 					i.decorative__sb_small.projects__sb_small Our Portfolio
 			section.reviews
-				.reviews__slider
+				.reviews__slider(data-slider)
 					ul.reviews__list(data-slider_list)
 						li.reviews__item.active__slide(data-slider_item)
 							p.paragraph__quote These guys do amazing work here. They made my car awesome.
