@@ -26,8 +26,6 @@ block content
 									span.h__bars
 									span.h__bars
 								span.h__text Menu
-						
-						
 					.welcome__center
 						.slider
 							ul.slider__list(data-slider_list)
@@ -63,9 +61,9 @@ block content
 									a.pagination__link 01
 								li.pagination__item
 									a.pagination__link 10
-						.controls(data-slider_controls)
-							a.controls__btn.controls__btn_next.btn__next(href='#') next
-							a.controls__btn.controls__btn_prev.btn__prev(href='#') prev
+						.slider__controls(data-slider_controls)
+							a.slider__btn_prev.slider__btn_prev--line(href='#') prev
+							a.slider__btn_next.slider__btn_next--line(href='#') next
 					.welcome__footer
 						ul.social__list.welcome__social
 							li.social__item
@@ -184,9 +182,9 @@ block content
 							.user__info
 								span.user__name John
 								span.user__car Camaro
-					.reviews__controls
-						a.btn__prev.reviews__btn_prev(href='#')
-						a.btn__next.reviews__btn_next(href='#')
+					.slider__controls.slider__conrols--reviews
+						a.slider__btn_prev.slider__btn_prev--arrow(href='#')
+						a.slider__btn_next.slider__btn_next--arrow(href='#')
 				.decorative
 					i.decorative__sb_big.reviews__decor T
 					i.decorative__sb_small Our Portfolio

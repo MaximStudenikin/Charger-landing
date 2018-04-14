@@ -49,11 +49,7 @@ $(document).ready(function () {
             edgeItem,
             reqItem;
 
-<<<<<<< HEAD
-        if ($this.classList('controls__btn_next')) {
-=======
         if ($this.hasClass('btn__next')) {
->>>>>>> 6cb3915e935d658c912e002be126be65c2573551
             existedItem = activeItem.next();
             var backImg = activeItem.find('.slider__img').attr('src');
             browsing.css('background', 'url(' + backImg + ') no-repeat');
@@ -61,12 +57,8 @@ $(document).ready(function () {
             edgeItem = items.first();
         }
 
-<<<<<<< HEAD
-        if ($this.classList('controls__btn_prev')) {
-=======
         if ($this.hasClass('btn__prev')) {
             cont = $this.parentsUntil().find('.slider');
->>>>>>> 6cb3915e935d658c912e002be126be65c2573551
             existedItem = activeItem.prev();
             var backImg = activeItem.find('.slider__img').attr('src');
             browsing.css('background', 'url(' + backImg + ') no-repeat');
