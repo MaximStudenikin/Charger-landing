@@ -1,7 +1,13 @@
 .cut__62{
   margin: rem(62px) 0 0 0;
+  @include landscape{
+    margin: rem(62px / 1.4) 0 0 0;
+}
   @include portrait{
-    margin: rem(32px) 0 0 0;
+    margin: rem(62px / 2) 0 0 0;
+}
+  @include landscape__phones{
+    margin: rem(62px / 3) 0 0 0;
 }
 }
 .cut__42{
@@ -9,4 +15,13 @@
 }
 .cut__32{
   margin: rem(32px) 0 0 0;
+  @include landscape{
+    margin: rem(32px / 1.4) 0 0 0;
+}
+@include portrait{
+  margin: rem(32px /1.2) 0 0 0;
+}
+@include portrait__phones{
+  margin: rem(32px / 2) 0 0 0;
+}
 }

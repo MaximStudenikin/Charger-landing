@@ -3,7 +3,6 @@
     position: absolute;
     overflow: hidden;
     margin: auto;
-
     &__list {
         position: relative;
         white-space: nowrap;
@@ -14,22 +13,21 @@
         display: inline-block;
         width: 100%;
         white-space: normal;
+        vertical-align: middle;
     }
-
-&__img {
-    position: absolute;
-    display: inline-block;
-    width: 1px;
-    height: 1px;
-    z-index: -1;
-    right: 99999px;
-}
-
-&__controls {
-    display: flex;
-    position: relative;
-    width: 100%;
-}
+    &__img {
+        position: absolute;
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        z-index: -1;
+        right: 99999px;
+    }
+    &__controls {
+        display: flex;
+        position: relative;
+        width: 100%;
+    }
 }
 
 .slider__btn_prev,
@@ -46,6 +44,9 @@
         width: 47px;
         height: 1px;
         background: $gold;
+        @include portrait__phones{
+            width: 20px;
+          }
     }
 }
 
@@ -59,6 +60,9 @@
         width: 47px;
         height: 1px;
         background: $gold;
+        @include portrait__phones{
+        width: 20px;
+      }
     }
 }
 
@@ -97,4 +101,16 @@
             left: 20px;
         }
     }
+}
+.slider-bg{
+    position: absolute;
+    filter: grayscale(100%);
+    box-shadow: inset 0 0 10px 5px rgba(0,0,0,0.5);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0.5;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
 }

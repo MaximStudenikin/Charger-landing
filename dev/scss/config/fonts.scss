@@ -31,6 +31,7 @@ sans-serif;
     font-family: $playfair__bold;
     font-size: rem(60px);
     position: relative;
+   
     &:after {
         content: '';
         position: absolute;
@@ -44,9 +45,18 @@ sans-serif;
         font-family: $playfair__bold;
         color: $gold;
         font-size: rem(120px);
-        @include portrait {
-            font-size: rem(60px);
+        @include landscape{
+            font-size: rem(120px / 1.3);
         }
+        @include portrait {
+            font-size: rem(120px / 1.6);
+        }
+        @include landscape__phones {
+            font-size: rem(120px / 1.6);
+        }
+        @include portrait__phones{
+            font-size: rem(120px / 2.6);
+          }
     }
     &__sb {
         font-family: $playfair__bold;
@@ -67,6 +77,9 @@ sans-serif;
 .paragraph {
     font-family: $proxima_regular;
     font-size: rem(16px);
+    @include portrait__phones{
+        font-size: rem(16px / 1.3);
+      }
     &__quote {
         font-family: $playfair_italic;
         font-size: rem(48px);
