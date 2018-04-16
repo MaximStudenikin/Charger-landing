@@ -26,6 +26,7 @@ $black: #000;
 //components
 @import "./components/btn";
 @import "./components/logo";
-@import "./components/hamburger__menu";
-@import "./components/slider";
-@import "./components/footer";
+@import "./components/header";
+@import "./components/h-menu/h-menu";
+@import "./components/slider/slider";
+@import "./components/footer/footer";

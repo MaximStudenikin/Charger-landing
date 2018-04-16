@@ -7,11 +7,6 @@
     flex-direction: column;
     justify-content: space-between;
     z-index: 2;
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        z-index: 1;
-    }
     &__center {
         width: 100%;
         display: flex;

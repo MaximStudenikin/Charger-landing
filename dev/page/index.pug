@@ -1,0 +1,21 @@
+include ./base
+	block head
+		title Charger costum
+block content
+	.wrap
+		.maincontent
+			section.welcome
+				include ./section/welcome
+			section.about
+				include ./section/about
+			section.services
+				include ./section/services
+			section.projects
+				include ./section/projects
+			section.reviews
+				include ./section/reviews
+			section.blog
+				include ./section/blog
+			footer.footer
+				include ../scss/components/footer/footer
+		include ../scss/components/h-menu/h-menu

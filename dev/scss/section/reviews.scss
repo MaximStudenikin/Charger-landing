@@ -4,20 +4,6 @@
     display: flex;
     align-items: center;
     height: 90%;
-    &__slider {
-        position: relative;
-        width: 100%;
-    }
-    &__list {
-        position: relative;
-        white-space: nowrap;
-        left: 0;
-    }
-    &__item {
-        display: inline-block;
-        text-align: center;
-        width: 100%;
-    }
     &__decor {
         position: relative;
         top: -70%;

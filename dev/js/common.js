@@ -1,87 +1,81 @@
 $(document).ready(function () {
 
-    $('.h__menu').on('click', function (e) {
-        e.preventDefault();
+	$('.h-menu').on('click', function (e) {
+		e.preventDefault();
 
-        var container = $('.h__menu');
+		var container = $('.h-menu');
 
-        $('.h__block', container).toggleClass('h__open');
-        $('.h__text', container).toggleClass('h__text--black');
-        $('.h__content').toggleClass('h__content--open');
-    });
+		$('.h-menu__block', container).toggleClass('h-menu__open');
+		$('.h-menu__text', container).toggleClass('h-menu__text--black');
+		$('.h-menu__content').toggleClass('h-menu__content--open');
+	});
 
-    //slider
+	//slider
 
-    // slider back images 
+	// slider back images 
 
-    var browsing = function (container, activeSlide) {
-        var showWindow = container.parents().find('.slider-bg'),
-            backImg = activeSlide.find('.slider__img').attr('src');
+	var browsing = function (container, activeSlide) {
+		var showWindow = container.parents().find('.slider-bg'),
+			backImg = activeSlide.find('.slider__img').attr('src');
 
-        showWindow.css('background', 'url(' + backImg + ') no-repeat');
-        showWindow.css('backgroundSize', 'cover');
-            
-        }
-    //click ruls btn reviews slider
+		showWindow.css('background', 'url(' + backImg + ') no-repeat');
+		showWindow.css('backgroundSize', 'cover');
 
-    $('.slider__controls').on('click', function (event) {
-        event.preventDefault();
+	}
 
-        var $this = $(event.target),
-            cont = $this.parents().find('[data-slider]'),
-            items = $('[data-slider_item]', cont),
-            activeItem = items.filter('.active__slide');
-            
-        var existedItem,
-            edgeItem,
-            reqItem;
+	//click ruls btn reviews slider
 
-        if ($this.hasClass('slider__btn_next')) {
-            existedItem = activeItem.next();
-            edgeItem = items.first();
-        }
+	$('.slider__controls').on('click', function (event) {
+		event.preventDefault();
 
-        if ($this.hasClass('slider__btn_prev')) {
-            existedItem = activeItem.prev();
-            edgeItem = items.last();
-        }
+		var $this = $(event.currentTarget),
+			container = $this.siblings().find('.slider'),
+			items = $('.slider__item', container),
+			activeItem = items.filter('.slider__item--active');
 
-        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+			console.log($this);
 
-        moveSlide(cont, reqItem);
-        browsing(cont, activeItem);
+		var existedItem,
+			edgeItem,
+			reqItem;
 
-    });
+		if ($this.nextAll().hasClass('slider__btn-next')) {
+			existedItem = activeItem.next();
+			edgeItem = items.first();
+			console.log($this);
+		}
 
-    //searh number slid and activ slide
+		if ($this.hasClass('slider__btn-prev')) {
+			existedItem = activeItem.prev();
+			edgeItem = items.last();
+		}
 
-    var moveSlide = function (cont, slideNum) {
+		reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
 
-        var items = cont.find('[data-slider_item]'),
-            activeSlide = items.filter('.active__slide'),
-            reqItem = items.eq(slideNum),
-            reqIndex = reqItem.index(),
-            list = cont.find('[data-slider_list]'),
-            dur = 500;
+		moveSlide(container, reqItem);
+		browsing(container, activeItem);
 
-        if (reqItem.length) {
-            list.animate({
-                'left': -reqIndex * 100 + '%',
-            }, dur, function () {
-                activeSlide.removeClass('active__slide');
-                reqItem.addClass('active__slide');
-            });
-        }
-    };
+	});
 
+	//searh number slid and activ slide
 
+	var moveSlide = function (container, slideNum) {
 
+		var items = container.find('.slider__item'),
+			activeSlide = items.filter('.slider__item--active'),
+			reqItem = items.eq(slideNum),
+			reqIndex = reqItem.index(),
+			list = container.find('.slider__list'),
+			dur = 500;
 
-    var container = $('[data-slider]'),
-        activeItem = container.find('.active__slide');
-
-    browsing(container, activeItem);
-
-
+		if (reqItem.length) {
+			list.animate({
+				'left': -reqIndex * 100 + '%',
+			}, dur, function () {
+				activeSlide.removeClass('slider__item--active');
+				reqItem.addClass('slider__item--active');
+			});
+		}
+	};
 
 });
