@@ -6,6 +6,19 @@ section {
     background: $black;
 }
 
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+svg rect,
+    {
+    fill: none;
+    stroke: $gold;
+    stroke-width: 1;
+}
+
 .wrap {
     position: relative;
     width: 100%;
@@ -52,9 +65,9 @@ section {
     top: 20%;
     opacity: .5;
     line-height: 1;
-    @include portrait {
-        top: 25%;
-        height: 60%;
+    @include landscape {
+        height: 75%;
+        top: 5%;
     }
     &__sb_big {
         font-size: rem(300px);
@@ -79,7 +92,7 @@ section {
     }
     &__side--right {
         right: 8%;
-        @include portrait {
+        @include landscape {
             right: 4%;
         }
     }

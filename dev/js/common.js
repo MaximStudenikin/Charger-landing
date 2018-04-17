@@ -28,8 +28,8 @@ $(document).ready(function () {
 	$('.slider__controls').on('click', function (event) {
 		event.preventDefault();
 
-		var $this = $(event.currentTarget),
-			container = $this.siblings().find('.slider'),
+		var $this = $(event.target),
+			container = $this.parents().find('.slider'),
 			items = $('.slider__item', container),
 			activeItem = items.filter('.slider__item--active');
 
@@ -39,7 +39,7 @@ $(document).ready(function () {
 			edgeItem,
 			reqItem;
 
-		if ($this.nextAll().hasClass('slider__btn-next')) {
+		if ($this.hasClass('slider__btn-next')) {
 			existedItem = activeItem.next();
 			edgeItem = items.first();
 			console.log($this);

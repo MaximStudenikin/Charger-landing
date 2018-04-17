@@ -1,5 +1,5 @@
 .about {
-  height: 90%;
+    height: 90%;
     display: flex;
     position: relative;
     background: $white;
@@ -9,32 +9,68 @@
 
 .blog {
     &__preview {
-      position: relative;
-      display: flex;
-      align-items: center;
-      width: 55%;
-      margin: auto;
-      @include portrait{
-        flex-direction: column;
-    }
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 55%;
+        margin: auto;
+        @include landscape{
+          width: 90%;
+        }
+        @include portrait{
+            width: 90%;
+          }
+        @include landscape__phones{
+            width: 90%;
+          }
+        @include portrait__phones{
+            width: 80%;
+    flex-direction: column;
+    height: 90%;
+          }
     }
     &__discription {
-      display: flex;
-      flex-direction: column;
-      flex-basis: 35%;
-      @include portrait{
-        margin: rem(32px) 0 0 0;
-    }
+        display: flex;
+        flex-direction: column;
+        flex-basis: 35%;
+        @include portrait{
+            flex-basis: 38%;
+        }
+        @include landscape__phones{
+            flex-basis: 38%;
+        }
+        @include portrait__phones{
+            align-items: center;
+    justify-content: space-evenly;
+    height: 40%;
+        }
     }
     &__img {
-      padding: 0 10% 0 0;
-      align-items: center;
-      width: 655px;
-      height: 540px;
-      overflow: hidden;
-      display: flex;
-      @include portrait{
-        padding: 0;
-    }
+        padding: 0 10% 0 0;
+        align-items: center;
+        width: 655px;
+        height: 540px;
+        overflow: hidden;
+        display: flex;
+        @include landscape {
+            padding: 0 5% 0 0;
+            width: 40vw;
+            height: 50vh;
+        }
+        @include portrait{
+            padding: 0 5% 0 0;
+            width: 50vw;
+            height: 50vh;
+          }
+        @include landscape__phones{
+            padding: 0 5% 0 0;
+            width: 50vw;
+            height: 50vh;
+          }
+        @include portrait__phones{
+            padding: 0;
+    width: 80vw;
+    height: 50vh;
+          }
     }
 }
