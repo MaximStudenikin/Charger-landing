@@ -89,8 +89,18 @@ sans-serif;
         font-size: rem(48px);
         white-space: normal;
         padding: 0 30%;
+        @include landscape{
+            font-size: rem(48px / 1.5);
+          }
         @include portrait {
-            padding: 0 10%;
+            font-size: rem(48px / 1.8);
+        }
+        @include landscape__phones {
+            font-size: rem(48px / 1.8);
+        }
+        @include portrait__phones {
+            padding: 0 15%;
+            font-size: rem(48px / 2);
         }
     }
 }
@@ -100,11 +110,35 @@ sans-serif;
         display: block;
         font-family: $proxima_regular;
         font-size: rem(30px);
+        @include landscape{
+            font-size: rem(30px / 1.5);
+          }
+          @include portrait{
+            font-size: rem(30px / 1.6);
+          }
+          @include landscape__phones{
+            font-size: rem(30px / 1.6);
+          }
+          @include portrait__phones{
+            font-size: rem(30px / 2);
+          }
     }
     &__car {
         display: block;
         font-family: $proxima_light;
         font-size: rem(18px);
+        @include landscape{
+            font-size: rem(18px / 1.8);
+          }
+          @include portrait{
+            font-size: rem(18px / 1.6);
+          }
+          @include landscape__phones{
+            font-size: rem(18px / 1.6);
+          }
+          @include portrait__phones{
+            font-size: rem(18px /2);
+          }
     }
     &__info {
         position: relative;
