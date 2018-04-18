@@ -38,10 +38,10 @@ const paths = {
 };
 
 function html() {
-	return gulp.src(paths.dev + 'page/index.pug')
+	return gulp.src(paths.dev + '/page/index.pug')
 		.pipe(plumber())
 		.pipe(pug({ pretty: true }))                  //pretty: true убирает что бы index был читаймым
-		// .pipe(rename({ basename: "index" }))
+		.pipe(rename({ basename: "index" }))
 		.pipe(rename({ dirname: "" }))
 		.pipe(gulp.dest(paths.build))
 }
@@ -55,7 +55,7 @@ function style() {
 		.pipe(groupMediaCSSQueries())
 		.pipe(cleanCSS())
 		// .pipe(autoPref({
-		//     browsers: ['last 15 versions'],
+		//     browsers: ['last 2 versions'],
 		//     cascade: false
 		// }))
 		.pipe(rename({ suffix: '.min' }))
@@ -67,11 +67,11 @@ function style() {
 //js
 function script() {
 	return gulp.src(paths.dev + 'js/*.js')
-		// .pipe(plumber())
-		// .pipe(babel({
-		// 	presets: ['env']
-		// }))
-		// .pipe(uglify())
+		.pipe(plumber())
+		.pipe(babel({
+			presets: ['env']
+		}))
+		.pipe(uglify())
 		.pipe(gulp.dest(paths.build + 'js/'))
 }
 

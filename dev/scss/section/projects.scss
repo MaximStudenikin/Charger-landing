@@ -41,7 +41,7 @@
   z-index: 2;
   &__item{
     display: inline-block;
-    width: 25vw;
+    width: 15vw;
     padding: 0 rem(15px) 0 0;
     @include portrait{
       width: 30vw;
@@ -58,7 +58,7 @@
     }
   }
   &__item:nth-child(2n){
-    width: 30vw;
+    width: 20vw;
     @include portrait{
       width: 40vw;
     }
@@ -80,9 +80,8 @@
 }
 
 .slidershow--right{
-  right: 25%;
+  right: 10%;
 }
 .slidershow--left{
-  left: -5%;
-  transform: translate(0.2%);
+  transform: translate(0.7%);
 }

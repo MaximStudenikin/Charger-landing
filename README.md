@@ -6,9 +6,9 @@
 Шаблон в первую очередь будет актуален для сайтов тематика которых связанна с автомобилями. 
 
 ## Типография:
-1.Playfair display
-2.Proxima nova
-![Типография:Playfair display, Proxima nova](https://mir-s3-cdn-cf.behance.net/project_modules/1400/1ac27058353073.59f902c217c16.jpg "используемые шрифты")
+1. Playfair display
+2. Proxima nova
+![Типография:Playfair display, Proxima nova](https://mir-s3-cdn-cf.behance.net/project_modules/1400/1ac27058353073.59f902c217c16.jpg "Используемые шрифты")
 
 ### Цвета:
 1. Белый
@@ -21,7 +21,7 @@
 
 ### Презинтация: 
 
-![charger презинтация](https://mir-s3-cdn-cf.behance.net/project_modules/fs/b437d858353073.5a02ab82505a8.jpg "Внешний вид шаблона")
+![charger презинтация](https://mir-s3-cdn-cf.behance.net/project_modules/fs/b437d858353073.5a02ab82505a8.jpg "Презентация шаблона")
 
 
 Demo (не окончен): https://maximstudenikin.github.io/Charger-landing/

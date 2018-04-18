@@ -14,35 +14,36 @@
         align-items: center;
         width: 55%;
         margin: auto;
-        @include landscape{
-          width: 90%;
+        @include landscape {
+            width: 90%;
         }
-        @include portrait{
+        @include portrait {
             width: 90%;
-          }
-        @include landscape__phones{
+        }
+        @include landscape__phones {
             width: 90%;
-          }
-        @include portrait__phones{
+        }
+        @include portrait__phones {
             width: 80%;
-    flex-direction: column;
-    height: 90%;
-          }
+            flex-direction: column;
+            height: 90%;
+        }
     }
     &__discription {
         display: flex;
         flex-direction: column;
         flex-basis: 35%;
-        @include portrait{
+        @include portrait {
             flex-basis: 38%;
         }
-        @include landscape__phones{
-            flex-basis: 38%;
+        @include landscape__phones {
+            flex-basis: 45%;
         }
-        @include portrait__phones{
+        @include portrait__phones {
             align-items: center;
-    justify-content: space-evenly;
-    height: 40%;
+            justify-content: space-evenly;
+            height: 40%;
+            margin: 5% 0 0 0;
         }
     }
     &__img {
@@ -57,20 +58,20 @@
             width: 40vw;
             height: 50vh;
         }
-        @include portrait{
+        @include portrait {
             padding: 0 5% 0 0;
             width: 50vw;
             height: 50vh;
-          }
-        @include landscape__phones{
+        }
+        @include landscape__phones {
             padding: 0 5% 0 0;
             width: 50vw;
             height: 50vh;
-          }
-        @include portrait__phones{
+        }
+        @include portrait__phones {
             padding: 0;
-    width: 80vw;
-    height: 50vh;
-          }
+            width: 77vw;
+            height: 50vh;
+        }
     }
 }
