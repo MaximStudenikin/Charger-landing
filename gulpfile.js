@@ -38,7 +38,7 @@ const paths = {
 };
 
 function html() {
-	return gulp.src(paths.dev + '*.pug')
+	return gulp.src(paths.dev + 'page/index.pug')
 		.pipe(plumber())
 		.pipe(pug({ pretty: true }))                  //pretty: true убирает что бы index был читаймым
 		// .pipe(rename({ basename: "index" }))
@@ -104,7 +104,7 @@ function remov() {
 
 //watch
 function watch() {
-	gulp.watch(paths.dev + '*.pug', html);
+	gulp.watch(paths.dev + 'page/**/*.pug', html);
 	gulp.watch(paths.dev + '/**/*.scss', style);
 	gulp.watch(paths.dev + 'js/*.js', script);
 }
