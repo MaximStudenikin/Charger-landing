@@ -10,56 +10,95 @@ $(document).ready(function () {
 		$('.h-menu__content').toggleClass('h-menu__content--open');
 	});
 
-	// //scroll
+	//scroll
 
 	const display = $('.maincontent'),
-		section = $('section');
+		sections = $('section');
 
 	let inScroll = false;
 
-	const switchActivePointFixeMenu = sectionEq =>{
+	const switchActivePointFixeMenu = sectionEq => {
 		$('.fixed-menu__item').rq(sectionEq).addClass('fixed-menu__item--active')
-		.siblings().removeClass('fixed-menu__item--active');
-	} 
+			.siblings().removeClass('fixed-menu__item--active');
+	}
 
 	const perfTrans = sectionEq => {
 
 		if (inScroll) return
 
-			inScroll = true;
+		inScroll = true;
 
-			const position = (sectionEq * -100) + '%';
+		const position = (sectionEq * -100) + '%';
 
-			display.css({
-				'transform': `translate(0, ${position})`
-			})
+		display.css({
+			'transform': `translate(0, ${position})`,
+			'-webkit-transform': `translate(0, ${position})`
+		})
 
-			section.eq(sectionEq).addClass('section--active')
-				.siblings().removeClass('section--active');
+		sections.eq(sectionEq).addClass('section--active')
+			.siblings().removeClass('section--active');
 
-			setTimeout(() => {
-				inScroll = false;
-				switchActivePointFixeMenu(sectionEq);
-			}, 1300);
+		setTimeout(() => {
+
+			inScroll = false;
+			switchActivePointFixeMenu(sectionEq);
+
+		}, 1300);
+
+	}
+
+	const difineSections = sections => {
+
+		const activeSection = sections.filter('.section--active');
+
+		return {
+
+			activeSection,
+			nextSection: activeSection.next(),
+			prevSection: activeSection.prev()
 
 		}
+
+	}
 
 	$('.wrap').on('wheel', evenet => {
 
 		const deltaY = evenet.originalEvent.deltaY,
-			activSection = section.filter('.section--active'),
-			nextSection = activSection.next(),
-			prevSection = activSection.prev();
+			section = difineSections(sections);
 
-		if (deltaY > 0 && nextSection.length) { //scroll down
-			perfTrans(nextSection.index());
+
+		if (deltaY > 0 && section.nextSection.length) { //scroll down
+			perfTrans(section.nextSection.index());
 		}
 
-		if (deltaY < 0 && prevSection.length) { //scroll up
-			perfTrans(prevSection.index());
+		if (deltaY < 0 && section.prevSection.length) { //scroll up
+			perfTrans(section.prevSection.index());
 		}
 
-	})
+	});
+
+	$(document).on('keydown', event => {
+
+		const section = difineSections(sections);
+
+		if (inScroll) return
+
+		switch (event.keyCode) {
+			case 40: //up
+
+				if (!section.nextSection.length) return
+				perfTrans(section.nextSection.index());
+				break;
+
+			case 38:  //down
+
+				if (!section.prevSection.length) return
+				perfTrans(section.prevSection.index());
+				break;
+
+		}
+
+	});
 
 	//slider
 

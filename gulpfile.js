@@ -68,10 +68,10 @@ function style() {
 function script() {
 	return gulp.src(paths.dev + 'js/*.js')
 		.pipe(plumber())
-		.pipe(babel({
-			presets: ['env']
-		}))
-		.pipe(uglify())
+		// .pipe(babel({
+		// 	presets: ['env']
+		// }))
+		// .pipe(uglify())
 		.pipe(gulp.dest(paths.build + 'js/'))
 }
 
