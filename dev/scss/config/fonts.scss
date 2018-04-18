@@ -103,6 +103,11 @@ sans-serif;
             font-size: rem(48px / 2);
         }
     }
+    &__textarea{
+        @include portrait__phones {
+            width: 100%;
+        }
+    }
 }
 
 .user {

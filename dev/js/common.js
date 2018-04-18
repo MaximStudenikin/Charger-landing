@@ -10,6 +10,37 @@ $(document).ready(function () {
 		$('.h-menu__content').toggleClass('h-menu__content--open');
 	});
 
+	// //scroll
+
+	// const display = $('.maincontent'),
+	// 			section = $('section');
+
+	// 			console.log(section);
+
+	// const perfTrans = sectionEq =>{
+	// 	const position = (sectionEq * -100) + '%';
+
+	// 	display.css({
+	// 		'transform' : `translate(0, ${position})`
+	// 	})
+
+
+	// }
+
+	// $('.wrap').on('wheel', evenet => {
+
+	// 	const deltaY = evenet.originalEvent.deltaY
+
+	// 	if (deltaY < 0) { //scroll up
+	// 		console.log('up')
+	// 	}
+
+	// 	if (deltaY > 0) { //scroll down
+	// 		perfTrans(1);
+	// 	}
+
+	// })
+
 	//slider
 
 	// slider back images 
@@ -18,7 +49,7 @@ $(document).ready(function () {
 		var showWindow = container.parents().find('.slider-bg'),
 			backImg = activeSlide.find('.slider__img').attr('src');
 
-		showWindow.css('background', 'url(' + backImg + ') no-repeat');
+		showWindow.css('background', `'url(${backImg}) no-repeat'`);
 		showWindow.css('backgroundSize', 'cover');
 
 	}
@@ -33,7 +64,7 @@ $(document).ready(function () {
 			items = $('.slider__item', container),
 			activeItem = items.filter('.slider__item--active');
 
-			console.log($this);
+		console.log($this);
 
 		var existedItem,
 			edgeItem,
