@@ -4,7 +4,7 @@ include ./base
 block content
 	.wrap
 		.maincontent
-			section.welcome
+			section.welcome.section--active
 				include ./section/welcome
 			section.about
 				include ./section/about
@@ -19,3 +19,11 @@ block content
 			footer.footer
 				include ../scss/components/footer/footer
 		include ../scss/components/h-menu/h-menu
+		nav.fixed-menu
+			ul.nav__list
+				li.nav__item.fixed-menu__item.fixed-menu__item--active
+					a.nav__link.nav__link--hover(href='#') about as
+				li.nav__item.fixed-menu__item
+					a.nav__link.nav__link--hover(href='#') services
+				li.nav__item.fixed-menu__item
+					a.nav__link.nav__link--hover(href='#') projects

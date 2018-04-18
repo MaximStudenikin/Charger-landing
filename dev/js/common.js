@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-	$('.h-menu').on('click', function (e) {
+	$('.h-menu').on('click', evenet => {
 		e.preventDefault();
 
-		var container = $('.h-menu');
+		const container = $('.h-menu');
 
 		$('.h-menu__block', container).toggleClass('h-menu__open');
 		$('.h-menu__text', container).toggleClass('h-menu__text--black');
@@ -12,41 +12,61 @@ $(document).ready(function () {
 
 	// //scroll
 
-	// const display = $('.maincontent'),
-	// 			section = $('section');
+	const display = $('.maincontent'),
+		section = $('section');
 
-	// 			console.log(section);
+	let inScroll = false;
 
-	// const perfTrans = sectionEq =>{
-	// 	const position = (sectionEq * -100) + '%';
+	const switchActivePointFixeMenu = sectionEq =>{
+		$('.fixed-menu__item').rq(sectionEq).addClass('fixed-menu__item--active')
+		.siblings().removeClass('fixed-menu__item--active');
+	} 
 
-	// 	display.css({
-	// 		'transform' : `translate(0, ${position})`
-	// 	})
+	const perfTrans = sectionEq => {
 
+		if (inScroll) return
 
-	// }
+			inScroll = true;
 
-	// $('.wrap').on('wheel', evenet => {
+			const position = (sectionEq * -100) + '%';
 
-	// 	const deltaY = evenet.originalEvent.deltaY
+			display.css({
+				'transform': `translate(0, ${position})`
+			})
 
-	// 	if (deltaY < 0) { //scroll up
-	// 		console.log('up')
-	// 	}
+			section.eq(sectionEq).addClass('section--active')
+				.siblings().removeClass('section--active');
 
-	// 	if (deltaY > 0) { //scroll down
-	// 		perfTrans(1);
-	// 	}
+			setTimeout(() => {
+				inScroll = false;
+				switchActivePointFixeMenu(sectionEq);
+			}, 1300);
 
-	// })
+		}
+
+	$('.wrap').on('wheel', evenet => {
+
+		const deltaY = evenet.originalEvent.deltaY,
+			activSection = section.filter('.section--active'),
+			nextSection = activSection.next(),
+			prevSection = activSection.prev();
+
+		if (deltaY > 0 && nextSection.length) { //scroll down
+			perfTrans(nextSection.index());
+		}
+
+		if (deltaY < 0 && prevSection.length) { //scroll up
+			perfTrans(prevSection.index());
+		}
+
+	})
 
 	//slider
 
 	// slider back images 
 
-	var browsing = function (container, activeSlide) {
-		var showWindow = container.parents().find('.slider-bg'),
+	const browsing = function (container, activeSlide) {
+		const showWindow = container.parents().find('.slider-bg'),
 			backImg = activeSlide.find('.slider__img').attr('src');
 
 		showWindow.css('background', `'url(${backImg}) no-repeat'`);
@@ -56,24 +76,21 @@ $(document).ready(function () {
 
 	//click ruls btn reviews slider
 
-	$('.slider__controls').on('click', function (event) {
+	$('.slider__controls').on('click', event => {
 		event.preventDefault();
 
-		var $this = $(event.target),
+		const $this = $(event.target),
 			container = $this.parents().find('.slider'),
 			items = $('.slider__item', container),
 			activeItem = items.filter('.slider__item--active');
 
-		console.log($this);
-
-		var existedItem,
+		let existedItem,
 			edgeItem,
 			reqItem;
 
 		if ($this.hasClass('slider__btn-next')) {
 			existedItem = activeItem.next();
 			edgeItem = items.first();
-			console.log($this);
 		}
 
 		if ($this.hasClass('slider__btn-prev')) {
@@ -90,9 +107,9 @@ $(document).ready(function () {
 
 	//searh number slid and activ slide
 
-	var moveSlide = function (container, slideNum) {
+	const moveSlide = (container, slideNum) => {
 
-		var items = container.find('.slider__item'),
+		const items = container.find('.slider__item'),
 			activeSlide = items.filter('.slider__item--active'),
 			reqItem = items.eq(slideNum),
 			reqIndex = reqItem.index(),
@@ -102,7 +119,7 @@ $(document).ready(function () {
 		if (reqItem.length) {
 			list.animate({
 				'left': -reqIndex * 100 + '%',
-			}, dur, function () {
+			}, dur, () => {
 				activeSlide.removeClass('slider__item--active');
 				reqItem.addClass('slider__item--active');
 			});

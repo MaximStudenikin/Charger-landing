@@ -105,6 +105,10 @@ svg rect,
     }
 }
 
+.nav__fixed{
+    position: fixed;
+}
+
 .visuallyhidden:not(:focus):not(:active) {
     position: absolute;
     width: 1px;
