@@ -12,93 +12,93 @@ $(document).ready(function () {
 
 	//scroll
 
-	const display = $('.maincontent'),
-		sections = $('section');
+	// const display = $('.maincontent'),
+	// 	sections = $('section');
 
-	let inScroll = false;
+	// let inScroll = false;
 
-	const switchActivePointFixeMenu = sectionEq => {
-		$('.fixed-menu__item').rq(sectionEq).addClass('fixed-menu__item--active')
-			.siblings().removeClass('fixed-menu__item--active');
-	}
+	// const switchActivePointFixeMenu = sectionEq => {
+	// 	$('.fixed-menu__item').eq(sectionEq).addClass('fixed-menu__item--active')
+	// 		.siblings().removeClass('fixed-menu__item--active');
+	// }
 
-	const perfTrans = sectionEq => {
+	// const perfTrans = sectionEq => {
 
-		if (inScroll) return
+	// 	if (inScroll) return
 
-		inScroll = true;
+	// 	inScroll = true;
 
-		const position = (sectionEq * -100) + '%';
+	// 	const position = (sectionEq * -100) + '%';
 
-		display.css({
-			'transform': `translate(0, ${position})`,
-			'-webkit-transform': `translate(0, ${position})`
-		})
+	// 	display.css({
+	// 		'transform': `translate(0, ${position})`,
+	// 		'-webkit-transform': `translate(0, ${position})`
+	// 	})
 
-		sections.eq(sectionEq).addClass('section--active')
-			.siblings().removeClass('section--active');
+	// 	sections.eq(sectionEq).addClass('section--active')
+	// 		.siblings().removeClass('section--active');
 
-		setTimeout(() => {
+	// 	setTimeout(() => {
 
-			inScroll = false;
-			switchActivePointFixeMenu(sectionEq);
+	// 		inScroll = false;
+	// 		switchActivePointFixeMenu(sectionEq);
 
-		}, 1300);
+	// 	}, 1300);
 
-	}
+	// }
 
-	const difineSections = sections => {
+	// const difineSections = sections => {
 
-		const activeSection = sections.filter('.section--active');
+	// 	const activeSection = sections.filter('.section--active');
 
-		return {
+	// 	return {
 
-			activeSection,
-			nextSection: activeSection.next(),
-			prevSection: activeSection.prev()
+	// 		activeSection,
+	// 		nextSection: activeSection.next(),
+	// 		prevSection: activeSection.prev()
 
-		}
+	// 	}
 
-	}
+	// }
 
-	$('.wrap').on('wheel', evenet => {
+	// $('.wrap').on('wheel', evenet => {
 
-		const deltaY = evenet.originalEvent.deltaY,
-			section = difineSections(sections);
+	// 	const deltaY = evenet.originalEvent.deltaY,
+	// 		section = difineSections(sections);
 
 
-		if (deltaY > 0 && section.nextSection.length) { //scroll down
-			perfTrans(section.nextSection.index());
-		}
+	// 	if (deltaY > 0 && section.nextSection.length) { //scroll down
+	// 		perfTrans(section.nextSection.index());
+	// 	}
 
-		if (deltaY < 0 && section.prevSection.length) { //scroll up
-			perfTrans(section.prevSection.index());
-		}
+	// 	if (deltaY < 0 && section.prevSection.length) { //scroll up
+	// 		perfTrans(section.prevSection.index());
+	// 	}
 
-	});
+	// });
 
-	$(document).on('keydown', event => {
+	// $(document).on('keydown', event => {
 
-		const section = difineSections(sections);
+	// 	const section = difineSections(sections);
 
-		if (inScroll) return
+	// 	if (inScroll) return
 
-		switch (event.keyCode) {
-			case 40: //up
+	// 	switch (event.keyCode) {
+	// 		case 40: //up
 
-				if (!section.nextSection.length) return
-				perfTrans(section.nextSection.index());
-				break;
+	// 			if (!section.nextSection.length) return
+	// 			perfTrans(section.nextSection.index());
+	// 			break;
 
-			case 38:  //down
+	// 		case 38:  //down
 
-				if (!section.prevSection.length) return
-				perfTrans(section.prevSection.index());
-				break;
+	// 			if (!section.prevSection.length) return
+	// 			perfTrans(section.prevSection.index());
+	// 			break;
 
-		}
+	// 	}
 
-	});
+	// });
 
 	//slider
 

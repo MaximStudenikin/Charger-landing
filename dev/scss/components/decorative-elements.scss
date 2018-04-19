@@ -1,0 +1,114 @@
+//block
+.decorative-elemetns {
+    display: flex;
+    flex-direction: column;
+    color: $gold;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    top: 20%;
+    opacity: .5;
+    line-height: 1;
+    @include landscape {
+        height: 75%;
+        top: 5%;
+    }
+}
+
+//elemetns
+.decorative-elemetns__big-simbol {
+    font-size: rem(300px);
+    font-family: $playfair__bold;
+    font-style: normal;
+    @include landscape {
+        font-size: rem(300px / 1.3);
+        top: 25%;
+        position: relative;
+    }
+    @include portrait {
+        font-size: rem(300px / 1.6);
+    }
+    @include landscape__phones {
+        font-size: rem(300px / 1.6);
+    }
+    @include portrait__phones {
+        font-size: rem(300px / 2.6);
+    }
+}
+
+.decorative-elemetns__service {
+    position: relative;
+    top: -85%;
+    @include landscape {
+        top: -35%;
+    }
+    @include portrait {
+        font-size: rem(300px / 1.6);
+    }
+    @include landscape__phones {
+        font-size: rem(300px / 1.6);
+    }
+    @include portrait__phones {
+        font-size: rem(300px / 2.6);
+    }
+}
+
+.decorative-elemetns__projects {
+    top: -30%;
+    position: relative;
+    @include landscape {
+        top: 15%;
+    }
+    @include portrait {
+        font-size: rem(300px / 1.6);
+    }
+    @include landscape__phones {
+        font-size: rem(300px / 1.6);
+    }
+    @include portrait__phones {
+        font-size: rem(300px / 2.6);
+    }
+}
+
+.decorative-elemetns__reviews {
+    position: relative;
+    top: -70%;
+    @include landscape {
+        top: -25%;
+    }
+    @include portrait {
+        font-size: rem(300px / 1.6);
+    }
+    @include landscape__phones {
+        font-size: rem(300px / 1.6);
+    }
+    @include portrait__phones {
+        font-size: rem(300px / 2.6);
+    }
+}
+
+.decorative-elemetns__small-text {
+    display: flex;
+    transform: rotate(-90deg);
+    &:after {
+        content: '';
+        display: inline-block;
+        margin: rem(10px) rem(16px);
+        width: 47px;
+        height: 1px;
+        background: $gold;
+    }
+}
+
+//mod
+.decorative-elemetns--right {
+    right: 8%;
+    @include landscape {
+        right: 4%;
+    }
+}
+
+.decorative-elemetns--left {
+    left: 15%;
+}

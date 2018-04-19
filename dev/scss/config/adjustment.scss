@@ -22,8 +22,7 @@ svg rect,
 .wrap {
     position: relative;
     width: 100%;
-    height: 100%; 
-    overflow: hidden;
+    height: 100%; // overflow: hidden;
     min-height: 650px;
 }
 
@@ -58,54 +57,8 @@ svg rect,
     overflow: hidden;
 }
 
-.decorative {
-    display: flex;
-    flex-direction: column;
-    color: $gold;
-    position: absolute;
-    justify-content: space-between;
-    align-items: center;
-    height: 50%;
-    top: 20%;
-    opacity: .5;
-    line-height: 1;
-    @include landscape {
-        height: 75%;
-        top: 5%;
-    }
-    &__sb_big {
-        font-size: rem(300px);
-        font-family: $playfair__bold;
-        font-style: normal;
-        @include portrait {
-            position: relative;
-            top: -25%;
-        }
-    }
-    &__sb_small {
-        display: flex;
-        transform: rotate(-90deg);
-        &:after {
-            content: '';
-            display: inline-block;
-            margin: rem(10px) rem(16px);
-            width: 47px;
-            height: 1px;
-            background: $gold;
-        }
-    }
-    &__side--right {
-        right: 8%;
-        @include landscape {
-            right: 4%;
-        }
-    }
-    &__side--left {
-        left: 15%;
-    }
-}
 
-.nav__fixed{
+.nav__fixed {
     position: fixed;
 }
 

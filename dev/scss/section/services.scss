@@ -1,5 +1,5 @@
 .services {
-    height: 100%;
+    height: 50%;
     position: relative;
     @include landscape {
         height: 60%;
@@ -158,10 +158,6 @@
     }
     &__btn {
         z-index: 11;
-    }
-    &__decor {
-        position: relative;
-        top: -85%;
     }
     &__description--active:hover {
         .services__description {
