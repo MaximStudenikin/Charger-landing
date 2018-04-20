@@ -28,10 +28,11 @@
     }
     @include portrait {
         font-size: rem(300px / 1.6);
-        top: 8%;
+        top: -12%;
     }
     @include landscape__phones {
         font-size: rem(300px / 1.6);
+        top: -15%;
     }
     @include portrait__phones {
         font-size: rem(300px / 2.6);
@@ -44,13 +45,13 @@
         top: -35%;
     }
     @include portrait {
-        font-size: rem(300px / 1.6);
+        top: -60%;
     }
     @include landscape__phones {
-        font-size: rem(300px / 1.6);
+        top: -60%;
     }
     @include portrait__phones {
-        font-size: rem(300px / 2.6);
+        top: -53%;
     }
 }
 
@@ -60,13 +61,13 @@
         top: 15%;
     }
     @include portrait {
-        font-size: rem(300px / 1.6);
+        
     }
     @include landscape__phones {
-        font-size: rem(300px / 1.6);
+        
     }
     @include portrait__phones {
-        font-size: rem(300px / 2.6);
+       top: 0%;
     }
 }
 
@@ -76,29 +77,29 @@
         top: -25%;
     }
     @include portrait {
-        font-size: rem(300px / 1.6);
+        top: -62%;
     }
     @include landscape__phones {
-        font-size: rem(300px / 1.6);
+        top: -62%;
     }
     @include portrait__phones {
-        font-size: rem(300px / 2.6);
+        top: -54%;
     }
 }
 
-.decorative-elemetns__blog{
+.decorative-elemetns__blog {
     top: -68%;
     @include landscape {
         top: -25%;
     }
     @include portrait {
-        font-size: rem(300px / 1.6);
+        top: -61%;
     }
     @include landscape__phones {
-        font-size: rem(300px / 1.6);
+        top: -62%;
     }
     @include portrait__phones {
-        font-size: rem(300px / 2.6);
+        top: -54%;
     }
 }
 
@@ -113,16 +114,46 @@
         height: 1px;
         background: $gold;
     }
+    @include landscape {
+        bottom: 0;
+    }
+    @include portrait {
+        bottom: -35%;
+    }
+    @include landscape__phones {
+        bottom: -30%;
+    }
+    @include portrait__phones {
+        bottom: -30%;
+    }
+}
+
+.decorative-elemetns__small-text--bottom{
+    position: relative;
+    @include portrait {
+        bottom: -15%;
+    }
+    @include landscape__phones {
+        bottom: -30%;
+    }
+}
+.decorative-elemetns__small-text--right{
+    right: -15%;
 }
 
 //mod
 .decorative-elemetns--right {
-    right: 8%;
-    @include landscape {
-        right: 4%;
+    right: 5%;
+    @include portrait {
+        right: 0;
+    }
+    @include portrait__phones {
+        right: -5%;
     }
 }
 
 .decorative-elemetns--left {
-    left: 15%;
+    @include portrait__phones {
+        left: -5%;
+    }
 }
