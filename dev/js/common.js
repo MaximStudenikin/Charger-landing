@@ -10,6 +10,37 @@ $(document).ready(function () {
 		$('.h-menu__content').toggleClass('h-menu__content--open');
 	});
 
+	//parallax
+
+	var parallax = (function () {
+
+		var decorativeElementsConatainer = $('.decorative-elemetns', )
+		simbolBig = $('.decorative-elemetns__big-simbol', decorativeElementsConatainer),
+			decorativeText = $('.decorative-elemetns__small-text', decorativeElementsConatainer);
+		return {
+			move: function (block, windowScroll, strafeAmount) {
+				var strafe = windowScroll / -strafeAmount + '%';
+
+				var style = block.style;
+
+				style.top = strafe;
+			},
+
+			init: function (wScroll) {
+				this.move(simbolBig, wScroll, 45);
+			}
+		}
+
+	}());
+
+	window.onscroll = function () {
+		var wScroll = window.pageXOffset;
+
+		parallax.init(wScroll);
+
+		console.log(wScroll);
+	}
+
 	//scroll
 
 	// const display = $('.maincontent'),
