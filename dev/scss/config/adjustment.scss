@@ -23,8 +23,17 @@ svg rect,
     position: relative;
     width: 100%;
     height: 100%; 
-   // overflow: hidden;
+   overflow: hidden;
     min-height: 650px;
+    @include portrait {
+        min-height: auto;
+    }
+    @include landscape__phones {
+        min-height: auto;
+    }
+    @include portrait__phones {
+        min-height: auto;
+    }
 }
 
 .maincontent {
@@ -33,6 +42,15 @@ svg rect,
     min-height: 650px;
     transition: 1s;
     will-change: transform;
+    @include portrait {
+        min-height: auto;
+    }
+    @include landscape__phones {
+        min-height: auto;
+    }
+    @include portrait__phones {
+        min-height: auto;
+    }
 }
 
 .container {

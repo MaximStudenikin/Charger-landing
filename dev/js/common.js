@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 		var eContainer = $('.decorative-elemetns');
 
-			return {
+		return {
 			move: function (block, windowScroll, strafeAmount) {
 
 				var strafe = windowScroll / -strafeAmount + '%';
@@ -27,10 +27,10 @@ $(document).ready(function () {
 				style.transform = transformString;
 				style.webkitTransform = transformString;
 			},
-			
+
 			init: function (wScroll) {
-				for(var index = 0; index < eContainer.length; ++index){
-					
+				for (var index = 0; index < eContainer.length; ++index) {
+
 					this.move(eContainer[index], wScroll, 45);
 
 				}
@@ -47,15 +47,24 @@ $(document).ready(function () {
 
 	//scroll
 
+	//elements
+
 	const display = $('.maincontent'),
 		sections = $('section');
 
 	let inScroll = false;
 
+	const mobailDetect = new MobileDetect(window.navigator.userAgent);
+	const isMobail = mobailDetect.mobile();
+
+	// cheger active point menu 
+
 	const switchActivePointFixeMenu = sectionEq => {
 		$('.fixed-menu__item').eq(sectionEq).addClass('fixed-menu__item--active')
 			.siblings().removeClass('fixed-menu__item--active');
 	}
+
+	//scroll logick
 
 	const perfTrans = sectionEq => {
 
@@ -82,6 +91,8 @@ $(document).ready(function () {
 
 	}
 
+	// serch section to scroll
+
 	const difineSections = sections => {
 
 		const activeSection = sections.filter('.section--active');
@@ -96,21 +107,70 @@ $(document).ready(function () {
 
 	}
 
-	$('.wrap').on('wheel', evenet => {
+	const scrollToSection = direction => {
+		const section = difineSections(sections)
 
-		const deltaY = evenet.originalEvent.deltaY,
-			section = difineSections(sections);
-
-
-		if (deltaY > 0 && section.nextSection.length) { //scroll down
-			perfTrans(section.nextSection.index());
+		if (inScroll) return
+		
+		if (direction === 'up' && section.nextSection.length) { //down
+			perfTrans(section.nextSection.index())
 		}
 
-		if (deltaY < 0 && section.prevSection.length) { //scroll up
-			perfTrans(section.prevSection.index());
+		if (direction === 'down' && section.prevSection.length) { //up
+			perfTrans(section.prevSection.index())
 		}
+
+	}
+
+	if (isMobail) {
+		$(window).swipe({
+			swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+
+				scrollToSection(direction);
+
+			}
+		})
+	};
+
+	$('.wrap').on({
+		wheel: evenet => {
+
+			const deltaY = evenet.originalEvent.deltaY;
+			// section = difineSections(sections);
+
+			let direction = (deltaY > 0) ? 'up' : 'down';
+
+			scrollToSection(direction);
+
+
+			// if (deltaY > 0 && section.nextSection.length) { //scroll down
+			// 	perfTrans(section.nextSection.index());
+			// }
+
+			// if (deltaY < 0 && section.prevSection.length) { //scroll up
+			// 	perfTrans(section.prevSection.index());
+			// }
+
+		},
+
+		touchmove: event => (event.preventDefault())
+	});
+
+	// nav scroll to section
+
+	$('[data-scroll-to]').on('click touchstart', event => {
+
+		event.preventDefault();
+
+		const $this = $(event.currentTarget),
+			sectionIndex = parseInt($this.attr('data-scroll-to'));
+
+		perfTrans(sectionIndex);
+
 
 	});
+
+	//key scroll to section
 
 	$(document).on('keydown', event => {
 
@@ -137,7 +197,7 @@ $(document).ready(function () {
 
 	//slider
 
-	// slider back images 
+	// slider bg images 
 
 	const browsing = function (container, activeSlide) {
 		const showWindow = container.parents().find('.slider-bg'),
@@ -150,7 +210,7 @@ $(document).ready(function () {
 
 	//click ruls btn reviews slider
 
-	$('.slider__controls').on('click', event => {
+	$('.slider__controls').on('click touchstart', event => {
 		event.preventDefault();
 
 		const $this = $(event.target),
@@ -179,7 +239,7 @@ $(document).ready(function () {
 
 	});
 
-	//searh number slid and activ slide
+	//searh number slaid and activ slide
 
 	const moveSlide = (container, slideNum) => {
 
