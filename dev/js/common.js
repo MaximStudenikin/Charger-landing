@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	$('.h-menu').on('click', evenet => {
-		e.preventDefault();
+		evenete.preventDefault();
 
 		const container = $('.h-menu');
 
@@ -12,9 +12,9 @@ $(document).ready(function () {
 
 	//parallax
 
-	var parallax = (function () {
+	const parallax = (function () {
 
-		var eContainer = $('.decorative-elemetns');
+		const eContainer = $('.decorative-elemetns');
 
 		return {
 			move: function (block, windowScroll, strafeAmount) {
@@ -22,14 +22,14 @@ $(document).ready(function () {
 				var strafe = windowScroll / -strafeAmount + '%';
 				var transformString = 'translate3d(0,' + strafe + ',0)';
 
-				var style = block.style;
+				const style = block.style;
 
 				style.transform = transformString;
 				style.webkitTransform = transformString;
 			},
 
 			init: function (wScroll) {
-				for (var index = 0; index < eContainer.length; ++index) {
+				for (let index = 0; index < eContainer.length; ++index) {
 
 					this.move(eContainer[index], wScroll, 45);
 
@@ -40,14 +40,14 @@ $(document).ready(function () {
 	}());
 
 	window.onscroll = function () {
-		var wScroll = window.pageYOffset;
+		let wScroll = window.pageYOffset;
 
 		parallax.init(wScroll);
 	}
 
 	//scroll
 
-	//elements
+	//display
 
 	const display = $('.maincontent'),
 		sections = $('section');
@@ -72,7 +72,7 @@ $(document).ready(function () {
 
 		inScroll = true;
 
-		const position = (sectionEq * -100) + '%';
+			const position = (sectionEq * -100) + '%';
 
 		display.css({
 			'transform': `translate(0, ${position})`,
@@ -111,7 +111,7 @@ $(document).ready(function () {
 		const section = difineSections(sections)
 
 		if (inScroll) return
-		
+
 		if (direction === 'up' && section.nextSection.length) { //down
 			perfTrans(section.nextSection.index())
 		}
@@ -136,24 +136,16 @@ $(document).ready(function () {
 		wheel: evenet => {
 
 			const deltaY = evenet.originalEvent.deltaY;
-			// section = difineSections(sections);
 
 			let direction = (deltaY > 0) ? 'up' : 'down';
 
 			scrollToSection(direction);
 
-
-			// if (deltaY > 0 && section.nextSection.length) { //scroll down
-			// 	perfTrans(section.nextSection.index());
-			// }
-
-			// if (deltaY < 0 && section.prevSection.length) { //scroll up
-			// 	perfTrans(section.prevSection.index());
-			// }
-
 		},
 
-		touchmove: event => (event.preventDefault())
+		touchmove: event => (event.preventDefault()),
+
+			
 	});
 
 	// nav scroll to section
@@ -166,7 +158,6 @@ $(document).ready(function () {
 			sectionIndex = parseInt($this.attr('data-scroll-to'));
 
 		perfTrans(sectionIndex);
-
 
 	});
 

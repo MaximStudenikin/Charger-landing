@@ -12,6 +12,18 @@
     height: 35px;
 }
 
+.btn__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn__rect {
+    fill: none;
+    stroke: $gold;
+    stroke-width: 1;
+}
+
 .btn__rec {
     text-transform: uppercase;
     position: relative;
