@@ -6,19 +6,6 @@ section {
     background: $black;
 }
 
-svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-svg rect,
-    {
-    fill: none;
-    stroke: $gold;
-    stroke-width: 1;
-}
-
 .wrap {
     position: relative;
     width: 100%;
