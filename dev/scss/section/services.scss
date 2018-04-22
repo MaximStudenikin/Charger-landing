@@ -1,6 +1,7 @@
 .services {
     height: 100%;
     position: relative;
+    background: $white;
     @include landscape {
         height: 60%;
     }
@@ -9,6 +10,12 @@
     }
     @include landscape__phones {
         height: 100%;
+    }
+    &__two-bg{
+        top: 0;
+        height: 75%;
+        position: absolute;
+        fill: $black;
     }
     &__container {
         display: flex;
@@ -34,6 +41,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        z-index: 2;
         @include portrait {
             justify-content: space-between;
             top: 20%;
