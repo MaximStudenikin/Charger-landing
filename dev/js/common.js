@@ -10,40 +10,7 @@ $(document).ready(function () {
 		$('.h-menu__content').toggleClass('h-menu__content--open');
 	});
 
-	//parallax
 
-	const parallax = (function () {
-
-		const eContainer = $('.decorative-elemetns');
-
-		return {
-			move: function (block, windowScroll, strafeAmount) {
-
-				var strafe = windowScroll / -strafeAmount + '%';
-				var transformString = 'translate3d(0,' + strafe + ',0)';
-
-				const style = block.style;
-
-				style.transform = transformString;
-				style.webkitTransform = transformString;
-			},
-
-			init: function (wScroll) {
-				for (let index = 0; index < eContainer.length; ++index) {
-
-					this.move(eContainer[index], wScroll, 45);
-
-				}
-			}
-		}
-
-	}());
-
-	window.onscroll = function () {
-		let wScroll = window.pageYOffset;
-
-		parallax.init(wScroll);
-	}
 
 	//scroll
 
@@ -72,7 +39,7 @@ $(document).ready(function () {
 
 		inScroll = true;
 
-			const position = (sectionEq * -100) + '%';
+		const position = (sectionEq * -100) + '%';
 
 		display.css({
 			'transform': `translate(0, ${position})`,
@@ -145,7 +112,7 @@ $(document).ready(function () {
 
 		touchmove: event => (event.preventDefault()),
 
-			
+
 	});
 
 	// nav scroll to section
@@ -154,8 +121,7 @@ $(document).ready(function () {
 
 		event.preventDefault();
 
-		const $this = $(event.currentTarget),
-			sectionIndex = parseInt($this.attr('data-scroll-to'));
+		const $this = $(event.currentTarget);
 
 		perfTrans(sectionIndex);
 
@@ -176,7 +142,7 @@ $(document).ready(function () {
 				perfTrans(section.nextSection.index());
 				break;
 
-			case 38:  //down
+			case 38: //down
 
 				if (!section.prevSection.length) return
 				perfTrans(section.prevSection.index());
@@ -185,6 +151,21 @@ $(document).ready(function () {
 		}
 
 	});
+
+	//animation for section
+
+	var sessss = $('.decorative-elemetns__big-simbol', '.decorative-elemetns');
+
+		anime({
+			targets: sessss[0], 
+			translateY: 
+			[{ value: 100, duration: 1500 },
+			{ value: 0, duration: 800 }],
+			loop: 5
+				
+		})
+
+		console.log(sessss);
 
 	//slider
 
