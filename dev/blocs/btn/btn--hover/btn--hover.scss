@@ -1,0 +1,3 @@
+.btn--hover {
+  @include hover__b_effect($gold, $black, 1px, 10px 6px, 0.2s);
+}
