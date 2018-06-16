@@ -1,0 +1,190 @@
+.services {
+    height: 100%;
+    position: relative;
+    background: $white;
+    @include landscape {
+        height: 60%;
+    }
+    @include portrait {
+        height: 100%;
+    }
+    @include landscape__phones {
+        height: 100%;
+    }
+    &__two-bg{
+        top: 0;
+        height: 75%;
+        position: absolute;
+        fill: $black;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        @include landscape {
+            width: 70%;
+        }
+        @include portrait {
+            width: 60%;
+            align-items: center;
+        }
+        @include landscape__phones {
+            width: 60%;
+            align-items: center;
+        }
+    }
+    &__header {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        z-index: 2;
+        @include portrait {
+            justify-content: space-between;
+            top: 20%;
+            width: 90%;
+        }
+        @include landscape__phones {
+            justify-content: space-between;
+            top: 4%;
+            width: 90%;
+        }
+    }
+    &__list {
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        @include landscape {
+            width: 70%;
+        }
+        @include portrait {
+            width: 60%;
+            top: 15%;
+            flex-direction: column;
+        }
+        @include landscape__phones {
+            width: 60%;
+            top: 20%;
+            flex-direction: column;
+        }
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        &:last-child {
+            padding: 0;
+        }
+        @include landscape {
+            width: 40vw;
+            height: 33vh;
+            padding: 0 2% 0 0;
+        }
+        @include portrait {
+            flex-direction: column;
+            height: 30%;
+            width: 90%;
+            overflow: hidden;
+        }
+        @include landscape__phones {
+            flex-direction: column;
+            height: 30%;
+            width: 90%;
+            overflow: hidden;
+        }
+    }
+    &__img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+    &__description {
+        @include landscape {
+            width: 100%;
+            height: 100%;
+        }
+        @include portrait {
+            justify-content: space-around;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        @include landscape__phones {
+            justify-content: space-around;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+        width: 100%;
+        text-align: center;
+        height: 100%;
+        top: 85%;
+        justify-content: space-between;
+        background: transparentize($black, 0.6);
+        box-shadow: 0px -20px 20px 20px transparentize($black, 0.6);
+        transition: top .6s ease-in-out;
+        transition-delay: 0.3s;
+        &:after,
+        &:before {
+            z-index: 9;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            content: '';
+            opacity: 0;
+            transition: opacity 0.35s, transform 0.35s;
+        }
+        &:before {
+            border-top: 1px solid $gold;
+            border-bottom: 1px solid $gold;
+            transform: scale(0, 1);
+        }
+        &:after {
+            border-right: 1px solid $gold;
+            border-left: 1px solid $gold;
+            transform: scale(1, 0);
+        }
+    }
+    &__btn {
+        z-index: 11;
+    }
+    &__description--active:hover {
+        .services__description {
+            top: 0%;
+            padding: 10% 0 0 0;
+            justify-content: space-evenly;
+            transition: top .3s ease-in-out;
+            transition-delay: 0.3s;
+            &:before,
+            &:after {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+    &__paragraph {
+        width: 60%;
+    }
+}
+
+.heading--white,
+.btn__text--white {
+    color: $white;
+}
