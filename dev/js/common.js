@@ -1,13 +1,14 @@
 $(document).ready(function () {
 
 	$('.h-menu').on('click', evenet => {
-		evenete.preventDefault();
+		evenet.preventDefault();
 
 		const container = $('.h-menu');
 
-		$('.h-menu__block', container).toggleClass('h-menu__open');
+		$('.h-menu__block', container).toggleClass('h-menu--open');
 		$('.h-menu__text', container).toggleClass('h-menu__text--black');
 		$('.h-menu__content').toggleClass('h-menu__content--open');
+		$('.welcome__center').toggleClass('visuallyhidden');
 	});
 
 
