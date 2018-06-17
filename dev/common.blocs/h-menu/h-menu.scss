@@ -1,0 +1,95 @@
+.h-menu {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    z-index: 999;
+}
+
+.h-menu__block {
+    margin: 0 rem(10px) 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.h-menu--open {
+    background: $white;
+    .h-menu__bars:first-child {
+        transform: rotate(45deg);
+        transform-origin: 2px 90%;
+    }
+    .h-menu__bars:nth-child(2) {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    .h-menu__bars:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: 2px 50%;
+    }
+}
+
+.h-menu__bars {
+    transition: all 0.2s ease-in-out;
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin: 5px 0 0 0;
+    background: $gold;
+    &:first-child {
+        margin: 0;
+    }
+}
+
+.h-menu__text {
+    color: $white;
+    height: 20px;
+}
+
+.h-menu__text--black {
+    transition: all 0.2s ease-in-out;
+    color: $black;
+}
+
+.h-menu__content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transform: translate(100%, 0);
+    transition: all 400ms ease-in-out;
+}
+
+.h-menu__content--open{
+    transform: translate(0);
+    z-index: 998;
+ }
+
+.h-menu__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    text-transform: uppercase;
+    background: $white;
+    overflow: hidden;
+}
+
+.h-menu__item {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+.h-menu__link {
+    color: $black;
+}
