@@ -1,4 +1,4 @@
-.cut__62{
+.up-cut_big{
   margin: rem(62px) 0 0 0;
   @include landscape{
     margin: rem(62px / 1.4) 0 0 0;
@@ -10,10 +10,10 @@
     margin: rem(62px / 3) 0 0 0;
 }
 }
-.cut__42{
+.up-cut_normal{
   margin: rem(42px) 0 0 0;
 }
-.cut__32{
+.up-cut_small{
   margin: rem(32px) 0 0 0;
   @include landscape{
     margin: rem(32px / 1.4) 0 0 0;
