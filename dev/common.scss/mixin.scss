@@ -1,0 +1,27 @@
+//rem
+@function rem($px)
+{
+    @return $px / 16px+0rem;
+}
+
+/*
+
+Не помню применялся ли миксин hover__slip_up__effect где-то. Если ошибок не будет делитну.
+
+*/
+
+// @mixin hover__slip_up__effect
+// {
+//     .services__description:hover
+//     {
+//         top: 0;
+//         justify-content: space-between;
+//         transform: translate3d(0,-50%,0);
+//     }
+
+//     .heading__sb:hover 
+//     {
+//         transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+//     }
+
+// }

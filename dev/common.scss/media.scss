@@ -1,6 +1,6 @@
 /* Large desktops and laptops */
 
-@mixin large__devices {
+@mixin desc_large {
     @media (min-width: 1200px) {
         @content;
     }
@@ -8,7 +8,7 @@
 
 /* Landscape tablets and medium desktops */
 
-@mixin landscape {
+@mixin lands-dev {
     @media (min-width: 992px) and (max-width: 1199px) {
         @content;
     }
@@ -16,7 +16,7 @@
 
 /* Portrait tablets and small desktops */
 
-@mixin portrait {
+@mixin port-dev {
     @media (min-width: 768px) and (max-width: 991px) {
         @content;
     }
@@ -24,7 +24,7 @@
 
 /* Landscape phones and portrait tablets */
 
-@mixin landscape__phones {
+@mixin phones_land {
     @media (max-width: 767px) {
         @content;
     }
@@ -32,7 +32,7 @@
 
 /* Portrait phones and smaller */
 
-@mixin portrait__phones {
+@mixin phones_port {
     @media (max-width: 480px) {
         @content;
     }

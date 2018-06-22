@@ -1,4 +1,4 @@
-.slider__btn-prev--line {
+.slider__btn-prev_line {
   &:after {
       content: '';
       display: inline-block;
@@ -12,7 +12,7 @@
   }
 }
 
-.slider__btn-next--line {
+.slider__btn-next_line {
   position: absolute;
   right: 0;
   &:before {

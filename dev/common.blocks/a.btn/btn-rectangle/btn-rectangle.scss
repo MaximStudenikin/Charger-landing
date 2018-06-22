@@ -1,0 +1,28 @@
+.btn-rectangle
+{
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  font-size: rem(14px);
+  padding: rem(20px);
+  color: $black;
+}
+
+.btn-rectangle__svg
+{
+  fill: none;
+  stroke: $gold;
+  stroke-width: 1;
+}
+
+.btn-rectangle__svg-elem
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-rectangle_rectangle-to-line
+{
+  @include effect--rectangle-to-line;
+}

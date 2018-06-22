@@ -1,0 +1,14 @@
+@mixin effect--line-to-rectangle
+{
+    svg rect {
+        stroke-dasharray: 400, 0;
+        transition: all 0.8s ease-in-out;
+    }
+    
+    &:hover svg rect {
+        stroke-width: 3;
+        stroke-dasharray: 65 188;
+        stroke-dashoffset: 65;
+        transition: all 0.8s ease-in-out;
+    }
+}
