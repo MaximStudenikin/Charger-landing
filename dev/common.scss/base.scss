@@ -56,10 +56,10 @@ body {
   font-family: $proxima_regular;
   font-size: rem(16px);
   line-height: 1.42;
-  @include portrait{
+  @include portrait-devices{
     line-height: 1.20;
   }
-  @include landscape__phones{
+  @include phones-landscape{
     font-size: rem(13px);
   }
   // -webkit-font-smoothing: antialiased;

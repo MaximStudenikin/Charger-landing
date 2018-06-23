@@ -6,12 +6,6 @@
   position: relative;
   background: $white;
   overflow: hidden;
-  @include portrait{
-    justify-content: space-evenly;
-  }
-  @include landscape__phones{
-    justify-content: space-evenly;
-  }
   &__heading{
     top: 5%;
     &::after{
@@ -39,15 +33,6 @@
     display: inline-block;
     width: 15vw;
     padding: 0 rem(15px) 0 0;
-    @include portrait{
-      width: 30vw;
-    }
-    @include landscape__phones{
-      width: 30vw;
-    }
-    @include portrait__phones{
-      width: 50vw;
-    }
     
     &:last-child{
       padding: 0;
@@ -55,15 +40,6 @@
   }
   &__item:nth-child(2n){
     width: 20vw;
-    @include portrait{
-      width: 40vw;
-    }
-    @include landscape__phones{
-      width: 40vw;
-    }
-    @include portrait__phones{
-      width: 60vw;
-    }
   }
   
 }

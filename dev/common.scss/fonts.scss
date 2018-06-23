@@ -45,18 +45,6 @@ sans-serif;
         font-family: $playfair__bold;
         color: $gold;
         font-size: rem(120px);
-        @include landscape{
-            font-size: rem(120px / 1.3);
-        }
-        @include portrait {
-            font-size: rem(120px / 1.6);
-        }
-        @include landscape__phones {
-            font-size: rem(120px / 1.6);
-        }
-        @include portrait__phones{
-            font-size: rem(120px / 2.6);
-          }
     }
     &__sb {
         font-family: $playfair__bold;
@@ -77,36 +65,11 @@ sans-serif;
 .paragraph {
     font-family: $proxima_regular;
     font-size: rem(16px);
-    @include landscape__phones{
-        font-size: rem(16px / 1.2);
-      }
-    @include portrait__phones{
-        width: 70%;
-        font-size: rem(16px / 1.3);
-      }
     &__quote {
         font-family: $playfair_italic;
         font-size: rem(48px);
         white-space: normal;
         padding: 0 30%;
-        @include landscape{
-            font-size: rem(48px / 1.5);
-          }
-        @include portrait {
-            font-size: rem(48px / 1.8);
-        }
-        @include landscape__phones {
-            font-size: rem(48px / 1.8);
-        }
-        @include portrait__phones {
-            padding: 0 15%;
-            font-size: rem(48px / 2);
-        }
-    }
-    &__textarea{
-        @include portrait__phones {
-            width: 100%;
-        }
     }
 }
 
@@ -115,35 +78,11 @@ sans-serif;
         display: block;
         font-family: $proxima_regular;
         font-size: rem(30px);
-        @include landscape{
-            font-size: rem(30px / 1.5);
-          }
-          @include portrait{
-            font-size: rem(30px / 1.6);
-          }
-          @include landscape__phones{
-            font-size: rem(30px / 1.6);
-          }
-          @include portrait__phones{
-            font-size: rem(30px / 2);
-          }
     }
     &__car {
         display: block;
         font-family: $proxima_light;
         font-size: rem(18px);
-        @include landscape{
-            font-size: rem(18px / 1.8);
-          }
-          @include portrait{
-            font-size: rem(18px / 1.6);
-          }
-          @include landscape__phones{
-            font-size: rem(18px / 1.6);
-          }
-          @include portrait__phones{
-            font-size: rem(18px /2);
-          }
     }
     &__info {
         position: relative;

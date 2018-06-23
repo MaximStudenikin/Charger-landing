@@ -4,31 +4,39 @@ $gold: #e3a062;
 $black: #000;
 
 //packege
-@import "../../node_modules/normalize.css/normalize";
-@import "../../node_modules/fast-grid/fast-grid";
+@import "./../node_modules/normalize.css/normalize";
+@import "./../node_modules/fast-grid/fast-grid";
 
-//config
-@import "./config/media";
-@import "./config/mixin";
-@import "./config/fonts";
-@import "./config/grid";
-@import "./config/base";
-@import "./config/adjustment";
+//common scss
+@import "./common.scss/media";
+@import "./common.scss/mixin";
+@import "./common.scss/fonts";
+@import "./common.scss/grid";
+@import "./common.scss/base";
+@import "./common.scss/adjustment";
+@import "./common.scss/mixin/effect--line-to-rectangle";
+@import "./common.scss/mixin/effect--rectangle-to-line";
+@import "./common.scss/mixin/effect--riding-underscore";
+
+//blocks
+@import "./common.blocks/a.btn/btn";
+@import "./common.blocks/a.btn/btn-rectangle";
+@import "./common.blocks/decorative-elements/decorative-elements";
+@import "./common.blocks/h-menu/h-menu";
+@import "./common.blocks/logo/logo";
+@import "./common.blocks/header/header";
+@import "./common.blocks/h-menu/h-menu";
+@import "./common.blocks/slider/images-slider/images-slider";
+@import "./common.blocks/slider/slider-controls/slider-controls";
+@import "./common.blocks/slider/_text-mod/_text-mod";
+@import "./common.blocks/slider/slider-controls/_arrow/_arrow";
+@import "./common.blocks/slider/slider-controls/_line/_line";
+@import "./common.blocks/footer/footer";
 
 //sections
-@import "./section/welcome";
-@import "./section/about";
-@import "./section/services";
-@import "./section/projects";
-@import "./section/reviews";
-@import "./section/blog";
-
-//components
-@import "./components/btn/btn";
-@import "./components/decorative-elements/decorative-elements";
-@import "./components/logo/logo";
-@import "./components/header/header";
-@import "./components/h-menu/h-menu";
-@import "./components/images-slider/images-slider";
-@import "./components/text-slider/text-slider";
-@import "./components/footer/footer";
+@import "./sections/welcome/welcome";
+@import "./sections/about/about";
+@import "./sections/services/services";
+@import "./sections/projects/projects";
+@import "./sections/reviews/reviews";
+@import "./sections/blog/blog";

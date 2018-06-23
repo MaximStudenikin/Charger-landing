@@ -1,47 +1,71 @@
 /* Large desktops and laptops */
 
-@mixin desc_large {
-    @media (min-width: 1200px) {
+@mixin desktops-large
+{
+
+    @media (min-width: 1200px)
+    {
         @content;
     }
+
 }
 
-/* Landscape tablets and medium desktops */
+/* landscape tablets and medium desktops */
 
-@mixin lands-dev {
-    @media (min-width: 992px) and (max-width: 1199px) {
+@mixin landscape-devices
+{
+
+    @media (min-width: 992px) and (max-width: 1199px)
+    {
         @content;
     }
+
 }
 
-/* Portrait tablets and small desktops */
+/* portrait tablets and small desktops */
 
-@mixin port-dev {
-    @media (min-width: 768px) and (max-width: 991px) {
+@mixin portrait-devices
+{
+
+    @media (min-width: 768px) and (max-width: 991px)
+    {
         @content;
     }
+
 }
 
-/* Landscape phones and portrait tablets */
+/* landscape phones and portrait-devices tablets */
 
-@mixin phones_land {
-    @media (max-width: 767px) {
+@mixin phones-landscape
+{
+
+    @media (max-width: 767px)
+    {
         @content;
     }
+
 }
 
-/* Portrait phones and smaller */
+/* portrait phones and smaller */
 
-@mixin phones_port {
-    @media (max-width: 480px) {
+@mixin phones-portrait
+{
+
+    @media (max-width: 480px)
+    {
         @content;
     }
+
 }
 
 /* Iphone 5 */
 
-@mixin iphone__5 {
-    @media (max-width: 320px) {
+@mixin small-phones
+{
+
+    @media (max-width: 320px)
+    {
         @content;
     }
+
 }

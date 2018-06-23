@@ -18,21 +18,21 @@
 
 .h-menu--open {
     background: $white;
-    .h-menu__bars:first-child {
+    .h-menu__line:first-child {
         transform: rotate(45deg);
         transform-origin: 2px 90%;
     }
-    .h-menu__bars:nth-child(2) {
+    .h-menu__line:nth-child(2) {
         transform: translateX(40px);
         opacity: 0;
     }
-    .h-menu__bars:nth-child(3) {
+    .h-menu__line:nth-child(3) {
         transform: rotate(-45deg);
         transform-origin: 2px 50%;
     }
 }
 
-.h-menu__bars {
+.h-menu__line {
     transition: all 0.2s ease-in-out;
     display: block;
     width: 20px;

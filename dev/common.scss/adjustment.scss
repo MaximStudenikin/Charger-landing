@@ -12,15 +12,6 @@ section {
     height: 100%; 
     overflow: hidden;
     min-height: 650px;
-    @include portrait {
-        min-height: auto;
-    }
-    @include landscape__phones {
-        min-height: auto;
-    }
-    @include portrait__phones {
-        min-height: auto;
-    }
 }
 
 .maincontent {
@@ -29,15 +20,6 @@ section {
     min-height: 650px;
     transition: 1s;
     will-change: transform;
-    @include portrait {
-        min-height: auto;
-    }
-    @include landscape__phones {
-        min-height: auto;
-    }
-    @include portrait__phones {
-        min-height: auto;
-    }
 }
 
 .container {

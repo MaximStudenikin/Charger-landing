@@ -16,5 +16,5 @@
 
 .btn_hover-line-torectangle
 {
-    @include effect--line-to-rectangle($gold, $black, 1px, 10px 6px, 0.2s);
+    @include effect--riding-underscore($gold, $black, 1px, 10px 6px, 0.2s);
 }
