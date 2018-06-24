@@ -25,13 +25,16 @@ $black: #000;
 @import "./common.blocks/h-menu/h-menu";
 @import "./common.blocks/logo/logo";
 @import "./common.blocks/header/header";
+@import "./common.blocks/navigation/navigation";
 @import "./common.blocks/h-menu/h-menu";
-@import "./common.blocks/slider/images-slider/images-slider";
+@import "./common.blocks/slider/cover-slider/cover-slider";
+@import "./common.blocks/slider/cover-slider/cover-slider__pagination";
 @import "./common.blocks/slider/slider-controls/slider-controls";
 @import "./common.blocks/slider/_text-mod/_text-mod";
 @import "./common.blocks/slider/slider-controls/_arrow/_arrow";
 @import "./common.blocks/slider/slider-controls/_line/_line";
 @import "./common.blocks/footer/footer";
+@import "./common.blocks/social-networks/social-networks";
 
 //sections
 @import "./sections/welcome/welcome";
