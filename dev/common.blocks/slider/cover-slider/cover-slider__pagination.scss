@@ -1,0 +1,31 @@
+.cover-slider__pagination
+{
+	display: flex;
+	font-family: $playfair__bold;
+	font-size: rem(26px);
+	position: absolute;
+	bottom: 5%;
+	right: 53%;  
+
+	&-btn
+	{
+
+		&:after
+		{
+			content: '';
+			display: inline-block;
+			margin: rem(4px) rem(20px);
+			width: 165px;
+			height: 1px;
+			opacity: 0.55;
+			background: $white;
+		}
+
+		&:last-child::after
+		{
+			content: none;
+		}
+
+	}
+	
+}

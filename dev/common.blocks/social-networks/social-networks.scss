@@ -1,0 +1,33 @@
+.social-networks
+{
+
+  &__list
+  {
+      display: flex;
+  }
+
+  &__item
+  {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      &:after
+      {
+          content: '/';
+          padding: 0 rem(10px);
+      }
+
+      &:last-child::after
+      {
+          content: none;
+      }
+
+  }
+
+  &__link_hover
+  {
+      @include effect--rectangle-to-line($white, $gold);
+  }
+  
+}

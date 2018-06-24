@@ -1,0 +1,36 @@
+.navigation
+
+{
+	position: relative;
+	right: 11%;
+ 
+	&__list
+	{
+			display: flex;
+	}
+
+	&__item
+	{
+			padding: 0 rem(38px) 0 0;
+			height: 40px;
+
+			&:last-child
+			{
+					padding: 0;
+			}
+	
+		}
+	
+	&__link
+	{
+			color: $white;
+			text-decoration: none;
+			text-transform: uppercase;
+	}
+
+	&__link_hover
+	{
+			@include effect--rectangle-to-line($white, $gold);
+	}
+
+}
