@@ -1,11 +1,11 @@
-.h-menu {
+.h-menu-btn {
     display: flex;
     cursor: pointer;
     align-items: center;
     z-index: 999;
 }
 
-.h-menu__block {
+.h-menu__lines {
     margin: 0 rem(10px) 0 0;
     display: flex;
     flex-direction: column;
