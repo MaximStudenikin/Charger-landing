@@ -38,7 +38,7 @@ const paths = {
 };
 
 function html() {
-	return gulp.src(paths.dev + '/page/index.pug')
+	return gulp.src(paths.dev + 'index.pug')
 		.pipe(plumber())
 		.pipe(pug({ pretty: true }))                  //pretty: true убирает что бы index был читаймым
 		.pipe(rename({ basename: "index" }))
@@ -47,7 +47,7 @@ function html() {
 }
 
 function style() {
-	return gulp.src(paths.dev + '/scss/main.scss')
+	return gulp.src(paths.dev + 'main.scss')
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sassGlob())
@@ -66,7 +66,7 @@ function style() {
 
 //js
 function script() {
-	return gulp.src(paths.dev + 'js/*.js')
+	return gulp.src(paths.dev + 'common.js/*.js')
 		.pipe(plumber())
 		// .pipe(babel({
 		// 	presets: ['env']
@@ -104,9 +104,9 @@ function remov() {
 
 //watch
 function watch() {
-	gulp.watch(paths.dev + 'page/**/*.pug', html);
-	gulp.watch(paths.dev + '/**/*.scss', style);
-	gulp.watch(paths.dev + 'js/*.js', script);
+	gulp.watch(paths.dev + '**/*.pug', html);
+	gulp.watch(paths.dev + '**/*.scss', style);
+	gulp.watch(paths.dev + '**/*.js', script);
 }
 
 
