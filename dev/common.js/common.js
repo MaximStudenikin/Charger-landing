@@ -47,8 +47,8 @@ $(document).ready(function () {
 			'-webkit-transform': `translate(0, ${position})`
 		})
 
-		sections.eq(sectionEq).addClass('section--active')
-			.siblings().removeClass('section--active');
+		sections.eq(sectionEq).addClass('section_active')
+			.siblings().removeClass('section_active');
 
 		setTimeout(() => {
 
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
 	const difineSections = sections => {
 
-		const activeSection = sections.filter('.section--active');
+		const activeSection = sections.filter('.section_active');
 
 		return {
 
@@ -183,7 +183,7 @@ $(document).ready(function () {
 
 	//click ruls btn reviews slider
 
-	$('.slider__controls').on('click touchstart', event => {
+	$('.slider-controls').on('click touchstart', event => {
 		event.preventDefault();
 
 		const $this = $(event.target),

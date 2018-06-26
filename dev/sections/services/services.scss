@@ -1,7 +1,11 @@
-.services {
+.section-services
+{
     height: 100%;
     position: relative;
     background: $white;
+}
+.services {
+   
     &__two-bg{
         top: 0;
         height: 75%;

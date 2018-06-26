@@ -29,12 +29,13 @@ $black: #000;
 @import "./common.blocks/h-menu/h-menu";
 @import "./common.blocks/slider/cover-slider/cover-slider";
 @import "./common.blocks/slider/cover-slider/cover-slider__pagination";
-@import "./common.blocks/slider/slider-controls/slider-controls";
-@import "./common.blocks/slider/_text-mod/_text-mod";
-@import "./common.blocks/slider/slider-controls/_arrow/_arrow";
-@import "./common.blocks/slider/slider-controls/_line/_line";
+@import "./common.blocks/slider/slider-controls__btn/slider-controls__btn";
+@import "./common.blocks/slider/text-slider/text-slider";
+@import "./common.blocks/slider/slider-controls__btn/_arrow";
+@import "./common.blocks/slider/slider-controls__btn/_line";
 @import "./common.blocks/footer/footer";
 @import "./common.blocks/social-networks/social-networks";
+@import "./common.blocks/photo/big-photo";
 
 //sections
 @import "./sections/welcome/welcome";

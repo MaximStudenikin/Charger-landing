@@ -1,38 +1,8 @@
-.about
+.section-about
 {
-    display: flex;
-    position: relative;
-    background: $white;
-    align-items: center;
-    padding: 0 2%;
-}
-
-.blog
-{
-    &__preview
-    {
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: 55%;
-        margin: auto;
-    }
-
-    &__discription
-    {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 35%;
-    }
-
-    &__img
-    {
-        padding: 0 10% 0 0;
-        align-items: center;
-        width: 655px;
-        height: 540px;
-        overflow: hidden;
-        display: flex;
-    }
-
+	display: flex;
+	position: relative;
+	background: $white;
+	align-items: center;
+	padding: 0 2%;
 }

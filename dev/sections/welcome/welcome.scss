@@ -1,5 +1,4 @@
-.welcome
-
+.section-welcome
 {
 	position: relative;
 	background-color: $black;
@@ -28,10 +27,5 @@
 		justify-content: space-between;
 		z-index: 1;
 	}
-
-}
-
-.welcome__text {
-	width: 60%;
 
 }
