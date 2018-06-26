@@ -1,11 +1,8 @@
 .section-welcome
 {
-	position: relative;
 	background-color: $black;
 	color: $white;
 	padding: rem(45px);
-	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
 	z-index: 2;
 
@@ -23,9 +20,8 @@
 
 	&__footer
 	{
-		display: flex;
-		justify-content: space-between;
-		z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	z-index: 1;
 	}
-
 }
