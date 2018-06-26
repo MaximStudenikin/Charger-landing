@@ -1,0 +1,30 @@
+.text-slider
+{
+	position: relative;
+	width: 100%;
+
+	&__list
+	{
+		position: relative;
+		white-space: nowrap;
+		left: 0;
+	}
+
+	&__item
+	{
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+	}
+
+	&__controls
+	{
+		display: flex;
+		position: absolute;
+		width: 100%;
+		justify-content: space-around;
+		top: 50%;
+		height: 5vh;
+	}
+		
+}
