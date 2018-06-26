@@ -1,0 +1,77 @@
+.welcome__text {
+	width: 60%;
+
+}
+
+.heading {
+    font-family: $playfair__bold;
+    font-size: rem(60px);
+    position: relative;
+   
+    &:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 50px;
+        top: 80px;
+        left: 0;
+        background: $gold;
+    }
+    &__welcome {
+        font-family: $playfair__bold;
+        color: $gold;
+        font-size: rem(120px);
+    }
+    &__sb {
+        font-family: $playfair__bold;
+        font-size: rem(24px);
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 50%;
+            left: 25%;
+            top: 55px;
+            background: $gold;
+        }
+    }
+}
+
+.paragraph {
+    font-family: $proxima_regular;
+    font-size: rem(16px);
+    &__quote {
+        font-family: $playfair_italic;
+        font-size: rem(48px);
+        white-space: normal;
+        padding: 0 30%;
+    }
+}
+
+.user {
+    &__name {
+        display: block;
+        font-family: $proxima_regular;
+        font-size: rem(30px);
+    }
+    &__car {
+        display: block;
+        font-family: $proxima_light;
+        font-size: rem(18px);
+    }
+    &__info {
+        position: relative;
+        margin: rem(50px) 0 0 0;
+        &:before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            display: block;
+            width: 4%;
+            left: 48%;
+            top: -35%;
+            background: #e3a062;
+        }
+    }
+}
