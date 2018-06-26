@@ -1,12 +1,3 @@
-section
-{
-	position: static;
-	display: block;
-	width: 100%;
-	height: 100%;
-	background: $black;
-}
-
 .wrap
 {
 	position: relative;
@@ -25,16 +16,15 @@ section
 	will-change: transform;
 }
 
-.container
-{
+.section-container{
 	position: relative;
 	display: flex;
-	width: 100%;
-	height: 100%;
-	max-width: 1920px;
-	min-width: 320px;
 	flex-direction: column;
 	align-items: center;
+	overflow: hidden;
+	background: $white;
+	width: 100%;
+  height: 100%;
 }
 
 .img-teg
@@ -42,15 +32,6 @@ section
 	display: block;
 	max-width: 100%;
 }
-
-.section__img
-{
-	display: flex;
-	align-items: center;
-	width: 55%;
-	overflow: hidden;
-}
-
 
 .visuallyhidden:not(:focus):not(:active)
 {
