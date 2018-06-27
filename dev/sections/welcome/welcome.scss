@@ -1,4 +1,4 @@
-.section-welcome
+.welcome__section-container
 {
 	background-color: $black;
 	color: $white;
@@ -6,7 +6,7 @@
 	justify-content: space-between;
 	z-index: 2;
 
-	&__center
+	&-center
 	{
 		position: relative;
 		width: 100%;
@@ -18,7 +18,7 @@
 		z-index: 1;
 	}
 
-	&__footer
+	&-footer
 	{
 	display: flex;
 	justify-content: space-between;
