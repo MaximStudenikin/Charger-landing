@@ -1,0 +1,13 @@
+.heading_after_underline-center
+{		
+	&:after
+	{
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 50%;
+		left: 25%;
+		top: 55px;
+		background: $gold;
+	}
+}
