@@ -181,7 +181,7 @@ $(document).ready(function () {
 
 	}
 
-	//click ruls btn reviews slider
+	//click ruls button reviews slider
 
 	$('.slider-controls').on('click touchstart', event => {
 		event.preventDefault();
@@ -195,12 +195,12 @@ $(document).ready(function () {
 			edgeItem,
 			reqItem;
 
-		if ($this.hasClass('slider__btn-next')) {
+		if ($this.hasClass('slider__button-next')) {
 			existedItem = activeItem.next();
 			edgeItem = items.first();
 		}
 
-		if ($this.hasClass('slider__btn-prev')) {
+		if ($this.hasClass('slider__button-prev')) {
 			existedItem = activeItem.prev();
 			edgeItem = items.last();
 		}
