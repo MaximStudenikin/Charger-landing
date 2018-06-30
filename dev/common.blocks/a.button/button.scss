@@ -1,0 +1,14 @@
+.button
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: rem(14px);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    width: 120px;
+    height: 35px;
+}
