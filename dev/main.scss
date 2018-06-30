@@ -14,38 +14,31 @@ $black: #000;
 @import "./common.scss/grid";
 @import "./common.scss/base";
 @import "./common.scss/adjustment";
-@import "./common.scss/mixin/effect--line-to-rectangle";
 @import "./common.scss/mixin/effect--rectangle-to-line";
-@import "./common.scss/mixin/effect--riding-underscore";
+
+// heading
+@import "./common.blocks/heading/import-heading";
+
+//a.button
+@import "./common.blocks/a.button/import-button";
+
+// slider
+@import "./common.blocks/slider/import-slider";
 
 //blocks
-@import "./common.blocks/a.btn/btn";
-@import "./common.blocks/a.btn/btn-rectangle";
-@import "./common.blocks/decorative-elements/decorative-elements";
-@import "./common.blocks/h-menu/h-menu";
 @import "./common.blocks/logo/logo";
 @import "./common.blocks/header/header";
-@import "./common.blocks/heading/heading";
-@import "./common.blocks/heading/_size_small";
-@import "./common.blocks/heading/_size_medium";
-@import "./common.blocks/heading/_size_big";
-@import "./common.blocks/heading/_color_gold";
-@import "./common.blocks/heading/_after_underline-center";
-@import "./common.blocks/heading/_after_underlin-left";
-@import "./common.blocks/navigation/navigation";
 @import "./common.blocks/h-menu/h-menu";
-@import "./common.blocks/slider/cover-slider/cover-slider";
 @import "./common.blocks/card/card";
-@import "./common.blocks/slider/cover-slider/cover-slider__pagination";
-@import "./common.blocks/slider/slider-controls__btn/slider-controls__btn";
-@import "./common.blocks/slider/text-slider/text-slider";
+@import "./common.blocks/navigation/navigation";
 @import "./common.blocks/text/text";
-@import "./common.blocks/textarea/textarea";
 @import "./common.blocks/text/_initial-letter";
-@import "./common.blocks/slider/slider-controls__btn/_arrow";
-@import "./common.blocks/slider/slider-controls__btn/_line";
+@import "./common.blocks/text/_color_white";
+@import "./common.blocks/text/_initial-letter";
+@import "./common.blocks/textarea/textarea";
 @import "./common.blocks/footer/footer";
 @import "./common.blocks/social-networks/social-networks";
+@import "./common.blocks/decorative-elements/decorative-elements";
 @import "./common.blocks/photo/big-photo";
 
 //sections
