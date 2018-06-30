@@ -1,0 +1,39 @@
+.card
+{
+
+	&-container
+	{
+		display: flex;
+    justify-content: space-evenly;
+		width: 60%;
+
+		&_content_center
+		{
+			align-items: center;
+		}
+
+	}
+
+	&__column
+	{
+		display: flex;
+		width: 50%;
+		overflow: hidden;
+
+		&:last-child
+		{
+			padding: 0;
+		}
+
+		&_direction_column
+		{
+			flex-direction: column;
+		}
+
+		&_width_medium{
+			width: 25%;
+		}
+
+	}
+
+}
