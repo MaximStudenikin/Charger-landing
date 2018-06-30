@@ -81,7 +81,7 @@
 						transform: scale(1, 0);
 				}
 		}
-		&__btn {
+		&__button {
 				z-index: 11;
 		}
 		&__description--active:hover {
@@ -104,6 +104,6 @@
 }
 
 .heading--white,
-.btn__text--white {
+.button__text--white {
 		color: $white;
 }
