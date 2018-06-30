@@ -1,0 +1,44 @@
+.slider-controls__button-prev_arrow,
+.slider-controls__button-next_arrow
+{
+    width: 50px;
+    height: 50px;
+
+    &:after
+    {
+        content: '';
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: rem(10px);
+    }
+
+}
+
+.slider-controls__button-next_arrow
+{
+
+    &:after
+    {
+        content: '';
+        position: relative;
+        transform: rotate(-45deg);
+        top: 15px;
+        left: 15px;
+    }
+
+}
+
+.slider-controls__button-prev_arrow
+{
+
+    &:after
+    {
+        content: '';
+        position: relative;
+        transform: rotate(135deg);
+        top: 15px;
+        left: 20px;
+    }
+    
+}
