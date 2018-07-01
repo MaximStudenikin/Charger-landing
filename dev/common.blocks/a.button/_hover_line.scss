@@ -20,7 +20,7 @@
         transition: transform $time ease-in-out;
         transition-delay: $time * 3;
     }
-    .text
+    .button__text
     {
         padding: $padding;
         position: relative;
@@ -51,8 +51,8 @@
         }
     }
     &:hover:after,
-    &:hover>.text:before,
-    &:hover>.text:after
+    &:hover>.button__text:before,
+    &:hover>.button__text:after
     {
         transform: translate(0, 0);
     }
@@ -60,11 +60,11 @@
     {
         transition-delay: 0s;
     }
-    &:hover>.text:before
+    &:hover>.button__text:before
     {
         transition-delay: $time;
     }
-    &:hover>.text:after
+    &:hover>.button__text:after
     {
         transition-delay: $time * 2;
     }
