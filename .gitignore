@@ -4,4 +4,3 @@ source/*
 build/*
 node_modules/*
 libs/*
-docs/*
