@@ -1,5 +1,19 @@
-.user
+.user-info
 {
+	position: relative;
+	margin: rem(50px) 0 0 0;
+
+		&:before
+		{
+			content: '';
+			position: absolute;
+			height: 2px;
+			display: block;
+			width: 4%;
+			left: 48%;
+			top: -35%;
+			background: $gold;
+		}
 
 	&__name
 	{
@@ -14,23 +28,5 @@
 		font-family: $proxima_light;
 		font-size: rem(18px);
 	}
-
-	&__info
-	{
-		position: relative;
-		margin: rem(50px) 0 0 0;
-			
-		&:before
-		{
-			content: '';
-			position: absolute;
-			height: 2px;
-			display: block;
-			width: 4%;
-			left: 48%;
-			top: -35%;
-			background: $gold;
-		}
-	}
 	
-}
+	}

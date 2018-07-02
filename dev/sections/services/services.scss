@@ -3,107 +3,18 @@
 	height: 100%;
 	justify-content: space-evenly;
 }
-.services {
-	 
-		&__two-bg{
-				top: 0;
-				height: 75%;
-				position: absolute;
-				fill: $black;
-		}
-		&__header {
-				width: 60%;
-				display: flex;
-				justify-content: space-between;
-				align-items: flex-end;
-				z-index: 2;
-		}
-		&__list {
-				color: $white;
-				display: flex;
-				justify-content: space-between;
-				width: 60%;
-		}
-		&__item {
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-self: center;
-				width: 350px;
-				height: 350px;
-				overflow: hidden;
-				&:last-child {
-						padding: 0;
-				}
-		}
-		&__img {
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				z-index: 1;
-		}
-		&__description {
-				position: absolute;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				z-index: 10;
-				width: 100%;
-				text-align: center;
-				height: 100%;
-				top: 85%;
-				justify-content: space-between;
-				background: transparentize($black, 0.6);
-				box-shadow: 0px -20px 20px 20px transparentize($black, 0.6);
-				transition: top .6s ease-in-out;
-				transition-delay: 0.3s;
-				&:after,
-				&:before {
-						z-index: 9;
-						position: absolute;
-						top: 15px;
-						right: 15px;
-						bottom: 15px;
-						left: 15px;
-						content: '';
-						opacity: 0;
-						transition: opacity 0.35s, transform 0.35s;
-				}
-				&:before {
-						border-top: 1px solid $gold;
-						border-bottom: 1px solid $gold;
-						transform: scale(0, 1);
-				}
-				&:after {
-						border-right: 1px solid $gold;
-						border-left: 1px solid $gold;
-						transform: scale(1, 0);
-				}
-		}
-		&__btn {
-				z-index: 11;
-		}
-		&__description--active:hover {
-				.services__description {
-						top: 0%;
-						padding: 10% 0 0 0;
-						justify-content: space-evenly;
-						transition: top .3s ease-in-out;
-						transition-delay: 0.3s;
-						&:before,
-						&:after {
-								opacity: 1;
-								transform: scale(1);
-						}
-				}
-		}
-		&__paragraph {
-				width: 60%;
-		}
+
+.services__header {
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	z-index: 2;
 }
 
-.heading--white,
-.btn__text--white {
-		color: $white;
+.services__two-bg{
+	top: 0;
+	height: 75%;
+	position: absolute;
+	fill: $black;
 }
