@@ -1,0 +1,19 @@
+.wall-photo__item 
+{
+	display: inline-block;
+	width: 15vw;
+	padding: 0 rem(15px) 0 0;
+	&:last-child {
+		padding: 0;
+	}
+	&_position_top {
+		vertical-align: bottom;
+	}
+	&_position_bottom {
+		vertical-align: top;
+	}
+	&:nth-child(2n)
+	{
+		width: 20vw;
+	}
+}

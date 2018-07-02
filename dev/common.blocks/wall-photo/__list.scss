@@ -1,0 +1,16 @@
+.wall-photo__list
+{
+	position: relative;
+	white-space: nowrap;
+	z-index: 2;
+	&_direction_right
+	{
+		right: 10%;
+	}
+	&_direction_left {
+		transform: translate(0.7%);
+	}	&__item:nth-child(2n)
+	{
+		width: 20vw;
+	}
+}
