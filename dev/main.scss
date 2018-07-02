@@ -11,7 +11,7 @@ $black: #000;
 @import "./common.scss/media";
 @import "./common.scss/mixin";
 @import "./common.scss/fonts";
-@import "./common.scss/grid";
+@import "./common.scss/_margin-top";
 @import "./common.scss/base";
 @import "./common.scss/adjustment";
 @import "./common.scss/mixin/effect--rectangle-to-line";
@@ -25,6 +25,15 @@ $black: #000;
 // slider
 @import "./common.blocks/slider/import-slider";
 
+// promo
+@import "./common.blocks/promo/import-promo";
+
+// import-wall
+@import "./common.blocks/wall-photo/import-wall-photo";
+
+// decorative-elements
+@import "./common.blocks/decorative-elements/import-decorative-elements";
+
 //blocks
 @import "./common.blocks/logo/logo";
 @import "./common.blocks/header/header";
@@ -32,16 +41,15 @@ $black: #000;
 @import "./common.blocks/card/card";
 @import "./common.blocks/navigation/navigation";
 @import "./common.blocks/text/text";
+@import "./common.blocks/text/_width_val-60";
 @import "./common.blocks/text/_initial-letter";
 @import "./common.blocks/text/_color_white";
 @import "./common.blocks/text/_initial-letter";
 @import "./common.blocks/textarea/textarea";
 @import "./common.blocks/footer/footer";
-@import "./common.blocks/promo/promo";
 @import "./common.blocks/quote/quote";
 @import "./common.blocks/user/user";
 @import "./common.blocks/social-networks/social-networks";
-@import "./common.blocks/decorative-elements/decorative-elements";
 @import "./common.blocks/photo/big-photo";
 
 //sections
