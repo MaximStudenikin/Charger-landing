@@ -4,7 +4,8 @@
 	justify-content: space-evenly;
 }
 
-.services__header {
+.services__header
+{
 	width: 60%;
 	display: flex;
 	justify-content: space-between;
@@ -12,9 +13,15 @@
 	z-index: 2;
 }
 
-.services__two-bg{
+.services__two-bg
+{
 	top: 0;
 	height: 75%;
 	position: absolute;
 	fill: $black;
+}
+
+.service__decorative-elemetns
+{
+	top: -65%;
 }
