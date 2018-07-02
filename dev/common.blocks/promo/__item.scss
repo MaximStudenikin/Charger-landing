@@ -1,0 +1,15 @@
+.promo__item
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  &:last-child
+  {
+    padding: 0;
+  }
+
+}
