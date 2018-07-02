@@ -1,0 +1,19 @@
+.promo__item_visible:hover
+{
+
+	.promo__description
+	{
+		top: 0%;
+		padding: 10% 0 0 0;
+		justify-content: space-evenly;
+		transition: top .3s ease-in-out;
+		transition-delay: 0.3s;
+		&:before,
+		&:after
+		{
+			opacity: 1;
+			transform: scale(1);
+		}
+		
+	}
+}
