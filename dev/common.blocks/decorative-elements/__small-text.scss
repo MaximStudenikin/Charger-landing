@@ -1,0 +1,17 @@
+.decorative-elemetns__small-text
+{
+	
+	display: flex;
+	transform: rotate(-90deg);
+	
+	&:after
+	{
+			content: '';
+			display: inline-block;
+			margin: rem(10px) rem(16px);
+			width: 47px;
+			height: 1px;
+			background: $gold;
+	}
+
+}
