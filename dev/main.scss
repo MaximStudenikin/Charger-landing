@@ -31,8 +31,8 @@ $black: #000;
 // import-wall
 @import "./common.blocks/wall-photo/import-wall-photo";
 
-// decorative-elements
-@import "./common.blocks/decorative-elements/import-decorative-elements";
+// decorating
+@import "./common.blocks/decorating/import-decorating";
 
 //blocks
 @import "./common.blocks/logo/logo";
@@ -52,10 +52,16 @@ $black: #000;
 @import "./common.blocks/social-networks/social-networks";
 @import "./common.blocks/photo/big-photo";
 
-//sections
-@import "./sections/welcome/welcome";
-@import "./sections/about/about";
-@import "./sections/services/services";
-@import "./sections/projects/projects";
-@import "./sections/reviews/reviews";
-@import "./sections/blog/blog";
+//screens
+@import "./screens/welcome/__section-container";
+@import "./screens/about/__section-container";
+@import "./screens/about/about__decorating";
+@import "./screens/services/__section-container";
+@import "./screens/services/services__decorating";
+@import "./screens/projects/__section-container";
+@import "./screens/projects/projects__decorating";
+@import "./screens/reviews/__section-container";
+@import "./screens/reviews/reviews__decorating";
+@import "./screens/blog/__section-container";
+@import "./screens/blog/blog__decorating";
+@import "./screens/blog/__card-container";
