@@ -1,13 +1,12 @@
 .cover-slider__pagination
 {
+	position: relative;
 	display: flex;
 	font-family: $playfair__bold;
 	font-size: rem(26px);
-	position: absolute;
-	bottom: 5%;
-	right: 53%;  
+	right: 15%;  
 
-	&-button
+	&-item
 	{
 
 		&:after
