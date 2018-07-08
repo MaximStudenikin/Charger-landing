@@ -1,13 +1,14 @@
 .heading_after_underline-center
 {		
+	display: flex;
+  justify-content: center;
 	&:after
 	{
 		content: '';
 		position: absolute;
 		height: 2px;
-		width: 50%;
-		left: 25%;
-		top: 55px;
+		width: 40px;
+		bottom: -25px;
 		background: $gold;
 	}
 }
