@@ -155,60 +155,81 @@ $(document).ready(function () {
 
 	//animation for section
 
-	var sessss = $('.decorative-elemetns__big-simbol', '.decorative-elemetns');
+	// var sessss = $('.decorative-elemetns__big-simbol', '.decorative-elemetns');
 
-		anime({
-			targets: sessss[0], 
-			translateY: 
-			[{ value: 100, duration: 1500 },
-			{ value: 0, duration: 800 }],
-			loop: 5
+	// 	anime({
+	// 		targets: sessss[0], 
+	// 		translateY: 
+	// 		[{ value: 100, duration: 1500 },
+	// 		{ value: 0, duration: 800 }],
+	// 		loop: 5
 				
-		})
+	// 	})
 
-		console.log(sessss);
+	// 	console.log(sessss);
 
 	//slider
 
-	// slider bg images 
-
-	const browsing = function (container, activeSlide) {
-		const showWindow = container.parents().find('.slider-bg'),
-			backImg = activeSlide.find('.slider__img').attr('src');
-
-		showWindow.css('background', `'url(${backImg}) no-repeat'`);
-		showWindow.css('backgroundSize', 'cover');
-
-	}
-
 	//click ruls button reviews slider
 
-	$('.slider-controls').on('click touchstart', event => {
+	$('.cover-slider__controls').on('click touchstart', event => {
 		event.preventDefault();
 
 		const $this = $(event.target),
-			container = $this.parents().find('.slider'),
-			items = $('.slider__item', container),
-			activeItem = items.filter('.slider__item--active');
+			container = $this.parents().find('.cover-slider'),
+			items = $('.cover-slider__item', container),
+			activeItem = items.filter('.cover-slider__item_active');
 
 		let existedItem,
 			edgeItem,
 			reqItem;
 
-		if ($this.hasClass('slider__button-next')) {
+		if ($this.hasClass('slider-controls__button-next')) {
 			existedItem = activeItem.next();
 			edgeItem = items.first();
 		}
 
-		if ($this.hasClass('slider__button-prev')) {
+		if ($this.hasClass('slider-controls__button-prev')) {
 			existedItem = activeItem.prev();
 			edgeItem = items.last();
 		}
 
 		reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
 
+		moveShowSlide(container, reqItem, activeItem);
 		moveSlide(container, reqItem);
-		browsing(container, activeItem);
+
+	});
+
+	//searh number slaid and activ slide
+
+	const moveShowSlide = (container, slideNum, activeItem) => {
+
+		const 
+			items = container.find('.cover-slider__item'),
+			showWindow = container.parents().find('.cover-slider-viewport-bg'),
+			backImg = activeItem.find('.cover-slider__img').attr('src'),
+			reqItem = items.eq(slideNum);
+
+		if (reqItem.length) {
+
+			reqItem.addClass('cover-slider__item_active')
+			.siblings().removeClass('cover-slider__item_active');
+
+		}
+
+		showWindow.css('background', 'url(' + '"' + backImg + '"' + ') no-repeat');
+		showWindow.css('backgroundSize', 'cover');
+	
+	};
+
+	$(window).one('load', (slideNum) =>{
+		
+		const 
+			allCoverSlider = $('.cover-slider'),
+			activeItem = $('.cover-slider__item_active', allCoverSlider);
+
+		moveShowSlide(allCoverSlider, slideNum, activeItem);
 
 	});
 
@@ -216,7 +237,8 @@ $(document).ready(function () {
 
 	const moveSlide = (container, slideNum) => {
 
-		const items = container.find('.slider__item'),
+		const 
+			items = container.find('.slider__item'),
 			activeSlide = items.filter('.slider__item--active'),
 			reqItem = items.eq(slideNum),
 			reqIndex = reqItem.index(),
