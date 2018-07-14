@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.1/mobile-detect.min.js">       </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
@@ -31,7 +32,7 @@
           <div class="h-menu__lines"><span class="h-menu__line"></span><span class="h-menu__line"></span><span class="h-menu__line"></span></div><span class="h-menu__text">Menu</span></a>
       </div>
       <div class="welcome__section-container-center">
-        <slider-controls class="cover-slider">
+        <div class="cover-slider">
           <ul class="cover-slider__list">
             <li class="cover-slider__item cover-slider__item_active">
               <h1 class="heading heading_size_big heading_color_gold">We’re Charger</h1>
@@ -50,13 +51,12 @@
               <p class="text text_width_val-60 _margin-top_val_32">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam deserunt corporis dolorem?</p><img class="cover-slider__img" src="https://source.unsplash.com/6nzYYtJtVDk"><a class="button button_hover_line _margin-top_val_62" href="#"><span class="button__text">Read more</span></a>
             </li>
             <li class="cover-slider__item">
-              <h1 class="heading heading_size_big heading_color_gold">Lorem ipsum dolor</h1>
+              <h1 class="heading heading_size_big heading_color_gold">Ipsum dolor</h1>
               <p class="text text_width_val-60 _margin-top_val_32">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, perferendis.</p><img class="cover-slider__img" src="https://source.unsplash.com/WrKEgsBpRuY"><a class="button button_hover_line _margin-top_val_62" href="#"><span class="button__text">Read more</span></a>
             </li>
           </ul>
-          <div class="cover-slider__pagination"><a class="cover-slider__pagination-button">01</a><a class="cover-slider__pagination-button">10</a></div>
           <div class="cover-slider__controls"><a class="slider-controls__button-prev slider-controls__button-prev_line" href="#">prev</a><a class="slider-controls__button-next slider-controls__button-next_line" href="#">next</a></div>
-        </slider-controls>
+        </div>
       </div>
       <div class="welcome__section-container-footer">
         <div class="social-networks">
@@ -65,7 +65,8 @@
             <li class="social-networks__item"><a class="social-networks__link social-networks__link_hover" href="#">Twitter</a></li>
             <li class="social-networks__item"><a class="social-networks__link social-networks__link_hover" href="#">Youtube</a></li>
           </ul>
-        </div><span class="scroll-down">scroll down</span>
+        </div>
+        <div class="cover-slider__pagination"><a class="cover-slider__pagination-item" data-numberPage></a><a class="cover-slider__pagination-item" data-maxPage></a></div><span class="scroll-down">scroll down</span>
       </div>
     </section>
     <section class="section-container about__section-container">
@@ -80,8 +81,18 @@
               <rect class="button-form-rectangle__rect-teg" x="0" y="0" fill="none" width="120" height="40"></rect>
             </svg>more</a>
         </div>
+        <div class="decorating about__decorating decorating_animation">
+          <svg class="decorating__svg-container" xmlns="http://www.w3.org/2000/svg">
+            <g class="decorating__svg-group">
+              <use class="decorating__big-simbol-border" xlink:href="#decorating__id-big-simbol"></use>
+              <use class="decorating__big-simbol-fill" xlink:href="#decorating__id-big-simbol"></use>
+            </g>
+            <symbol id="decorating__id-big-simbol">
+              <text class="decorating__big-simbol" x="50%" y="50%">A</text>
+            </symbol>
+          </svg><i class="decorating__small-text">Who We Are</i>
+        </div>
       </div>
-      <div class="decorative-elemetns decorative-elemetns--right"><i class="decorative-elemetns__big-simbol">A</i><i class="decorative-elemetns__small-text">Who We Are</i></div>
     </section>
     <section class="section-container services__section-container">
       <div class="services__header">
@@ -113,7 +124,7 @@
       <svg class="services__two-bg" width="100%" height="25%">
         <rect x="0" y="0" width="100%" height="100%" fill="#000"></rect>
       </svg>
-      <div class="decorative-elemetns decorative-elemetns--left"><i class="decorative-elemetns__big-simbol decorative-elemetns__service">S</i><i class="decorative-elemetns__small-text">Cars & Details</i></div>
+      <div class="decorating services__decorating"><i class="decorating__big-simbol">S</i><i class="decorating__small-text">Cars & Details</i></div>
     </section>
     <section class="section-container projects__section-container">
       <h3 class="heading heading_size_medium heading_after_underline-center">Projects</h3>
@@ -142,7 +153,7 @@
         <svg class="button-form-rectangle__svg-teg" width="120" height="40" viewbox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
           <rect class="button-form-rectangle__rect-teg" x="0" y="0" fill="none" width="120" height="40"></rect>
         </svg>more</a>
-      <div class="decorative-elemetns decorative-elemetns--right"><i class="decorative-elemetns__big-simbol decorative-elemetns__projects">P</i><i class="decorative-elemetns__small-text projects__sb_small">Our Portfolio</i></div>
+      <div class="decorating projects__decorating"><i class="decorating__big-simbol">P</i><i class="decorating__small-text">Our Portfolio</i></div>
     </section>
     <section class="section-container reviews__section-container">
       <div class="text-slider">
@@ -171,7 +182,7 @@
         </ul>
         <div class="text-slider__controls"><a class="slider-controls__button-prev slider-controls__button-prev_arrow" href="#"></a><a class="slider-controls__button-next slider-controls__button-next_arrow" href="#"></a></div>
       </div>
-      <div class="decorative-elemetns decorative-elemetns--left"><i class="decorative-elemetns__big-simbol decorative-elemetns__reviews">T</i><i class="decorative-elemetns__small-text">Our Portfolio</i></div>
+      <div class="decorating reviews__decorating"><i class="decorating__big-simbol">T</i><i class="decorating__small-text">Our Portfolio</i></div>
     </section>
     <section class="section-container blog__section-container">
       <div class="card-container blog__card-container">
@@ -189,7 +200,7 @@
             </svg>more</a>
         </div>
       </div>
-      <div class="decorative-elemetns decorative-elemetns--right"><i class="decorative-elemetns__big-simbol decorative-elemetns__blog">C</i><i class="decorative-elemetns__small-text decorative-elemetns__small-text--bottom decorative-elemetns__small-text--right">Our Portfolio</i></div>
+      <div class="decorating blog__decorating"><i class="decorating__big-simbol">C</i><i class="decorating__small-text">Our Portfolio</i></div>
       <footer class="footer">
         <div class="footer__row">
           <div class="footer__block"><a class="logo" href="#">
