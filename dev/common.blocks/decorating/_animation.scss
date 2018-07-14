@@ -1,0 +1,27 @@
+.decorating_animation
+{
+  stroke-dasharray: 550 0;
+  stroke-width: 2px;
+  animation: dashArray 10s infinite alternate;
+ 
+  .decorating__big-simbol-border
+  {
+    stroke: $gold;
+    animation-delay: 1s;
+  }
+  .decorating__big-simbol-fill
+  {
+    fill: $gold;
+    animation-delay: 1.2s;
+  }
+}
+
+
+@keyframes dashArray
+{
+  100%
+  {
+    stroke-dasharray: 0 550;
+    fill-opacity: 0;
+  }
+}
