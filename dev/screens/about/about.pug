@@ -9,6 +9,11 @@
 			svg.button-form-rectangle__svg-teg(width="120" height="40" viewbox="0 0 120 40" xmlns="http://www.w3.org/2000/svg")
 				rect.button-form-rectangle__rect-teg(x='0' y='0' fill='none' width='120' height='40')
 			| more
-.decorating.about__decorating
-	i.decorating__big-simbol A
-	i.decorating__small-text Who We Are
+	.decorating.about__decorating.decorating_animation
+		svg.decorating__svg-container(xmlns='http://www.w3.org/2000/svg')
+			g.decorating__svg-group
+				use.decorating__big-simbol-border(xlink:href='#decorating__id-big-simbol')
+				use.decorating__big-simbol-fill(xlink:href='#decorating__id-big-simbol')
+			symbol#decorating__id-big-simbol
+				text.decorating__big-simbol(x='50%' y='50%') A
+		i.decorating__small-text Who We Are
