@@ -17,7 +17,7 @@
 	}
 
 	&__title {
-		font-family: $playfair__bold;
+		@extend %playfair__bold;
 		font-size: rem(20px);
 	}
 

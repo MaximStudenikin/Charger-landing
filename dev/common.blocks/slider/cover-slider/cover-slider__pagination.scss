@@ -2,7 +2,7 @@
 {
 	position: relative;
 	display: flex;
-	font-family: $playfair__bold;
+	@extend %playfair__bold;
 	font-size: rem(26px);
 	right: 15%;  
 

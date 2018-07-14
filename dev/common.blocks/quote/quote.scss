@@ -1,6 +1,6 @@
 .quote
 	{
-		font-family: $playfair_italic;
+		@extend %playfair_italic;
 		font-size: rem(48px);
 		white-space: normal;
 		padding: 0 30%;

@@ -25,7 +25,7 @@
 	&__car
 	{
 		display: block;
-		font-family: $proxima_light;
+		@extend %playfair__bold;
 		font-size: rem(18px);
 	}
 	
