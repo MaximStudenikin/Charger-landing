@@ -1,7 +1,46 @@
-.big-photo{
+.big-photo
+{
+  position: relative;
   display: flex;
   align-items: center;
   width: 35vw;
   height: 55vh;
   overflow: hidden;
+  background-color: $gold;
+  &:after
+  {
+    position: absolute;
+    top: 0;
+    content: '';
+    display: block;
+    width: 35vw;
+    height: 55vh;
+    background-color: transparentize($white, .25);
+    transform: translate(100%);
+  }
+}
+
+.big-photo_show:after
+{
+  animation: big-photo_show 2s ease;
+}
+
+@keyframes big-photo_show
+{
+  0% {
+    width: 5%; 
+    transform: translate(0);
+  }
+  25% {
+    width: 5%;
+  }
+  50% {
+    width: 100%;
+  }
+  51% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
