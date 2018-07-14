@@ -54,6 +54,7 @@ $(document).ready(function () {
 
 			inScroll = false;
 			switchActivePointFixeMenu(sectionEq);
+			decorAnimation(sections);
 
 		}, 1300);
 
@@ -153,21 +154,33 @@ $(document).ready(function () {
 
 	});
 
+// 	var box = $('.big-photo');
+
+// setTimeout(() => {
+//   box.addClass('big-photo_show');  
+// }, 1000);
+
 	//animation for section
 
-	// var sessss = $('.decorative-elemetns__big-simbol', '.decorative-elemetns');
+	// const decoratingParallax = (activeSection)=>
+	// {
+	// 	const
+	// 	decorating = $('.decorating', activeSection),
+	// 	decoratingElements = $('.__decorating', decorating);
 
-	// 	anime({
-	// 		targets: sessss[0], 
-	// 		translateY: 
-	// 		[{ value: 100, duration: 1500 },
-	// 		{ value: 0, duration: 800 }],
-	// 		loop: 5
-				
-	// 	})
+	// 	console.log(decoratingElements);
+	// }
 
-	// 	console.log(sessss);
+	//animation for section
 
+	// const decorAnimation = sections => {
+		
+	// 	const 
+	// 		activeSection = $(sections).filter('.section_active'),
+	// 		decorating = $('.decorating' , activeSection);
+
+	// }
+		
 	//slider
 
 	//click ruls button cover-slider slider
