@@ -12,7 +12,12 @@
 				rect.button-form-rectangle__rect-teg(x='0' y='0' fill='none' width='120' height='40')
 			| more
 .decorating.blog__decorating
-	i.decorating__big-simbol C
+	svg.decorating__svg-container(xmlns='http://www.w3.org/2000/svg')
+			g.decorating__svg-group
+				use.decorating__big-simbol-border(xlink:href='#decorating__C-big-simbol')
+				use.decorating__big-simbol-fill(xlink:href='#decorating__C-big-simbol')
+			symbol#decorating__C-big-simbol
+				text.decorating__big-simbol(x='50%' y='50%') C
 	i.decorating__small-text Our Portfolio
 footer.footer
 	include ../../common.blocks/footer/footer
