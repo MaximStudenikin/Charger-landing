@@ -11,8 +11,6 @@ $(document).ready(function () {
 		$('.welcome__center').toggleClass('visuallyhidden');
 	});
 
-
-
 	//scroll
 
 	//display
@@ -104,7 +102,7 @@ $(document).ready(function () {
 	$('.wrap').on({
 		wheel: evenet => {
 
-			const deltaY = evenet.originalEvent.deltaY;
+			let deltaY = evenet.originalEvent.deltaY;
 
 			let direction = (deltaY > 0) ? 'up' : 'down';
 
@@ -160,26 +158,34 @@ $(document).ready(function () {
 //   box.addClass('big-photo_show');  
 // }, 1000);
 
+// textarea
+
+$('.textarea').on('mouseenter', (inScroll) => {
+
+	const inScroll = false;
+
+	return inScroll;
+
+ });
+
 	//animation for section
 
-	// const decoratingParallax = (activeSection)=>
-	// {
-	// 	const
-	// 	decorating = $('.decorating', activeSection),
-	// 	decoratingElements = $('.__decorating', decorating);
+	const decorAnimation = sections =>
+	{
+		const
+		activeSection = $(sections).filter('.section_active'),
+		noActiveSection = activeSection.siblings(),
 
-	// 	console.log(decoratingElements);
-	// }
+		decorating = $('.decorating', activeSection),
+		noDecorating = $('.decorating', noActiveSection);
 
-	//animation for section
+		decorating.addClass('decorating_animation');
 
-	// const decorAnimation = sections => {
-		
-	// 	const 
-	// 		activeSection = $(sections).filter('.section_active'),
-	// 		decorating = $('.decorating' , activeSection);
+		noDecorating.removeClass('decorating_animation');
+	
+	}
 
-	// }
+	decorAnimation(sections);
 		
 	//slider
 
@@ -210,7 +216,6 @@ $(document).ready(function () {
 		reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
 
 		moveShowSlide(container, reqItem, activeItem);
-		moveSlide(container, reqItem);
 
 	});
 
@@ -238,15 +243,20 @@ $(document).ready(function () {
 	
 	};
 
-	//load bg images on load window for cover slider
+	//load bg images on load window for sliders
 
 	$(window).one('load', (slideNum) =>{
 		
 		const 
 			allCoverSlider = $('.cover-slider'),
-			activeItem = $('.cover-slider__item_active', allCoverSlider);
+			activeItem = $('.cover-slider__item_active', allCoverSlider),
+
+			container = $('.text-slider'),
+			activeSlide = $('.text-slider_active', container);
+			
 
 		moveShowSlide(allCoverSlider, slideNum, activeItem);
+		moveSlide(container, activeSlide)
 
 	});
 
@@ -258,7 +268,6 @@ $(document).ready(function () {
 		itemIndex = reqItem.index(),
 		itemLength = items.length;
 
-
 		const pagination = {
 			numberPage:`<a class="cover-slider__pagination-item">${itemIndex + 1}</a>`,
 			maxPage:`<a class="cover-slider__pagination-item">${itemLength}</a>`
@@ -269,7 +278,7 @@ $(document).ready(function () {
 		
 	};
 
-	//click ruls button cover-slider slider
+	//click ruls button text-slider slider
 
 	$('.text-slider__controls').on('click touchstart', event => {
 		event.preventDefault();
@@ -295,7 +304,6 @@ $(document).ready(function () {
 
 		reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
 
-		moveShowSlide(container, reqItem, activeItem);
 		moveSlide(container, reqItem);
 
 	});
@@ -310,6 +318,8 @@ $(document).ready(function () {
 			reqItem = items.eq(slideNum),
 			reqIndex = reqItem.index(),
 			list = container.find('.text-slider__list'),
+			showWindow = container.parents().find('.text-slider-viewport-bg'),
+			backImg = activeSlide.find('.text-slider__img').attr('src'),
 			dur = 500;
 
 		if (reqItem.length) {
@@ -320,6 +330,9 @@ $(document).ready(function () {
 				reqItem.addClass('text-slider_active');
 			});
 		}
+
+		showWindow.css('background', 'url(' + '"' + backImg + '"' + ') no-repeat');
+		showWindow.css('backgroundSize', 'cover');
 	};
 
 });
