@@ -1,27 +1,42 @@
 .decorating_animation
 {
-  stroke-dasharray: 550 0;
   stroke-width: 2px;
-  animation: dashArray 10s infinite alternate;
  
   .decorating__big-simbol-border
   {
     stroke: $gold;
-    animation-delay: 1s;
+    animation: dashArray 8s 1 alternate;
+    animation-fill-mode: forwards;
   }
   .decorating__big-simbol-fill
   {
     fill: $gold;
-    animation-delay: 1.2s;
+    animation: fillOpacity 16s 1 alternate;
+    animation-fill-mode: forwards;
   }
 }
 
 
 @keyframes dashArray
 {
-  100%
+  from
   {
-    stroke-dasharray: 0 550;
+    stroke-dasharray: 0 500;
+  }
+  to
+  {
+    stroke-dasharray: 500 0;
+  }
+}
+
+@keyframes fillOpacity
+{
+  from
+  {
     fill-opacity: 0;
+  }
+  to
+  {
+    fill-opacity: 1;
   }
 }
